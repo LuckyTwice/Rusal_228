@@ -47,10 +47,10 @@ namespace Rusal_228
                 }
                 MessageBox.Show(message,"Список");
             }
-           /* string username = Login.Text;
+            int username = Convert.ToInt32(Login.Text);
             string password = Password.Password;
 
-            if (VerifyLogin(username, password))
+            /*if (VerifyLogin(username, password))
             {
                 MessageBox.Show("11");
                 int proff = GetProffFromTable2(username);
@@ -68,11 +68,12 @@ namespace Rusal_228
                 MessageBox.Show("Invalid username or password.");
             }*/
         }
-        /*private bool VerifyLogin(string username, string password)
+        private bool VerifyLogin(int username, string password)
         {
-            string connectionString = "Dsn=Rusal;data source=localhost;database=Rusal;user id=postgres;schema=Rusal_Schema"; // Replace with your actual connection string
-
-            using (connection = new OdbcConnection(connectionString))
+            using(AdminContext db = new AdminContext()) 
+            {
+                var count = db.Passwords.
+            /*using (connection = new OdbcConnection(connectionString))
             {
                 try
                 {
@@ -91,9 +92,9 @@ namespace Rusal_228
                     MessageBox.Show("An error occurred while connecting to the database.");
                     return false;
                 }
-            }
+            }*/
         }
-        private int GetProffFromTable2(string username)
+        /*private int GetProffFromTable2(string username)
         {
             string connectionString = "Dsn=Rusal;data source=localhost;database=Rusal;user id=postgres;schema=Rusal_Schema"; // Replace with your actual connection string
 
@@ -103,8 +104,8 @@ namespace Rusal_228
                 string query = $"SELECT \"Профессия\" FROM \"Rusal_Shema\".\"Personal\" WHERE \"Id\" = '{username}'";
 
                 using (OdbcCommand command = new OdbcCommand(query, connection))
-                {*/
-                    /* try
+                {
+                    *//* try
                      {*//*
                     return Convert.ToInt32(command.ExecuteScalar());
                     *//* }*/
@@ -116,7 +117,7 @@ namespace Rusal_228
                      }*//*
                 }
             }
-        }
+        }*//*
 
         private string VerifyProff(int proff)
         {
