@@ -167,7 +167,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Content="Выход"  x:Name="Exit" Grid.Column="0" Grid.Row="0" Margin="15,15,15,10" Height="25"/>
-            <Button Content="Войти"  x:Name="Log" Grid.Column="1" Grid.Row="0" Margin="15,15,15,10" Height="25"/>
+            <Button Content="Войти"  x:Name="Log" Grid.Column="1" Grid.Row="0" Margin="15,15,15,10" Height="25" Click="Done_Click"/>
         </Grid>
     </StackPanel>
 

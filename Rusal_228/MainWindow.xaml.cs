@@ -24,14 +24,30 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
-        /*private void Cancel_Click(object sender, RoutedEventArgs e)
+        private void Cancel_Click(object sender, RoutedEventArgs e)
         {
 
         }
-        private OdbcConnection connection;
+        
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            string username = Login.Text;
+            using (AdminContext db  = new AdminContext()) 
+            {
+                /*var users = db.Personals.ToList();
+                ///Console.WriteLine("список");
+                foreach (var user in users) 
+                {
+                    Console.WriteLine($"{user.Id}.{user.Имя}.{user.Фамилия} - {user.Профессия}");
+                }*/
+                var phones = db.Personals.ToList();
+                string message = "";
+                foreach(var person in phones) 
+                {
+                    message += $"Имя:{person.Имя}, Фамилия:{person.Фамилия}{Environment.NewLine}";
+                }
+                MessageBox.Show(message,"Список");
+            }
+           /* string username = Login.Text;
             string password = Password.Password;
 
             if (VerifyLogin(username, password))
@@ -50,9 +66,9 @@ namespace Rusal_228
             else
             {
                 MessageBox.Show("Invalid username or password.");
-            }
+            }*/
         }
-        private bool VerifyLogin(string username, string password)
+        /*private bool VerifyLogin(string username, string password)
         {
             string connectionString = "Dsn=Rusal;data source=localhost;database=Rusal;user id=postgres;schema=Rusal_Schema"; // Replace with your actual connection string
 
@@ -87,8 +103,8 @@ namespace Rusal_228
                 string query = $"SELECT \"Профессия\" FROM \"Rusal_Shema\".\"Personal\" WHERE \"Id\" = '{username}'";
 
                 using (OdbcCommand command = new OdbcCommand(query, connection))
-                {
-                    *//* try
+                {*/
+                    /* try
                      {*//*
                     return Convert.ToInt32(command.ExecuteScalar());
                     *//* }*/
@@ -136,5 +152,5 @@ namespace Rusal_228
             AdminMain admin = new AdminMain();
             admin.ShowDialog();
         }*/
-    }
-}
+                }
+            }
