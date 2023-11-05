@@ -7,7 +7,7 @@
         mc:Ignorable="d"
             Title="WorkerMain" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="35,36,0,0" TextWrapping="Wrap" Text="Ты работяга" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="35,36,0,0" TextWrapping="Wrap" Text="Ты работяга" VerticalAlignment="Top" Width="120"/>
         <Button Content="Выход" HorizontalAlignment="Left" Margin="189,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.606,-0.726"/>
 
     </Grid>

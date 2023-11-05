@@ -8,12 +8,13 @@
             Title="AdminMain" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="133*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -22,8 +23,8 @@
             <RowDefinition Height="14*" />
 
         </Grid.RowDefinitions>
-        <TextBox x:Name="Name" Height="25" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сюда нужно логин вставлять " VerticalAlignment="Top"  Margin="5,5,55,10" FontSize="15" />
-        <Button x:Name="LogOut" Height="25" Grid.Column="1" Grid.Row="0" Content="Выход" Grid.RowSpan="2" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,4,10" Background="LightGray"  />
+        <TextBox x:Name="Name" Height="25" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сюда нужно логин вставлять " VerticalAlignment="Top"  Margin="5,5,55,0" FontSize="15" />
+        <Button x:Name="LogOut" Height="25" Grid.Column="1" Grid.Row="0" Content="Выход" Grid.RowSpan="2" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,4,0" Background="LightGray"  />
 
     </Grid>
 </Window>
