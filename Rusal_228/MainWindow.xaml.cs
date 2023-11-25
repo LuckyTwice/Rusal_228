@@ -24,10 +24,6 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
         
         private void Done_Click(object sender, RoutedEventArgs e)
         {
@@ -42,7 +38,6 @@ namespace Rusal_228
                         int password = Convert.ToInt32(Password.Password);
                         if (VerifyLogin(db, username, password))
                         {
-                            MessageBox.Show("11");
                             int proff = GetProffFromTable2(db, username);
                             if (VerifyProff(db, proff) == "Работник")
                             {
@@ -90,16 +85,21 @@ namespace Rusal_228
         private void OpenWindow1(AdminContext db, int id)
         {
             var fio = db.Personals.Where(p => p.Id == id).Select(p => new { p.Фамилия, p.Имя, p.Отчество }).First();
-            WorkerMain worker = new WorkerMain();
+            Delivery_WND worker = new Delivery_WND();
             worker.Name.Text = $"{fio.Фамилия} {fio.Имя} {fio.Отчество}";
             worker.ShowDialog();
         }
         private void OpenWindow2(AdminContext db, int id)
         {
             var fio = db.Personals.Where(p => p.Id == id).Select(p => new {p.Фамилия, p.Имя, p.Отчество }).First();
-            AdminMain admin = new AdminMain();
+            Admin_WND admin = new Admin_WND();
             admin.Name.Text = $"{fio.Фамилия} {fio.Имя} {fio.Отчество}";
             admin.ShowDialog();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

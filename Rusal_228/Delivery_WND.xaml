@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Поставка" Height="550" Width="1400" >
+        Title="Поставка" Height="550" Width="1400" Loaded="Window_Loaded" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -21,7 +21,7 @@
         <TextBox x:Name="Name" Height="45" Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Сюда нужно логин вставлять " VerticalAlignment="Top"  Margin="20,10,40,0" FontSize="20" />
         <Label Grid.Column="1" Grid.Row="0" Content="Поставка сырья" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" Padding="0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30"  />
 
-        <Button x:Name="LogOut" Height="45" Width="70" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="LightGray" >
+        <Button x:Name="LogOut" Height="45" Width="70" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="LightGray" IsCancel="True" >
             <Image Source="\Resources\icons8-exit-50.png" />
         </Button>
         <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="0,-10,0,0" Grid.ColumnSpan="8" Height="1"  Grid.Row="1" VerticalAlignment="Top"/>
@@ -53,15 +53,15 @@
                         <Label Content="Компания-поставщик"  Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
                         <TextBox x:Name="Delivery_Num" Grid.Column="0" Grid.Row="1" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" />
-                        <ComboBox x:Name="Сompany"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="15,0,15,0" Height="30"/>
+                        <ComboBox x:Name="Companyy"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="15,0,15,0" Height="30"/>
 
 
 
                         <Label Content="Тип сырья" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                         <Label Content="Марка сырья" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                        <ComboBox x:Name="Type_material"  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
-                        <ComboBox x:Name="Grade_material"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                        <ComboBox x:Name="Type"  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                        <ComboBox x:Name="Grade"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
 
                         <Label Content="Количество" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                         <Label Content="Единица измерения" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
@@ -79,7 +79,7 @@
 
 
                     </Grid>
-                    <Button x:Name="Add" Content="Добавить" FontSize="15"  Margin="15,15,15,15" IsDefault="True" Height="35"/>
+                    <Button x:Name="Add" Content="Добавить" FontSize="15"  Margin="15,15,15,15" IsDefault="True" Height="35" Click="Add_Click"/>
                 </StackPanel>
 
             </Border>
