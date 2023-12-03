@@ -32,10 +32,10 @@ namespace Rusal_228
                 var company = db.Companies.Select(x => x.Name).ToList();
                 var unit = db.Units.Select(x => x.Name).ToList();
                 var type = db.TypeMaterials.Select(x => x.Name).ToList();
-                Companyy.ItemsSource = company;
+                Company.ItemsSource = company;
                 Type.ItemsSource = type;
                 Type_Material.ItemsSource = type;
-                Grade.ItemsSource = marka;
+                //Grade.ItemsSource = marka;
                 Unit.ItemsSource = unit;
             }
         }
@@ -44,9 +44,9 @@ namespace Rusal_228
         {
             var db = new MaterialContext();
             int unit = db.Units.Where(p=>p.Name == Unit.SelectedItem.ToString()).Select(p=>p.Id).Single();
-            int marka = db.MarkaMaterials.Where(p => p.Name == Grade.SelectedItem.ToString()).Select(p => p.Id).Single();
+            //int marka = db.MarkaMaterials.Where(p => p.Name == Grade.SelectedItem.ToString()).Select(p => p.Id).Single();
             int type = db.TypeMaterials.Where(p => p.Name == Type.SelectedItem.ToString()).Select(p => p.Id).Single();
-            int company = db.Companies.Where(p => p.Name == Companyy.SelectedItem.ToString()).Select(p => p.Id).Single();
+            int company = db.Companies.Where(p => p.Name == Company.SelectedItem.ToString()).Select(p => p.Id).Single();
             int number = Convert.ToInt32(Delivery_Num.Text);
             int quant = Convert.ToInt32(Quantity.Text);
             DateTime date = Date.SelectedDate.Value;
@@ -55,7 +55,7 @@ namespace Rusal_228
             {
                 NumberPost = number,
                 TypeMaterial = type,
-                MarkaMaterial = marka,
+                //MarkaMaterial = marka,
                 Count = quant,
                 Date = date,
                 Company = company,

@@ -51,18 +51,13 @@
                         </Grid.RowDefinitions>
 
                         <Label Content="Номер поставки" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-                        <Label Content="Компания-поставщик"  Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-
-                        <TextBox x:Name="Delivery_Num" Grid.Column="0" Grid.Row="1" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" />
-                        <ComboBox x:Name="Сompany"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="15,0,15,0" Height="30"/>
-
-
+                        <TextBox x:Name="Delivery_Num" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" />
 
                         <Label Content="Тип сырья" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                         <Label Content="Компания-поставщик" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                        <ComboBox x:Name="Type_material"  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
-                        <ComboBox x:Name="Grade_material"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                        <ComboBox x:Name="Type"  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                        <ComboBox x:Name="Company"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
 
                         <Label Content="Количество" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                         <Label Content="Единица измерения" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
@@ -86,8 +81,8 @@
             </Border>
         </Grid>
 
-        <Label  Grid.Column="1" Grid.Row="1" Content="Документооборот" VerticalAlignment="Top" Margin="10,10,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-        <ListBox  x:Name="Documents" Grid.Column="1" Grid.Row="1" Margin="10,47,20,-10" BorderBrush="Gray" BorderThickness="1"  FontSize="20" SelectionChanged="Documents_SelectionChanged" />
+        <Label  Grid.Column="2" Grid.Row="1" Content="Документооборот" VerticalAlignment="Top" Margin="10,10,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+        <ListBox  x:Name="Documents" Grid.Column="2" Grid.Row="1" Margin="10,47,20,-10" BorderBrush="Gray" BorderThickness="1"  FontSize="20" />
 
         <StackPanel Grid.Column="2" Grid.Row="2" Margin="0,30,0,0" >
             <Label  Content="Снабжение" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
