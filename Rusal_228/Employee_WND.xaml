@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Права доступа сотрудника" Height="500" Width="600">
+        Title="Права доступа сотрудника" Height="520" Width="600">
     <Window.Resources>
         <SolidColorBrush x:Key="ListBox.Static.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FFABADB3"/>
@@ -75,7 +75,7 @@
                     <Label Content="—" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="15,10,15,0" VerticalAlignment="Center"  FontSize="20" />
                     <Label Content="—" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="15,10,15,0" VerticalAlignment="Center"  FontSize="20" />
 
-                    <TextBox  x:Name="ID_Empl" Grid.Row="1" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="15,10,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray" />
+                    <TextBox  x:Name="ID_Empl" Grid.Row="1" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="15,10,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray" TextChanged="ID_Empl_TextChanged"/>
                     <TextBox x:Name="Surname"  Grid.Row="2" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="15,10,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
 
 
