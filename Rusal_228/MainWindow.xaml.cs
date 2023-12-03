@@ -27,7 +27,9 @@ namespace Rusal_228
         
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            using (var db = new AdminContext())
+            Electrolysis_Department_WND dialog = new Electrolysis_Department_WND();
+        dialog.Show();
+            /*using (var db = new AdminContext())
             {
                 bool isConnected = db.Database.CanConnect();
                 if (isConnected)
@@ -62,7 +64,7 @@ namespace Rusal_228
                 {
                     MessageBox.Show("Отсутствует связь с сервером", "Ошибка");
                 }
-            }
+            }*/
            
         }
         private bool VerifyLogin(AdminContext db, int username, int password)

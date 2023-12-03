@@ -5,46 +5,134 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Stat_WND" Height="450" Width="800">
+        Title="Статистика" Height="550" Width="850">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
-            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
         </Grid.RowDefinitions>
-        <Label Content="Расход компанентов от" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="15" />
-        <Label Content="до" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="73,0,0,0" VerticalAlignment="Top" FontSize="15" />
-        <DatePicker  x:Name="DateFrom"  Grid.Column="1" Grid.Row="0" Margin="0,1,170,0" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="30" />
-        <DatePicker  x:Name="DateTo"  Grid.Column="1" Grid.Row="0" Margin="141,1,29,0" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="30" />
-
-        <Label Content="Количество глинозема" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="15" />
-        <Label Content="Количество фторсолей" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-        <Label Content="Количество хз чего" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-        <TextBox x:Name="Alumina" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-        <TextBox x:Name="Salt" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-        <TextBox x:Name="else" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+        
 
 
-        <Label Content="Поступление компанентов от" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="15" />
-        <Label Content="до" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="73,0,0,0" VerticalAlignment="Top" FontSize="15" />
-        <DatePicker  x:Name="DateFrom1"  Grid.Column="1" Grid.Row="4" Margin="0,1,170,0" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="30" />
-        <DatePicker  x:Name="DateTo1"  Grid.Column="1" Grid.Row="4" Margin="141,1,29,0" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="30" />
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="0,20,0,0" >
+            <Border  BorderBrush="Gray" BorderThickness="1"  HorizontalAlignment="Stretch" Margin="10,0,20,-1" Grid.ColumnSpan="2"  >
+                <Grid Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
 
-        <Label Content="Количество глинозема" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="15" />
-        <Label Content="Количество фторсолей" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-        <Label Content="Количество хз чего" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-        <TextBox x:Name="Alumina1" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-        <TextBox x:Name="Sal1t" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-        <TextBox x:Name="else1" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label  Content="Расход компанентов" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"  />
+                    <Label Content="от" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="до" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
+
+                    <DatePicker  x:Name="DateFromOut" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
+                    <DatePicker  x:Name="DateToOut"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"  Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
+                </Grid>
+            </Border>
+            <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,20,20" Grid.ColumnSpan="2" >
+                <Grid   Margin="0,15,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="20" />
+                    <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="Аннодная масса" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+
+                    <TextBox x:Name="AluminaOut" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                    <TextBox x:Name="SaltOut" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                    <TextBox x:Name="AnodeOut" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,20,0,0" >
+            <Border  BorderBrush="Gray" BorderThickness="1"  HorizontalAlignment="Stretch" Margin="10,0,20,-1" Grid.ColumnSpan="2"  >
+                <Grid Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label  Content="Поступление компанентов" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"  />
+                    <Label Content="от" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="до" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
+
+                    <DatePicker  x:Name="DateFromIn" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
+                    <DatePicker  x:Name="DateToIn"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"  Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
+                </Grid>
+            </Border>
+            <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,20,20" Grid.ColumnSpan="2" >
+                <Grid   Margin="0,15,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="20" />
+                    <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="Аннодная масса" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+
+                    <TextBox x:Name="AluminaIn" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                    <TextBox x:Name="SaltIn" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                    <TextBox x:Name="AnodeIn" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="0,20,0,0" >
+            <Border  BorderBrush="Gray" BorderThickness="1"  HorizontalAlignment="Stretch" Margin="10,0,20,-1" Grid.ColumnSpan="2"  >
+                <Grid Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label  Content="Диаграмма для" Grid.Row="0"  VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"  />
+                    <ComboBox x:Name="Type"  Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="30"/>
+
+                    <Label Content="от" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="до" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
+
+                    <DatePicker  x:Name="DateFromGraph" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
+                    <DatePicker  x:Name="DateToGraph"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"  Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
+                </Grid>
+            </Border>
+            <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,20,20" Grid.RowSpan="2" Height="400">
+                <Label Content="сюда как-то нужно вставить диаграмму" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
+            </Border>
+        </StackPanel>
     </Grid>
+    
+    
 </Window>
