@@ -1,11 +1,11 @@
-﻿<Window x:Class="Rusal_228.Electrolysis_Admin_WND"
+﻿<Window x:Class="Rusal_228.Admin_Electrolysis_WND"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
- Title="Мониторинг электролиза" Height="900" Width="1600">
+        Title="Мониторинг электролиза" Height="900" Width="1900">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -97,7 +97,7 @@
 
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  >
                 <Label  Content="В доступе" VerticalAlignment="Top" Margin="5,0,5,0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,20" Grid.ColumnSpan="2"  >
+                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,10" Grid.ColumnSpan="2"  >
                     <Grid   Margin="0,15,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -110,15 +110,17 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"  FontSize="20" />
-                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
+                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
+                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
-                        <TextBox x:Name="Alumina_7" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Salt_7" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Anode_7" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
+                        <TextBox x:Name="Alumina_7" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Salt_7" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Anode_7" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,0" Height="30"/>
                     </Grid>
                 </Border>
+                <Label  x:Name="Count_7" Content="Загрeжено ванн: ... (...%) " VerticalAlignment="Top"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  FontSize="20" />
+
             </StackPanel>
 
             <Button x:Name="Corpus7_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-10 ванна</Button>
@@ -153,7 +155,7 @@
 
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  >
                 <Label  Content="В доступе" VerticalAlignment="Top" Margin="5,0,5,0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,20" Grid.ColumnSpan="2"  >
+                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,10" Grid.ColumnSpan="2"  >
                     <Grid   Margin="0,15,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -166,15 +168,17 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"  FontSize="20" />
-                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
+                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
+                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
-                        <TextBox x:Name="Alumina_8" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Salt_8" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Anode_8" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
+                        <TextBox x:Name="Alumina_8" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Salt_8" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Anode_8" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,0" Height="30"/>
                     </Grid>
                 </Border>
+                <Label  x:Name="Count_8" Content="Загрeжено ванн: ... (...%) " VerticalAlignment="Top"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  FontSize="20" />
+
             </StackPanel>
 
 
@@ -211,7 +215,7 @@
 
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  >
                 <Label  Content="В доступе" VerticalAlignment="Top" Margin="5,0,5,0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,20" Grid.ColumnSpan="2"  >
+                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,10" Grid.ColumnSpan="2"  >
                     <Grid   Margin="0,15,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -224,15 +228,17 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"  FontSize="20" />
-                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
+                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
+                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
-                        <TextBox x:Name="Alumina_9" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Salt_9" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Anode_9" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
+                        <TextBox x:Name="Alumina_9" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Salt_9" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Anode_9" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,0" Height="30"/>
                     </Grid>
                 </Border>
+                <Label  x:Name="Count_9" Content="Загрeжено ванн: ... (...%) " VerticalAlignment="Top"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  FontSize="20" />
+
             </StackPanel>
 
 
@@ -269,7 +275,7 @@
 
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  >
                 <Label  Content="В доступе" VerticalAlignment="Top" Margin="5,0,5,0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,20" Grid.ColumnSpan="2"  >
+                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,10" Grid.ColumnSpan="2"  >
                     <Grid   Margin="0,15,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -282,15 +288,17 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"  FontSize="20" />
-                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
+                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
+                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
-                        <TextBox x:Name="Alumina_10" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Salt_10" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Anode_10" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
+                        <TextBox x:Name="Alumina_10" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Salt_10" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Anode_10" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,0" Height="30"/>
                     </Grid>
                 </Border>
+                <Label  x:Name="Count_10" Content="Загрeжено ванн: ... (...%) " VerticalAlignment="Top"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  FontSize="20" />
+
             </StackPanel>
 
 
@@ -326,7 +334,7 @@
 
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  >
                 <Label  Content="В доступе" VerticalAlignment="Top" Margin="5,0,5,0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,20" Grid.ColumnSpan="2"  >
+                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,10" Grid.ColumnSpan="2"  >
                     <Grid   Margin="0,15,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -339,15 +347,16 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"  FontSize="20" />
-                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
+                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
+                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
-                        <TextBox x:Name="Alumina_11" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Salt_11" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Anode_11" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
+                        <TextBox x:Name="Alumina_11" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Salt_11" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Anode_11" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,0" Height="30"/>
                     </Grid>
                 </Border>
+                <Label  x:Name="Count_11" Content="Загрeжено ванн: ... (...%) " VerticalAlignment="Top"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  FontSize="20" />
             </StackPanel>
 
 
@@ -383,7 +392,7 @@
 
             <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  >
                 <Label  Content="В доступе" VerticalAlignment="Top" Margin="5,0,5,0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,20" Grid.ColumnSpan="2"  >
+                <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="5,-1,5,10" Grid.ColumnSpan="2"  >
                     <Grid   Margin="0,15,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -396,15 +405,17 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"  FontSize="20" />
-                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20" />
+                        <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
+                        <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
-                        <TextBox x:Name="Alumina_12" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Salt_12" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
-                        <TextBox x:Name="Anode_12" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,15,10" Height="30"/>
+                        <TextBox x:Name="Alumina_12" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Salt_12" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
+                        <TextBox x:Name="Anode_12" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,0" Height="30"/>
                     </Grid>
                 </Border>
+                <Label  x:Name="Count_12" Content="Загрeжено ванн: ... (...%) " VerticalAlignment="Top"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  FontSize="20" />
+
             </StackPanel>
 
 
@@ -423,3 +434,4 @@
 
     </Grid>
 </Window>
+

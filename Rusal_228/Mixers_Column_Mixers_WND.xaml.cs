@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для Delivery_Admin_WND.xaml
+    /// Логика взаимодействия для Mixers_Column_Mixers_WND.xaml
     /// </summary>
-    public partial class Delivery_Admin_WND : Window
+    public partial class Mixers_Column_Mixers_WND : Window
     {
-        public Delivery_Admin_WND()
+        public Mixers_Column_Mixers_WND()
         {
             InitializeComponent();
         }

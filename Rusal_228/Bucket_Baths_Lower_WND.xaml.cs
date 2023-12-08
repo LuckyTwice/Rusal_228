@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для CaseEmpty_WND.xaml
+    /// Логика взаимодействия для Bucket_Baths_Lower_WND.xaml
     /// </summary>
-    public partial class CaseEmpty_WND : Window
+    public partial class Bucket_Baths_Lower_WND : Window
     {
-        public CaseEmpty_WND()
+        public Bucket_Baths_Lower_WND()
         {
             InitializeComponent();
         }

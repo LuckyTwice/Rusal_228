@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для Case_WND.xaml
+    /// Логика взаимодействия для Admin_Electrolysis_Bath_WND.xaml
     /// </summary>
-    public partial class Case_WND : Window
+    public partial class Admin_Electrolysis_Bath_WND : Window
     {
-        public Case_WND()
+        public Admin_Electrolysis_Bath_WND()
         {
             InitializeComponent();
         }

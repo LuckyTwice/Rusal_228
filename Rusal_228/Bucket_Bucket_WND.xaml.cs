@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для AdminMain.xaml
+    /// Логика взаимодействия для Bucket_Bucket_WND.xaml
     /// </summary>
-    public partial class AdminMain : Window
+    public partial class Bucket_Bucket_WND : Window
     {
-        public AdminMain()
+        public Bucket_Bucket_WND()
         {
             InitializeComponent();
         }

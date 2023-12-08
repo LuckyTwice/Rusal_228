@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для Electrolysis_Admin_WND.xaml
+    /// Логика взаимодействия для Bucket_Bath_WND.xaml
     /// </summary>
-    public partial class Electrolysis_Admin_WND : Window
+    public partial class Bucket_Bath_WND : Window
     {
-        public Electrolysis_Admin_WND()
+        public Bucket_Bath_WND()
         {
             InitializeComponent();
         }
