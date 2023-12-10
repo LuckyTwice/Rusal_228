@@ -37,6 +37,7 @@
         <Label Content="Добавлено глинозема" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Center"  FontSize="20" />
         <TextBox x:Name="AluminaAdd" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,30,10" Height="30"/>
 
-        <Button x:Name="Cancel" Content="Назад" FontSize="15" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="0" Margin="15,15,15,15" IsDefault="True" Height="35" Width="220"/>
+        <Button x:Name="Cancel" Content="Назад" FontSize="15" Grid.Row="6" Grid.Column="0" Margin="15,15,15,15" IsDefault="True" Height="35" Width="220"/>
+        <Button x:Name="End" Content="Закончить" FontSize="15" Grid.Row="6" Grid.Column="1" Margin="15,15,15,15" IsDefault="True" Height="35" Width="220"/>
     </Grid>
 </Window>

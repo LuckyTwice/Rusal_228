@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для Stat_WND.xaml
+    /// Логика взаимодействия для Control_Report_Defective_WND.xaml
     /// </summary>
-    public partial class Stat_WND : Window
+    public partial class Control_Report_Defective_WND : Window
     {
-        public Stat_WND()
+        public Control_Report_Defective_WND()
         {
             InitializeComponent();
         }
