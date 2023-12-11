@@ -27,7 +27,7 @@ namespace Rusal_228
         
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            Electrolysis_Department_WND dialog = new Electrolysis_Department_WND();
+            Admin_Storage_WND dialog = new Admin_Storage_WND();
         dialog.Show();
             /*using (var db = new AdminContext())
             {

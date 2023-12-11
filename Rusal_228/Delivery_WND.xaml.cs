@@ -24,7 +24,7 @@ namespace Rusal_228
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+/*        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             using (var db = new MaterialContext()) 
             {
@@ -65,6 +65,6 @@ namespace Rusal_228
             db.Posts.Add(data);
             db.SaveChanges();
             MessageBox.Show("Данные успешно внесены");
-        }
+        }*/
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Поставка" Height="550" Width="1400" Loaded="Window_Loaded" >
+        Title="Поставка" Height="550" Width="1400" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -75,7 +75,7 @@
 
 
                     </Grid>
-                    <Button x:Name="Add" Content="Добавить" FontSize="15"  Margin="15,15,15,15" IsDefault="True" Height="35" Click="Add_Click"/>
+                    <Button x:Name="Add" Content="Добавить" FontSize="15"  Margin="15,15,15,15" IsDefault="True" Height="35" />
                 </StackPanel>
 
             </Border>

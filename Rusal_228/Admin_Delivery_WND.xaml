@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Мониторинг доставки" Height="320" Width="850">
+        Title="Мониторинг доставки" Height="350" Width="850">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />

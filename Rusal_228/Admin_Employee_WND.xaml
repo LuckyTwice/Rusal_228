@@ -1,4 +1,4 @@
-﻿<Window x:Class="Rusal_228.Employee_WND"
+﻿<Window x:Class="Rusal_228.Admin_Employee_WND"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

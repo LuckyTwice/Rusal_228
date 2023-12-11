@@ -1,0 +1,54 @@
+﻿<Window x:Class="Rusal_228.Admin_Casting_WND"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rusal_228"
+        mc:Ignorable="d"
+        Title="Мониторинг отливки" Height="400" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Label  Content="Литьё столбов" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="15,15,15,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+            <Border  Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="15,52,15,13" BorderThickness="1,0,1,1" BorderBrush="Gray">
+
+                <Grid Margin="5">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+
+                    </Grid.RowDefinitions>
+                    <TextBox  x:Name="Column_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Отлито за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+
+                    <TextBox x:Name="Column_Casting" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сюда нужно инфу об отливке" VerticalAlignment="Stretch" Margin="15,0,15,0" FontSize="15"/>
+
+                </Grid>
+            </Border>
+
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Label  Content="Литьё чушек" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="15,15,15,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+            <Border  Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="15,52,15,13" BorderThickness="1,0,1,1" BorderBrush="Gray">
+
+                <Grid Margin="5">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <TextBox  x:Name="Tshaped_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Отлито за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+                    <TextBox x:Name="Tshaped_Casting" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сюда нужно инфу об отливке" VerticalAlignment="Stretch" Margin="15,0,15,0" FontSize="15"/>
+
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Grid>
+</Window>

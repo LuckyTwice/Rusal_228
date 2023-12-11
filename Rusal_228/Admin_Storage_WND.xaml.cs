@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для NewEmployee_WND.xaml
+    /// Логика взаимодействия для Admin_Storage_WND.xaml
     /// </summary>
-    public partial class NewEmployee_WND : Window
+    public partial class Admin_Storage_WND : Window
     {
-        public NewEmployee_WND()
+        public Admin_Storage_WND()
         {
             InitializeComponent();
         }

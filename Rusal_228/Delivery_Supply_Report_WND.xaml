@@ -49,8 +49,8 @@
                 <TextBox x:Name="NameSend" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
                 <TextBox x:Name="NameWrite" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
-                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Content="Назад" FontSize="15" HorizontalAlignment="Center" Margin="30,5,100,15"  IsDefault="True" Width="200" Height="35" Click="Add_Click"/>
-                <Button x:Name="Add" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Content="Добавить" FontSize="15" HorizontalAlignment="Center" Margin="100,5,30,15" IsDefault="True"  Width="200" Height="35" Click="Add_Click"/>
+                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Content="Назад" FontSize="15" HorizontalAlignment="Center" Margin="30,5,100,15"  IsDefault="True" Width="200" Height="35" />
+                <Button x:Name="Add" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Content="Добавить" FontSize="15" HorizontalAlignment="Center" Margin="100,5,30,15" IsDefault="True"  Width="200" Height="35" />
             </Grid>
 
         </Border>

@@ -1,0 +1,120 @@
+﻿<Window x:Class="Rusal_228.Admin_Bucket_WND"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rusal_228"
+        mc:Ignorable="d"
+        Title="Мониторинг работы ковшей" Height="550" Width="700">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="5" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <ListBox x:Name="Bucket" Grid.RowSpan="2" Margin="15,52,15,15" BorderBrush="Gray" BorderThickness="1" FontSize="20" />
+        <Label  Content="Ковши" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="15,15,15,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+
+        <Grid  Grid.ColumnSpan="2" Margin="30,60,30,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBox  x:Name="Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Загружено ковшей за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+            <TextBox  x:Name="Unload" Grid.ColumnSpan="2" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="Выгружено ковшей за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+
+            <Button x:Name="Bucket1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 1</Button>
+            <Button x:Name="Bucket2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 2</Button>
+            <Button x:Name="Bucket3" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 3</Button>
+            <Button x:Name="Bucket4" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 4</Button>
+            <Button x:Name="Bucket5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 5</Button>
+            <Button x:Name="Bucket6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 6</Button>
+            <Button x:Name="Bucket7" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 7</Button>
+            <Button x:Name="Bucket8" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 8</Button>
+            <Button x:Name="Bucket9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 9</Button>
+            <Button x:Name="Bucket10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 10</Button>
+            <Button x:Name="Bucket11" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 11</Button>
+            <Button x:Name="Bucket12" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 12</Button>
+            <Button x:Name="Bucket13" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 13</Button>
+            <Button x:Name="Bucket14" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 14</Button>
+            <Button x:Name="Bucket15" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 15</Button>
+            <Button x:Name="Bucket16" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 16</Button>
+            <Button x:Name="Bucket17" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 17</Button>
+            <Button x:Name="Bucket18" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 18</Button>
+            <Button x:Name="Bucket19" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 19</Button>
+            <Button x:Name="Bucket20" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 20</Button>
+            <Button x:Name="Bucket21" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 21</Button>
+            <Button x:Name="Bucket22" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 22</Button>
+            <Button x:Name="Bucket23" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 23</Button>
+            <Button x:Name="Bucket24" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Ковш 24</Button>
+
+        </Grid>
+
+
+    </Grid>
+</Window>

@@ -55,8 +55,8 @@
                     <TextBox x:Name="NameTake" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
                     <TextBox x:Name="NameWrite" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
-                    <Button x:Name="Cancel" Grid.Column="0" Grid.Row="12" Content="Назад" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35" Click="Add_Click"/>
-                    <Button x:Name="Add" Grid.Column="1" Grid.Row="12" Content="Добавить" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35" Click="Add_Click"/>
+                    <Button x:Name="Cancel" Grid.Column="0" Grid.Row="12" Content="Назад" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35"/>
+                    <Button x:Name="Add" Grid.Column="1" Grid.Row="12" Content="Добавить" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35"/>
                 </Grid>
             </StackPanel>
         </Border>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Дефекты" Height="550" Width="600" Loaded="Window_Loaded">
+        Title="Дефекты" Height="550" Width="600" >
     <StackPanel>
         <Grid Margin="15,0,15,0">
             <Grid.ColumnDefinitions>
