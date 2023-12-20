@@ -1,0 +1,30 @@
+﻿<Window x:Class="Rusal_228.Message_Text_WND"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rusal_228"
+        mc:Ignorable="d"
+        Title="Чтение сообщения" Height="470" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0"  Content="Получено сообщение от " Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,5" Padding="0"  VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="30"  />
+        <Label Grid.Column="0" Grid.Row="1"  Content="Отправлено в " Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,5" Padding="0"  VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="30"  />
+
+        <TextBox x:Name="Write" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,5,15,10" VerticalAlignment="Top" Height="250" BorderThickness="2"/>
+
+
+        <Button x:Name="Back" Grid.Column="0" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="15,0" Background="LightGray" FontSize="15" >Назад</Button>
+        <Button x:Name="Mark" Grid.Column="1" Grid.Row="3"  VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="15,0" Background="LightGray" FontSize="15" >Пометить прочитанным</Button>
+    </Grid>
+</Window>

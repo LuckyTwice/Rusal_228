@@ -1,0 +1,58 @@
+﻿<Window x:Class="Rusal_228.Delivery_Supply_Report_WND"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rusal_228"
+        mc:Ignorable="d"
+        Title="Отчет о снабжении" Height="470" Width="800">
+    <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,20,0,0" >
+        <Label  Content="Отчет о снабжении" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+        <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,0,20,15" VerticalAlignment="Stretch" Grid.ColumnSpan="2" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Label Content="Тип сырья" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
+                <Label Content="Цех направления" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
+                <Label Content="Количество, кг" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
+
+                <TextBox x:Name="Type_Material" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+                <TextBox x:Name="Direction_Material" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+                <TextBox x:Name="Quantity_Material" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+
+                <Label Content="Дата снабжения" Grid.Column="0" Grid.Row="3" Margin="30,0,100,0" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" Width="200"  VerticalAlignment="Top" FontSize="15" />
+                <Label Content="Время снабжения"  Grid.Column="1" Grid.Row="3" Margin="100,0,30,0" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" Width="200" VerticalAlignment="Top" FontSize="15" />
+
+
+                <TextBox  x:Name="Date" Margin="30,0,100,15" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Width="200" Height="30" />
+                <TextBox x:Name="Time" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Margin="100,0,30,15" FontSize="15" Width="200" Height="30" />
+
+                <Label Content="Сотрудник, отправивший сырьё"  Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
+                <Label Content="Сотрудник, оформивший отчет" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
+
+                <TextBox x:Name="NameSend" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
+                <TextBox x:Name="NameWrite" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
+
+                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Content="Назад" FontSize="15" HorizontalAlignment="Center" Margin="30,5,100,15"  IsDefault="True" Width="200" Height="35" />
+                <Button x:Name="Add" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Content="Добавить" FontSize="15" HorizontalAlignment="Center" Margin="100,5,30,15" IsDefault="True"  Width="200" Height="35" />
+            </Grid>
+
+        </Border>
+    </StackPanel>
+</Window>
