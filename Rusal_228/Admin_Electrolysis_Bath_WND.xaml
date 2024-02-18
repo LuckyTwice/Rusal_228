@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-Title="Выбор ванны" Height="500" Width="500">
+Title="Выбор ванны" Height="500" Width="500" Loaded="Window_Loaded">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -63,7 +63,7 @@ Title="Выбор ванны" Height="500" Width="500">
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid >
 
         <ListBox x:Name="Corpus" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="15,64,15,15" BorderBrush="Gray" BorderThickness="1" FontSize="20" />
         <Label Grid.Column="0" Grid.Row="2" Content=" Корпус № " Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="15" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
@@ -82,17 +82,16 @@ Title="Выбор ванны" Height="500" Width="500">
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Button x:Name="Corpus_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1 ванна</Button>
-            <Button x:Name="Corpus_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >2 ванна</Button>
-            <Button x:Name="Corpus_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >3 ванна</Button>
-            <Button x:Name="Corpus_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >4 ванна</Button>
-            <Button x:Name="Corpus_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >5 ванна</Button>
-
-            <Button x:Name="Corpus_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >6 ванна</Button>
-            <Button x:Name="Corpus_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >7 ванна</Button>
-            <Button x:Name="Corpus_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >8 ванна</Button>
-            <Button x:Name="Corpus_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >9ванна</Button>
-            <Button x:Name="Corpus_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10 ванна</Button>
+            <Button x:Name="Corpus_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden" >1 ванна</Button>
+            <Button x:Name="Corpus_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">2 ванна</Button>
+            <Button x:Name="Corpus_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">3 ванна</Button>
+            <Button x:Name="Corpus_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">4 ванна</Button>
+            <Button x:Name="Corpus_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">5 ванна</Button>
+            <Button x:Name="Corpus_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">6 ванна</Button>
+            <Button x:Name="Corpus_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">7 ванна</Button>
+            <Button x:Name="Corpus_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">8 ванна</Button>
+            <Button x:Name="Corpus_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">9ванна</Button>
+            <Button x:Name="Corpus_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Visibility="Hidden">10 ванна</Button>
 
         </Grid>
 

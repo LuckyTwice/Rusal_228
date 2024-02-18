@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Мониторинг электролиза" Height="900" Width="1900">
+        Title="Мониторинг электролиза" Height="900" Width="1900" Loaded="Window_Loaded">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -123,16 +123,16 @@
 
             </StackPanel>
 
-            <Button x:Name="Corpus7_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-10 ванна</Button>
-            <Button x:Name="Corpus7_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10-20 ванна</Button>
-            <Button x:Name="Corpus7_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >20-30 ванна</Button>
-            <Button x:Name="Corpus7_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >30-40 ванна</Button>
-            <Button x:Name="Corpus7_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >40-50 ванна</Button>
-            <Button x:Name="Corpus7_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >50-60 ванна</Button>
-            <Button x:Name="Corpus7_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >60-70 ванна</Button>
-            <Button x:Name="Corpus7_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >70-80 ванна</Button>
-            <Button x:Name="Corpus7_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >80-90 ванна</Button>
-            <Button x:Name="Corpus7_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >90-100 ванна</Button>
+            <Button x:Name="Corpus7_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click" >1-10 ванна</Button>
+            <Button x:Name="Corpus7_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">10-20 ванна</Button>
+            <Button x:Name="Corpus7_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click" >20-30 ванна</Button>
+            <Button x:Name="Corpus7_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">30-40 ванна</Button>
+            <Button x:Name="Corpus7_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">40-50 ванна</Button>
+            <Button x:Name="Corpus7_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">50-60 ванна</Button>
+            <Button x:Name="Corpus7_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">60-70 ванна</Button>
+            <Button x:Name="Corpus7_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">70-80 ванна</Button>
+            <Button x:Name="Corpus7_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">80-90 ванна</Button>
+            <Button x:Name="Corpus7_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">90-100 ванна</Button>
 
         </Grid>
 
@@ -182,16 +182,16 @@
             </StackPanel>
 
 
-            <Button x:Name="Corpus8_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-10 ванна</Button>
-            <Button x:Name="Corpus8_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10-20 ванна</Button>
-            <Button x:Name="Corpus8_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >20-30 ванна</Button>
-            <Button x:Name="Corpus8_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >30-40 ванна</Button>
-            <Button x:Name="Corpus8_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >40-50 ванна</Button>
-            <Button x:Name="Corpus8_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >50-60 ванна</Button>
-            <Button x:Name="Corpus8_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >60-70 ванна</Button>
-            <Button x:Name="Corpus8_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >70-80 ванна</Button>
-            <Button x:Name="Corpus8_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >80-90 ванна</Button>
-            <Button x:Name="Corpus8_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >90-100 ванна</Button>
+            <Button x:Name="Corpus8_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">1-10 ванна</Button>
+            <Button x:Name="Corpus8_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">10-20 ванна</Button>
+            <Button x:Name="Corpus8_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">20-30 ванна</Button>
+            <Button x:Name="Corpus8_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">30-40 ванна</Button>
+            <Button x:Name="Corpus8_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">40-50 ванна</Button>
+            <Button x:Name="Corpus8_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">50-60 ванна</Button>
+            <Button x:Name="Corpus8_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">60-70 ванна</Button>
+            <Button x:Name="Corpus8_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">70-80 ванна</Button>
+            <Button x:Name="Corpus8_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">80-90 ванна</Button>
+            <Button x:Name="Corpus8_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">90-100 ванна</Button>
 
         </Grid>
 
@@ -242,16 +242,16 @@
             </StackPanel>
 
 
-            <Button x:Name="Corpus9_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-10 ванна</Button>
-            <Button x:Name="Corpus9_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10-20 ванна</Button>
-            <Button x:Name="Corpus9_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >20-30 ванна</Button>
-            <Button x:Name="Corpus9_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >30-40 ванна</Button>
-            <Button x:Name="Corpus9_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >40-50 ванна</Button>
-            <Button x:Name="Corpus9_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >50-60 ванна</Button>
-            <Button x:Name="Corpus9_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >60-70 ванна</Button>
-            <Button x:Name="Corpus9_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >70-80 ванна</Button>
-            <Button x:Name="Corpus9_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >80-90 ванна</Button>
-            <Button x:Name="Corpus9_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >90-100 ванна</Button>
+            <Button x:Name="Corpus9_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">1-10 ванна</Button>
+            <Button x:Name="Corpus9_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">10-20 ванна</Button>
+            <Button x:Name="Corpus9_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">20-30 ванна</Button>
+            <Button x:Name="Corpus9_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">30-40 ванна</Button>
+            <Button x:Name="Corpus9_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">40-50 ванна</Button>
+            <Button x:Name="Corpus9_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">50-60 ванна</Button>
+            <Button x:Name="Corpus9_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">60-70 ванна</Button>
+            <Button x:Name="Corpus9_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">70-80 ванна</Button>
+            <Button x:Name="Corpus9_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">80-90 ванна</Button>
+            <Button x:Name="Corpus9_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">90-100 ванна</Button>
 
         </Grid>
 
@@ -302,16 +302,16 @@
             </StackPanel>
 
 
-            <Button x:Name="Corpus10_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-10 ванна</Button>
-            <Button x:Name="Corpus10_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10-20 ванна</Button>
-            <Button x:Name="Corpus10_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >20-30 ванна</Button>
-            <Button x:Name="Corpus10_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >30-40 ванна</Button>
-            <Button x:Name="Corpus10_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >40-50 ванна</Button>
-            <Button x:Name="Corpus10_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >50-60 ванна</Button>
-            <Button x:Name="Corpus10_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >60-70 ванна</Button>
-            <Button x:Name="Corpus10_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >70-80 ванна</Button>
-            <Button x:Name="Corpus10_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >80-90 ванна</Button>
-            <Button x:Name="Corpus10_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >90-100 ванна</Button>
+            <Button x:Name="Corpus10_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">1-10 ванна</Button>
+            <Button x:Name="Corpus10_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">10-20 ванна</Button>
+            <Button x:Name="Corpus10_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">20-30 ванна</Button>
+            <Button x:Name="Corpus10_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">30-40 ванна</Button>
+            <Button x:Name="Corpus10_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">40-50 ванна</Button>
+            <Button x:Name="Corpus10_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">50-60 ванна</Button>
+            <Button x:Name="Corpus10_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">60-70 ванна</Button>
+            <Button x:Name="Corpus10_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">70-80 ванна</Button>
+            <Button x:Name="Corpus10_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">80-90 ванна</Button>
+            <Button x:Name="Corpus10_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">90-100 ванна</Button>
 
         </Grid>
 
@@ -360,16 +360,16 @@
             </StackPanel>
 
 
-            <Button x:Name="Corpus11_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-10 ванна</Button>
-            <Button x:Name="Corpus11_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10-20 ванна</Button>
-            <Button x:Name="Corpus11_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >20-30 ванна</Button>
-            <Button x:Name="Corpus11_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >30-40 ванна</Button>
-            <Button x:Name="Corpus11_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >40-50 ванна</Button>
-            <Button x:Name="Corpus11_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >50-60 ванна</Button>
-            <Button x:Name="Corpus11_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >60-70 ванна</Button>
-            <Button x:Name="Corpus11_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >70-80 ванна</Button>
-            <Button x:Name="Corpus11_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >80-90 ванна</Button>
-            <Button x:Name="Corpus11_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >90-100 ванна</Button>
+            <Button x:Name="Corpus11_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">1-10 ванна</Button>
+            <Button x:Name="Corpus11_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">10-20 ванна</Button>
+            <Button x:Name="Corpus11_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">20-30 ванна</Button>
+            <Button x:Name="Corpus11_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">30-40 ванна</Button>
+            <Button x:Name="Corpus11_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">40-50 ванна</Button>
+            <Button x:Name="Corpus11_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">50-60 ванна</Button>
+            <Button x:Name="Corpus11_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">60-70 ванна</Button>
+            <Button x:Name="Corpus11_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">70-80 ванна</Button>
+            <Button x:Name="Corpus11_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">80-90 ванна</Button>
+            <Button x:Name="Corpus11_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">90-100 ванна</Button>
 
         </Grid>
 
@@ -419,16 +419,16 @@
             </StackPanel>
 
 
-            <Button x:Name="Corpus12_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-10 ванна</Button>
-            <Button x:Name="Corpus12_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10-20 ванна</Button>
-            <Button x:Name="Corpus12_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >20-30 ванна</Button>
-            <Button x:Name="Corpus12_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >30-40 ванна</Button>
-            <Button x:Name="Corpus12_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >40-50 ванна</Button>
-            <Button x:Name="Corpus12_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >50-60 ванна</Button>
-            <Button x:Name="Corpus12_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >60-70 ванна</Button>
-            <Button x:Name="Corpus12_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >70-80 ванна</Button>
-            <Button x:Name="Corpus12_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >80-90 ванна</Button>
-            <Button x:Name="Corpus12_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >90-100 ванна</Button>
+            <Button x:Name="Corpus12_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">1-10 ванна</Button>
+            <Button x:Name="Corpus12_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">10-20 ванна</Button>
+            <Button x:Name="Corpus12_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">20-30 ванна</Button>
+            <Button x:Name="Corpus12_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">30-40 ванна</Button>
+            <Button x:Name="Corpus12_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">40-50 ванна</Button>
+            <Button x:Name="Corpus12_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">50-60 ванна</Button>
+            <Button x:Name="Corpus12_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">60-70 ванна</Button>
+            <Button x:Name="Corpus12_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">70-80 ванна</Button>
+            <Button x:Name="Corpus12_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">80-90 ванна</Button>
+            <Button x:Name="Corpus12_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" Click="Click">90-100 ванна</Button>
 
         </Grid>
 
