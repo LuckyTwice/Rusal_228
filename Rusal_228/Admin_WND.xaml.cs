@@ -23,5 +23,79 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
+
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow dialog = new MainWindow();
+            dialog.Show();
+            Close();
+        }
+
+        private void Rules_Click(object sender, RoutedEventArgs e)
+        {
+            //Реализовать не открывание нового окна, если одно уже открыто
+            //if ()
+            Admin_Rules_WND dialog = new Admin_Rules_WND();
+            dialog.ShowDialog();
+            //Close();
+        }
+
+        private void Stat_Click(object sender, RoutedEventArgs e)
+        {
+            //Реализовать не открывание нового окна, если одно уже открыто
+            Admin_Stat_WND dialog = new Admin_Stat_WND();
+            dialog.Show();
+            Close();
+        }
+
+        private void Alert_Click(object sender, RoutedEventArgs e)
+        {
+            //Реализовать не открывание нового окна, если одно уже открыто
+            Message_WND dialog = new Message_WND();
+            dialog.Show();
+            Close();
+        }
+
+        private void Delivery_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin_Delivery_WND dialog = new Admin_Delivery_WND();  
+            dialog.Show();
+        }
+
+        private void Electrolysis_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin_Electrolysis_WND dialog = new Admin_Electrolysis_WND();
+            dialog.Show();
+        }
+
+        private void Bucket_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin_Bucket_WND dialog = new Admin_Bucket_WND();
+            dialog.Show();
+        }
+
+        private void Mixer_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin_Mixer_WND dialog = new Admin_Mixer_WND();
+            dialog.Show();
+        }
+
+        private void Casting_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin_Casting_WND dialog = new Admin_Casting_WND();
+            dialog.Show();
+        }
+
+        private void Control_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin_Control_WND dialog = new Admin_Control_WND();
+            dialog.Show();
+        }
+
+        private void Storage_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin_Storage_WND dialog = new Admin_Storage_WND();
+            dialog.Show();
+        }
     }
 }

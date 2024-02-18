@@ -25,7 +25,7 @@
 
             <Border Background="LightGray" Margin="15,20,15,10" CornerRadius="10" BorderBrush="Gray" BorderThickness="1">
                 <Grid>
-                    <ListBox x:Name="Department"  HorizontalAlignment="Stretch" Margin="10,10,10,10"  VerticalAlignment="Top" Height="300" Background="LightGray" BorderThickness="0" FontSize="20"/>
+                    <ListBox x:Name="Department"  HorizontalAlignment="Stretch" Margin="10,10,10,10"  VerticalAlignment="Top" Height="300" Background="LightGray" BorderThickness="0" FontSize="20" SelectionChanged="Department_SelectionChanged"/>
                 </Grid>
             </Border>
 
@@ -36,7 +36,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
-                <Button x:Name="Add_Empl" Grid.Column="1" Grid.Row="0" Content="Добавить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
+                <Button x:Name="Add_Empl" Grid.Column="1" Grid.Row="0" Content="Добавить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Add_Empl_Click" />
                 <Button x:Name="Stop" Grid.Column="2" Grid.Row="0" Content="Сохранить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
             </Grid>
         </StackPanel>

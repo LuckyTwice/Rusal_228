@@ -23,5 +23,11 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
+
+        private void Read_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Message_Text_WND dialog = new Message_Text_WND();
+            dialog.ShowDialog();
+        }
     }
 }

@@ -27,8 +27,9 @@ namespace Rusal_228
         
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            Admin_Storage_WND dialog = new Admin_Storage_WND();
-        dialog.Show();
+            Admin_WND dialog = new Admin_WND();
+            dialog.Show();
+            Close();
             /*using (var db = new AdminContext())
             {
                 bool isConnected = db.Database.CanConnect();
@@ -67,7 +68,7 @@ namespace Rusal_228
             }*/
            
         }
-        private bool VerifyLogin(AdminContext db, int username, int password)
+        /*private bool VerifyLogin(AdminContext db, int username, int password)
         {
                 int verify = db.Passwords.Count(p => p.Id == username && p.Password1 == password);
                 return verify > 0;
@@ -97,7 +98,7 @@ namespace Rusal_228
             Admin_WND admin = new Admin_WND();
             admin.Name.Text = $"{fio.Фамилия} {fio.Имя} {fio.Отчество}";
             admin.ShowDialog();
-        }
+        }*/
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {

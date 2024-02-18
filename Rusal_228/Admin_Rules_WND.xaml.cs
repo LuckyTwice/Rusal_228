@@ -23,5 +23,17 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
+
+        private void Add_Empl_Click(object sender, RoutedEventArgs e)
+        {
+            Admin_NewEmployee_WND dialog = new Admin_NewEmployee_WND();
+            dialog.ShowDialog();
+        }
+
+        private void Department_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Admin_Employee_WND dialog = new Admin_Employee_WND();
+            dialog.ShowDialog();
+        }
     }
 }
