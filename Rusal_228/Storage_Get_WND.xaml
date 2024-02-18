@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-  Title="Отчет о прибытии в хранилище" Height="400" Width="800">
+  Title="Отчет о прибытии в хранилище" Height="410" Width="800">
     <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,20,0,0" >
         <Label  Content="Отчет о прибытии в хранилище" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
         <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,0,20,15" VerticalAlignment="Stretch" Grid.ColumnSpan="2" >

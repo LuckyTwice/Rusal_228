@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Ковши" Height="650" Width="800">
+        Title="Ковши" Height="670" Width="800">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -94,8 +94,8 @@
 
 
 
-        <Label  Content="Документооборот" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10,282,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" Grid.RowSpan="2" />
-        <ListBox x:Name="Documents"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  Margin="10,37,20,20" BorderBrush="Gray" BorderThickness="1"  FontSize="20" />
+        <Label  Content="Документооборот" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" Grid.RowSpan="2" />
+        <ListBox x:Name="Documents"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  Margin="10,38,20,20" BorderBrush="Gray" BorderThickness="1,0,1,1"  FontSize="20" />
 
 
         <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Margin="0,70,0,0" Grid.RowSpan="2"  >

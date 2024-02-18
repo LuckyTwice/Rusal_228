@@ -24,7 +24,7 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
-        
+
         private void Done_Click(object sender, RoutedEventArgs e)
         {
             Admin_WND dialog = new Admin_WND();
@@ -66,24 +66,24 @@ namespace Rusal_228
                     MessageBox.Show("Отсутствует связь с сервером", "Ошибка");
                 }
             }*/
-           
+
         }
         /*private bool VerifyLogin(AdminContext db, int username, int password)
         {
-                int verify = db.Passwords.Count(p => p.Id == username && p.Password1 == password);
-                return verify > 0;
+            int verify = db.Passwords.Count(p => p.Id == username && p.Password1 == password);
+            return verify > 0;
         }
         private int GetProffFromTable2(AdminContext db, int username)
         {
-                //Возможно использование First это костыль
-                var id = db.Personals.Where(p => p.Id == username).Select(p=> p.Профессия ).First();
-                return Convert.ToInt32(id);
+            //Возможно использование First это костыль
+            var id = db.Personals.Where(p => p.Id == username).Select(p => p.Профессия).First();
+            return Convert.ToInt32(id);
         }
 
         private string VerifyProff(AdminContext db, int proff)
         {
-                var prof = db.Professia.Where(p => p.Id == proff).Select(p => p.Професия).First();
-                return prof.ToString();
+            var prof = db.Professia.Where(p => p.Id == proff).Select(p => p.Професия).First();
+            return prof.ToString();
         }
         private void OpenWindow1(AdminContext db, int id)
         {
@@ -94,7 +94,7 @@ namespace Rusal_228
         }
         private void OpenWindow2(AdminContext db, int id)
         {
-            var fio = db.Personals.Where(p => p.Id == id).Select(p => new {p.Фамилия, p.Имя, p.Отчество }).First();
+            var fio = db.Personals.Where(p => p.Id == id).Select(p => new { p.Фамилия, p.Имя, p.Отчество }).First();
             Admin_WND admin = new Admin_WND();
             admin.Name.Text = $"{fio.Фамилия} {fio.Имя} {fio.Отчество}";
             admin.ShowDialog();

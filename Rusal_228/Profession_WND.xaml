@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Выберите специальность" Height="380" Width="500" Background="#FFE4E4E4" >
+        Title="Выберите специальность" Height="420" Width="530" Background="#FFE4E4E4" >
     <Window.Resources>
         <SolidColorBrush x:Key="ListBox.Static.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FFABADB3"/>
@@ -48,7 +48,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <StackPanel Background="#FFE4E4E4" HorizontalAlignment="Center"  VerticalAlignment="Center">
+    <StackPanel Background="#FFE4E4E4" HorizontalAlignment="Center"  Margin="0,0,0,15" VerticalAlignment="Center">
         <TextBlock Text="Выберите необходимый отдел" HorizontalAlignment="Center" FontSize="30" FontWeight="Heavy" Margin="0,15"/>
 
         <ListBox Style="{DynamicResource ListBoxStyle1}" x:Name="Read" Grid.RowSpan="2" Margin="20" Background="LightGray" BorderBrush="LightGray" FontSize="15" Height="200"/>

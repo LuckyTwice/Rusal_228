@@ -18,8 +18,8 @@
             <ColumnDefinition  />
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0"  Content="Получено сообщение от " Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,5" Padding="0"  VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="30"  />
-        <Label Grid.Column="0" Grid.Row="1"  Content="Отправлено в " Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,5" Padding="0"  VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="30"  />
+        <Label Grid.Column="0" Grid.Row="0"  Content="Получено сообщение от контроля качества" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,5" Padding="0"  VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="30"  />
+        <Label Grid.Column="0" Grid.Row="1"  Content="Отправлено в 13:42" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,5" Padding="0"  VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="30"  />
 
         <TextBox x:Name="Write" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,5,15,10" VerticalAlignment="Top" Height="250" BorderThickness="2"/>
 
