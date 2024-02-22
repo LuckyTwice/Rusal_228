@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,12 @@ namespace Rusal_228
     /// </summary>
     public partial class Admin_Electrolysis_WND : Window
     {
-        Button[,] Corpuses;
+        private Button[,] Corpuses;
+        int[] baths;
 
         public Admin_Electrolysis_WND()
         {
             InitializeComponent();
-
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -37,7 +38,7 @@ namespace Rusal_228
             { Corpus11_1, Corpus11_2, Corpus11_3, Corpus11_4, Corpus11_5, Corpus11_6, Corpus11_7, Corpus11_8, Corpus11_9, Corpus11_10 },
             { Corpus12_1, Corpus12_2, Corpus12_3, Corpus12_4, Corpus12_5, Corpus12_6, Corpus12_7, Corpus12_8, Corpus12_9, Corpus12_10 } };
 
-            int[] baths = new int[] { 100, 90, 81, 91, 75, 88 };
+            baths = new int[] { 100, 90, 81, 91, 75, 88 };
 
             for (int i = 0; i < Corpuses.GetLength(0); i++)
             {
@@ -57,28 +58,52 @@ namespace Rusal_228
                         Corpuses[i, j].Content = (change * j + 1).ToString() + " - " + (baths[i]).ToString() + " ванны";
                 }
             }
+
+            AddEventButton();
         }
-
-        private void Click(object sender, RoutedEventArgs e)
+        private void AddEventButton()
         {
-            Button clickedButton = (Button)sender;
-            if (clickedButton != null)
+            for (int i = 0; i < Corpuses.GetLength(0); i++)
             {
-                string[] subs = clickedButton.Content.ToString().Replace(" ", "").Replace("ванна", "").Replace("ванны", "").Split('-');
-
-                Admin_Electrolysis_Bath_WND dialog = new Admin_Electrolysis_Bath_WND();
-
-                dialog.start = Convert.ToInt32(subs[0]);
-                if (subs.Length > 1)
-                dialog.finish = Convert.ToInt32(subs[1]);
-                else
-                dialog.start = Convert.ToInt32(subs[0]);
-
-                if (dialog.ShowDialog() == true) // Диалог завершен с кнопкой OK
+                for (int j = 0; j < Corpuses.GetLength(1); j++)
                 {
-
+                    Button button = Corpuses[i, j];
+                    button.Tag = new Tuple<int, int>(i, j);
+                    button.Click -= Button_Click; // Удаляем старый обработчик
+                    button.Click += Button_Click; // Добавляем новый обработчик
                 }
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            // ЧТО ЭТО ТАКОЕ УЗНАТЬ НАДА________________________________________________________________________________
+            Tuple<int, int> tag = (Tuple<int, int>)button.Tag;
+            int row = tag.Item1;
+            int col = tag.Item2;
+
+            Button clickedButton = Corpuses[row, col];
+
+            if (clickedButton != null)
+            {
+                Admin_Electrolysis_Bath_WND dialog = new Admin_Electrolysis_Bath_WND();
+
+                int buttonNumber = (row * Corpuses.GetLength(1)) + col + 1;
+                int corpus = (buttonNumber - 1) / 10;
+                double change = Math.Ceiling((double)baths[(buttonNumber - 1) / 10] / Corpuses.GetLength(1));
+
+                dialog.corpus = (buttonNumber - 1) / 10 + 7;
+                dialog.start = Convert.ToInt32(1 + (buttonNumber - 1) % 10 * change);
+
+                if (((buttonNumber - 1) % 10 + 1) * change < baths[(buttonNumber - 1) / 10])
+                    dialog.finish = Convert.ToInt32(((buttonNumber - 1) % 10 + 1) * change);
+                else
+                    dialog.finish = baths[(buttonNumber - 1) / 10];
+
+                dialog.ShowDialog();
+            }
+        }
+
     }
 }

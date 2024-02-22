@@ -21,6 +21,7 @@ namespace Rusal_228
     {
         public int start { get; set; }
         public int finish { get; set; }
+        public int corpus { get; set; }
 
 
         public Admin_Electrolysis_Bath_WND()
@@ -30,10 +31,12 @@ namespace Rusal_228
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            Corpus_name.Content = "Корпус № " + corpus;
             Button[] Baths = new Button[] { Corpus_1, Corpus_2, Corpus_3, Corpus_4, Corpus_5, Corpus_6, Corpus_7, Corpus_8, Corpus_9, Corpus_10 };
 
             int var1 = start;
             int var2 = finish;
+            int var3 = corpus;
 
             if (var2 == 0)
             {
@@ -41,14 +44,13 @@ namespace Rusal_228
                 Baths[0].Content = start.ToString() + " ванна";
             }
             else
-                for (int i = 0; i < var2 + 1 - var1; i++)
+                for (int i = 0; i < Math.Abs(var2 - var1) + 1; i++)
                 {
                     Baths[i].Visibility = Visibility.Visible;
                     Baths[i].Content = (start + i).ToString() + " ванна";
                 }
 
             //DialogResult = true;
-            MessageBox.Show(var1.ToString() + "   " + var2.ToString());
         }
     }
 }
