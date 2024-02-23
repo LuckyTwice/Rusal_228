@@ -36,7 +36,7 @@ namespace Rusal_228
             //Реализовать не открывание нового окна, если одно уже открыто
             //if ()
             Admin_Rules_WND dialog = new Admin_Rules_WND();
-            dialog.ShowDialog();
+            dialog.Show();
             //Close();
         }
 
@@ -45,7 +45,6 @@ namespace Rusal_228
             //Реализовать не открывание нового окна, если одно уже открыто
             Admin_Stat_WND dialog = new Admin_Stat_WND();
             dialog.Show();
-            Close();
         }
 
         private void Alert_Click(object sender, RoutedEventArgs e)
@@ -53,7 +52,6 @@ namespace Rusal_228
             //Реализовать не открывание нового окна, если одно уже открыто
             Message_WND dialog = new Message_WND();
             dialog.Show();
-            Close();
         }
 
         private void Delivery_PreviewMouseDown(object sender, MouseButtonEventArgs e)

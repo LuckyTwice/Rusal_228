@@ -19,9 +19,23 @@ namespace Rusal_228
     /// </summary>
     public partial class Admin_Mixers_Empty_WND : Window
     {
+        public int Type { get; set; }
+        public int Number { get; set; }
         public Admin_Mixers_Empty_WND()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            int TypeMixer = Type;
+            int NumberMixer = Number+1;
+
+            if (TypeMixer == 0)
+                Mixer_Numb.Text = "Столбы. Миксер " + NumberMixer + ".";
+            else
+                Mixer_Numb.Text = "Чушки. Миксер " + NumberMixer + ".";
+
         }
     }
 }

@@ -36,7 +36,7 @@
                     <ColumnDefinition  />
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="Back" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,10" Background="LightGray" FontSize="15" >Назад</Button>
+                <Button x:Name="Back" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,10" Background="LightGray" FontSize="15" IsCancel="True">Назад</Button>
                 <Button x:Name="Add" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,10" Background="LightGray" FontSize="15" >Отправить сообщение</Button>
 
             </Grid>

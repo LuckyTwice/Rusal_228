@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-      Title="Информация о ковше"  Height="300" Width="400">
+      Title="Информация о ковше"  Height="250" Width="400" Loaded="Window_Loaded">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -85,7 +85,6 @@
 
                 </Grid>
             </Border>
-            <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Window>

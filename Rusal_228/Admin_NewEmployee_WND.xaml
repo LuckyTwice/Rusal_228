@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Новый сотрудник" Height="300" Width="500">
+        Title="Новый сотрудник" Height="320" Width="500">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
@@ -148,8 +148,8 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
-                <Button x:Name="Save" Grid.Column="1" Grid.Row="0" Content="Сохранить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
+                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True" Click="Cancel_Click"/>
+                <Button x:Name="Save" Grid.Column="1" Grid.Row="0" Content="Сохранить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Save_Click" />
             </Grid>
         </StackPanel>
     </Grid>

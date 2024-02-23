@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Мониторинг работы миксеров" Height="450" Width="800">
+        Title="Мониторинг работы миксеров" Height="450" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -104,7 +104,7 @@
                     </Grid.RowDefinitions>
                     <TextBox  x:Name="Tshaped_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Загружено в миксера за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
                     <Button x:Name="Tshaped_Mixer1" Style="{DynamicResource ButtonStyle1}" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 1</Button>
-                    <Button x:Name="TshapedM_ixer2" Style="{DynamicResource ButtonStyle1}" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 2</Button>
+                    <Button x:Name="Tshaped_Mixer2" Style="{DynamicResource ButtonStyle1}" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 2</Button>
                     <Button x:Name="Tshaped_Mixer3" Style="{DynamicResource ButtonStyle1}" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 3</Button>
                 </Grid>
             </Border>

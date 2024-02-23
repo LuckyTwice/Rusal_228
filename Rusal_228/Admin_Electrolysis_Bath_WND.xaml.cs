@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace Rusal_228
         public int finish { get; set; }
         public int corpus { get; set; }
 
-
+        Button[] Baths;
         public Admin_Electrolysis_Bath_WND()
         {
             InitializeComponent();
@@ -31,26 +32,52 @@ namespace Rusal_228
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Corpus_name.Content = "Корпус № " + corpus;
-            Button[] Baths = new Button[] { Corpus_1, Corpus_2, Corpus_3, Corpus_4, Corpus_5, Corpus_6, Corpus_7, Corpus_8, Corpus_9, Corpus_10 };
+            Corpus_name.Content = "Корпус " + corpus;
+            Baths = new Button[] { Corpus_1, Corpus_2, Corpus_3, Corpus_4, Corpus_5, Corpus_6, Corpus_7, Corpus_8, Corpus_9, Corpus_10 };
 
-            int var1 = start;
-            int var2 = finish;
-            int var3 = corpus;
+            int startBaths = start;
+            int finishBaths = finish;
+            int corpusBaths = corpus;
 
-            if (var2 == 0)
+            for (int i = 0; i < Math.Abs(finishBaths - startBaths) + 1; i++)
             {
-                Baths[0].Visibility = Visibility.Visible;
-                Baths[0].Content = start.ToString() + " ванна";
-            }
-            else
-                for (int i = 0; i < Math.Abs(var2 - var1) + 1; i++)
-                {
-                    Baths[i].Visibility = Visibility.Visible;
-                    Baths[i].Content = (start + i).ToString() + " ванна";
-                }
+                Baths[i].Tag = new Tuple<int, int>(corpus, start + i);
 
-            //DialogResult = true;
+                Baths[i].Visibility = Visibility.Visible;
+                Baths[i].Content = (start + i).ToString() + " ванна";
+            }
+            AddEventButton();
+        }
+
+        private void AddEventButton()
+        {
+            for (int i = 0; i < Baths.Length; i++)
+            {
+                Button button = Baths[i];
+                button.Click -= Button_Click;
+                button.Click += Button_Click;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            Tuple<int, int> tag = (Tuple<int, int>)button.Tag;
+            int Corpus = tag.Item1;
+            int Bath = tag.Item2;
+            //MessageBox.Show(Corpus.ToString() + "  " + Bath.ToString());
+
+                // сделать проверку, что в выбранной ванне запущен процесс электролиза, но не закончен
+                // Если да, то
+                Admin_Electrolysis_Bath_Full_WND dialog = new Admin_Electrolysis_Bath_Full_WND();
+
+                dialog.Corpus = Corpus;
+                dialog.Bath = Bath;
+
+                dialog.ShowDialog();
+                // если нет, то
+                MessageBox.Show("Выбранная вами ванна не запущена", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
     }
 }

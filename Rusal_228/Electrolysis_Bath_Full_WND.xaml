@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-      Title="Информация о ванне"  Height="480" Width="400">
+      Title="Информация о ванне"  Height="350" Width="400">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -87,13 +87,6 @@
                     <TextBox x:Name="Alumina" Style="{DynamicResource TextBoxStyle1}" Grid.Row="2" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                     <TextBox x:Name="Salt" Style="{DynamicResource TextBoxStyle1}" Grid.Row="3" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                     <TextBox x:Name="Anode" Style="{DynamicResource TextBoxStyle1}" Grid.Row="4" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,10,15,20" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
-
-                    <Label Content="Предотвращение анодного эффекта" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" FontSize="20" />
-
-                    <Label Content="Добавить глинозем" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="15,0,0,20" Padding="0" VerticalAlignment="Center"  FontSize="15" />
-                    <Label Content="—" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,20" FontSize="15"  />
-                    <TextBox x:Name="AluminaAdd" Style="{DynamicResource TextBoxStyle1}" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,7,15,20" Height="25" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
-
                 </Grid>
             </Border>
 

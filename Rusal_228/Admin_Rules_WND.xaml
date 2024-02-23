@@ -35,9 +35,9 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
+                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True" Click="Cancel_Click"/>
                 <Button x:Name="Add_Empl" Grid.Column="1" Grid.Row="0" Content="Добавить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Add_Empl_Click" />
-                <Button x:Name="Stop" Grid.Column="2" Grid.Row="0" Content="Сохранить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
+                <Button x:Name="Stop" Grid.Column="2" Grid.Row="0" Content="Сохранить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Stop_Click" />
             </Grid>
         </StackPanel>
     </Grid>

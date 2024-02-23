@@ -35,5 +35,15 @@ namespace Rusal_228
             Admin_Employee_WND dialog = new Admin_Employee_WND();
             dialog.ShowDialog();
         }
+
+        private void Stop_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

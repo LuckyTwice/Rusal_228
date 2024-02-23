@@ -69,8 +69,8 @@ namespace Rusal_228
                 {
                     Button button = Corpuses[i, j];
                     button.Tag = new Tuple<int, int>(i, j);
-                    button.Click -= Button_Click; // Удаляем старый обработчик
-                    button.Click += Button_Click; // Добавляем новый обработчик
+                    button.Click -= Button_Click; 
+                    button.Click += Button_Click;
                 }
             }
         }
@@ -90,10 +90,9 @@ namespace Rusal_228
                 Admin_Electrolysis_Bath_WND dialog = new Admin_Electrolysis_Bath_WND();
 
                 int buttonNumber = (row * Corpuses.GetLength(1)) + col + 1;
-                int corpus = (buttonNumber - 1) / 10;
                 double change = Math.Ceiling((double)baths[(buttonNumber - 1) / 10] / Corpuses.GetLength(1));
 
-                dialog.corpus = (buttonNumber - 1) / 10 + 7;
+                dialog.corpus = row + 7;
                 dialog.start = Convert.ToInt32(1 + (buttonNumber - 1) % 10 * change);
 
                 if (((buttonNumber - 1) % 10 + 1) * change < baths[(buttonNumber - 1) / 10])
