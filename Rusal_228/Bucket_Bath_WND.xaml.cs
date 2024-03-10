@@ -19,9 +19,16 @@ namespace Rusal_228
     /// </summary>
     public partial class Bucket_Bath_WND : Window
     {
+        public int number { get; set; }
+        public int corpus { get; set; }
         public Bucket_Bath_WND()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Case_Numb.Text = "Корпус " + (corpus +7)+ ". Ванна "+number+".";
         }
     }
 }

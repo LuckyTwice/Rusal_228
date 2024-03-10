@@ -38,7 +38,7 @@ namespace Rusal_228
             { Corpus11_1, Corpus11_2, Corpus11_3, Corpus11_4, Corpus11_5, Corpus11_6, Corpus11_7, Corpus11_8, Corpus11_9, Corpus11_10 },
             { Corpus12_1, Corpus12_2, Corpus12_3, Corpus12_4, Corpus12_5, Corpus12_6, Corpus12_7, Corpus12_8, Corpus12_9, Corpus12_10 } };
 
-            baths = new int[] { 100, 90, 81, 91, 75, 88 };
+            baths = new int[] { 100, 32, 81, 95, 75, 88 };
 
             for (int i = 0; i < Corpuses.GetLength(0); i++)
             {
@@ -46,16 +46,18 @@ namespace Rusal_228
 
                 for (int j = 0; j < Corpuses.GetLength(1); j++)
                 {
-                    if (j != Corpuses.GetLength(1) - 1)
-                        Corpuses[i, j].Content = (change * j + 1).ToString() + " - " + (change * (1 + j)).ToString() + " ванны";
-                    else
-                        if (change * j + 1 > baths[i])
+
+                    if (change * j + 1 > baths[i])
                         Corpuses[i, j].Visibility = Visibility.Hidden;
                     else
-                        if (change * j + 1 == baths[i])
+                    if (change * j + 1 == baths[i])
                         Corpuses[i, j].Content = (change * j + 1).ToString() + " ванна";
                     else
+                    if (change * (1 + j) > baths[i])
                         Corpuses[i, j].Content = (change * j + 1).ToString() + " - " + (baths[i]).ToString() + " ванны";
+                    else
+                        Corpuses[i, j].Content = (change * j + 1).ToString() + " - " + (change * (1 + j)).ToString() + " ванны";
+
                 }
             }
 
@@ -69,7 +71,7 @@ namespace Rusal_228
                 {
                     Button button = Corpuses[i, j];
                     button.Tag = new Tuple<int, int>(i, j);
-                    button.Click -= Button_Click; 
+                    button.Click -= Button_Click;
                     button.Click += Button_Click;
                 }
             }

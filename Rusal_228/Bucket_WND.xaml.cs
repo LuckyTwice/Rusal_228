@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,65 @@ namespace Rusal_228
     /// </summary>
     public partial class Bucket_WND : Window
     {
+        Button[] Buckets;
+        Button[] Corpuses;
         public Bucket_WND()
         {
             InitializeComponent();
+            
+            Buckets = new Button[] { Bucket1, Bucket2, Bucket3, Bucket4, Bucket5, Bucket6, Bucket7, Bucket8, Bucket9, Bucket10, Bucket11, Bucket12, Bucket13, Bucket14, Bucket15, Bucket16, Bucket17, Bucket18, Bucket19, Bucket20, Bucket21, Bucket22, Bucket23, Bucket24 };
+            Corpuses = new Button[] { Corpus7, Corpus8, Corpus9, Corpus10, Corpus11, Corpus12, Defective };
+            AddEventButton();
+        }
+        private void AddEventButton()
+        {
+            for (int i = 0; i < Corpuses.Length; i++)
+            {
+                Button button = Corpuses[i];
+                Corpuses[i].Tag = new Tuple<int>(i);
+                button.Click -= Corpuses_Click;
+                button.Click += Corpuses_Click;
+
+            }
+            for (int i = 0; i < Buckets.Length; i++)
+            {
+                Button button = Buckets[i];
+                Buckets[i].Tag = new Tuple<int>(i);
+                button.Click -= Buckets_Click;
+                button.Click += Buckets_Click;
+            }
+            
+        }
+        private void Buckets_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            Tuple<int> tag = (Tuple<int>)button.Tag;
+            int number = tag.Item1;
+
+            // сделать проверку, что в выбранном ковше есть алюминий
+            // Если да, то
+            Bucket_Bucket_WND dialog = new Bucket_Bucket_WND();
+            dialog.number = number;
+            dialog.ShowDialog();
+            // если нет, то
+            MessageBox.Show("Выбранный вами ковш пустой", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+
+        }
+        private void Corpuses_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            Tuple<int> tag = (Tuple<int>)button.Tag;
+            int number = tag.Item1;
+            
+            if(number!= Corpuses.Length - 1)
+            {
+                Bucket_Baths_WND dialog = new Bucket_Baths_WND();
+                dialog.corpus = number;
+                dialog.ShowDialog();
+            }
+            else
+            MessageBox.Show("НАДА СДЕЛАТЬ ДОП ОКНО ДЛЯ ДЕФЕКТОВ", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
     }
 }

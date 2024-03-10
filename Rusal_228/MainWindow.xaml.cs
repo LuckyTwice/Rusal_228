@@ -27,6 +27,8 @@ namespace Rusal_228
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
+            Profession_WND dialog1 = new Profession_WND();
+            dialog1.Show();
             Admin_WND dialog = new Admin_WND();
             dialog.Show();
             Close();

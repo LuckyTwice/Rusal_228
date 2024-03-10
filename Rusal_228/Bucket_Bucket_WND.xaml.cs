@@ -19,9 +19,16 @@ namespace Rusal_228
     /// </summary>
     public partial class Bucket_Bucket_WND : Window
     {
+        public int number { get; set; }
+
         public Bucket_Bucket_WND()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Bucket_Numb.Text = "Ковш "+ (number+1)+".";
         }
     }
 }

@@ -19,9 +19,17 @@ namespace Rusal_228
     /// </summary>
     public partial class Electrolysis_Bath_Empty_WND : Window
     {
+        public int number { get; set; }
+        public int corpus { get; set; }
         public Electrolysis_Bath_Empty_WND()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Case_Numb.Text = "Корпус " + corpus + ". Ванна " + number + ".";
+
         }
     }
 }

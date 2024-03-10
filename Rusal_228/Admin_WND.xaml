@@ -25,7 +25,7 @@
             <RowDefinition Height="10*" />
 
         </Grid.RowDefinitions>
-        <TextBox x:Name="Name" Height="45" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="Сюда нужно логин вставлять " VerticalAlignment="Top"  Margin="5,5,10,10" FontSize="20" />
+        <TextBox x:Name="Name" Height="45" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="Ярослав Комаровский " VerticalAlignment="Top"  Margin="5,5,10,10" FontSize="20" />
 
 
         <Button x:Name="LogOut" Height="45" Width="70" Grid.Column="3" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0" Background="LightGray" Click="LogOut_Click" >

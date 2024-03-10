@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Электролиз" Height="900" Width="1000">
+        Title="Электролиз" Height="900" Width="1000" Loaded="Window_Loaded">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">

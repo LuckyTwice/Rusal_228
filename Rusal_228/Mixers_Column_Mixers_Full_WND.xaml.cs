@@ -19,9 +19,19 @@ namespace Rusal_228
     /// </summary>
     public partial class Mixers_Column_Mixers_Full_WND : Window
     {
+        public int type { get; set; }
+        public int number { get; set; }
         public Mixers_Column_Mixers_Full_WND()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (type == 0)
+                Mixer_Numb.Text = "Столбы. " + (number + 1) + " миксер.";
+            else
+                Mixer_Numb.Text = "Чушки. " + (number + 1) + " миксер.";
         }
     }
 }
