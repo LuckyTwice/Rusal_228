@@ -22,6 +22,11 @@ namespace Rusal_228
         public Delivery_WND()
         {
             InitializeComponent();
+            Type.Items.Add("Глинозем");
+            Type_Material.Items.Add("Аннодная масса");
+            Direction_Material.Items.Add("Цех №12");
+            Documents.Items.Add("Отчет о поставке фторсолей");
+            Documents.Items.Add("Отчет о снабжении цеха №10");
         }
 
 /*        private void Window_Loaded(object sender, RoutedEventArgs e)

@@ -29,6 +29,9 @@ namespace Rusal_228
             Buckets = new Button[] { Bucket1, Bucket2, Bucket3, Bucket4, Bucket5, Bucket6, Bucket7, Bucket8, Bucket9, Bucket10, Bucket11, Bucket12, Bucket13, Bucket14, Bucket15, Bucket16, Bucket17, Bucket18, Bucket19, Bucket20, Bucket21, Bucket22, Bucket23, Bucket24 };
             Corpuses = new Button[] { Corpus7, Corpus8, Corpus9, Corpus10, Corpus11, Corpus12, Defective };
             AddEventButton();
+
+            Documents.Items.Add("Отчет о загрузке 19 ковша");
+            Documents.Items.Add("Отчет об отправлении  19 ковша");
         }
         private void AddEventButton()
         {

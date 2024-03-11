@@ -80,8 +80,8 @@
 
                     <TextBox x:Name="Bucket_Numb" Style="{DynamicResource TextBoxStyle1}" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Ковш № ..." VerticalAlignment="Top" Margin="15,20,15,10" FontSize="25" Background="LightGray" BorderBrush="LightGray" HorizontalContentAlignment="Center"/>
 
-                    <TextBox x:Name="Rest" Style="{DynamicResource TextBoxStyle1}" Grid.Row="2" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
-                    <TextBox x:Name="Weight" Style="{DynamicResource TextBoxStyle1}" Grid.Row="4" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="3,3 тонны" VerticalAlignment="Top" Margin="15,10,15,20" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <TextBox x:Name="Rest" Style="{DynamicResource TextBoxStyle1}" Grid.Row="2" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="700 кг" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <TextBox x:Name="Weight" Style="{DynamicResource TextBoxStyle1}" Grid.Row="4" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="3300 кг" VerticalAlignment="Top" Margin="15,10,15,20" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
 
                     
                 </Grid>

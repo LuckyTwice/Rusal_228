@@ -24,6 +24,7 @@ namespace Rusal_228
         public Bucket_Bucket_WND()
         {
             InitializeComponent();
+            Bucket.Items.Add("Линия чушек");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

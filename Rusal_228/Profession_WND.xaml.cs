@@ -48,5 +48,12 @@ namespace Rusal_228
                 Read.SelectedIndex = -1;
             }
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Read.Items.Add("Администратор");
+            Read.Items.Add("Работник электролизного цеха №8");
+            Read.Items.Add("Работник электролизного цеха №7");
+        }
     }
 }

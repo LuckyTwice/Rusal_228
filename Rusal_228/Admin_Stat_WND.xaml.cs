@@ -23,5 +23,19 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            TypeOut.Items.Add("Цех №11");
+            AluminaOut.Text = "2100 кг";
+            SaltOut.Text = "800 кг";
+            AnodeOut.Text = "1800 кг";
+            Type.Items.Add("Чушки");
+            ColumnDone.Text = "400 шт";
+            TshapedDone.Text = "1200 шт";
+            Send.Text = "300 шт";
+            Storage.Text = "1800 шт";
+
+        }
     }
 }

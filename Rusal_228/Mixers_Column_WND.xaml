@@ -112,7 +112,7 @@
                         <ListBox x:Name="Bucket" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="10,10,10,0" Background="LightGray" BorderBrush="LightGray" FontSize="15" SelectionChanged="Bucket_SelectionChanged" />
                     </Border>
 
-                    <Button x:Name="Add" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,10" Background="LightGray" FontSize="15" >Добавить выбранное</Button>
+                    <Button x:Name="Add" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,10" Background="LightGray" FontSize="15" Click="Add_Click" >Добавить выбранное</Button>
 
                 </Grid>
 
@@ -146,7 +146,7 @@
                     <RowDefinition Height="2*"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBox x:Name="Casting"  TextWrapping="Wrap" Text="Сюда нужно инфу об отливке" VerticalAlignment="Stretch" Margin="15,10,15,0" FontSize="15"/>
+                <TextBox x:Name="Casting"  TextWrapping="Wrap" Text="Сейчас ведется отливка из миксера №3. Время начала отливки 11:10.           Примерное время окончания литья - 12:00." VerticalAlignment="Stretch" Margin="15,10,15,0" FontSize="15"/>
                 <Button x:Name="Control"  Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,10" Background="LightGray" FontSize="15" >Отправить на контроль качества</Button>
 
             </Grid>

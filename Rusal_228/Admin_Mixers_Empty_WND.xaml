@@ -74,8 +74,8 @@
 
                     <TextBox x:Name="Mixer_Numb" Style="{DynamicResource TextBoxStyle1}" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Столбы\чушки. Миксер № ..." VerticalAlignment="Top" Margin="15,20,15,10" FontSize="25" Background="LightGray" BorderBrush="LightGray" HorizontalContentAlignment="Center"/>
 
-                    <TextBox x:Name="Fill" Style="{DynamicResource TextBoxStyle1}" Grid.Row="1" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
-                    <TextBox x:Name="Rest" Style="{DynamicResource TextBoxStyle1}" Grid.Row="2" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,10,15,20" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <TextBox x:Name="Fill" Style="{DynamicResource TextBoxStyle1}" Text="300 кг" Grid.Row="1" Grid.Column="2" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <TextBox x:Name="Rest" Style="{DynamicResource TextBoxStyle1}" Text="500 кг" Grid.Row="2" Grid.Column="2" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="15,10,15,20" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                 </Grid>
             </Border>
 

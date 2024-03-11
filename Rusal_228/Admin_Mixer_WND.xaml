@@ -80,7 +80,7 @@
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
-                    <TextBox  x:Name="Column_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Загружено в миксера за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+                    <TextBox  x:Name="Column_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="4400 кг загружено в миксера за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
 
                     <Button x:Name="Column_Mixer1" Style="{DynamicResource ButtonStyle1}" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 1</Button>
                     <Button x:Name="Column_Mixer2" Style="{DynamicResource ButtonStyle1}" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 2</Button>
@@ -102,7 +102,7 @@
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
-                    <TextBox  x:Name="Tshaped_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Загружено в миксера за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+                    <TextBox  x:Name="Tshaped_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="5200 кг загружено в миксера за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
                     <Button x:Name="Tshaped_Mixer1" Style="{DynamicResource ButtonStyle1}" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 1</Button>
                     <Button x:Name="Tshaped_Mixer2" Style="{DynamicResource ButtonStyle1}" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 2</Button>
                     <Button x:Name="Tshaped_Mixer3" Style="{DynamicResource ButtonStyle1}" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >Миксер 3</Button>

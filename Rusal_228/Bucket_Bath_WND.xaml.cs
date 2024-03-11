@@ -24,7 +24,8 @@ namespace Rusal_228
         public Bucket_Bath_WND()
         {
             InitializeComponent();
-        }
+            Bucket.Items.Add("14");
+                    }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

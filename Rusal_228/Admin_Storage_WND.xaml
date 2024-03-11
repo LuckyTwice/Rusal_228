@@ -30,8 +30,8 @@
                     <Label Content="Доступно" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top"  FontSize="15" />
                     <Label Content="Отправлено сегодня " Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                    <TextBox x:Name="Access_Col" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
-                    <TextBox x:Name="Send_Col" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
+                    <TextBox x:Name="Access_Col"  Text="1560"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
+                    <TextBox x:Name="Send_Col"  Text="810" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
 
                 </Grid>
             </Border>
@@ -56,8 +56,8 @@
                     <Label Content="Доступно" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top"  FontSize="15" />
                     <Label Content="Отправлено сегодня " Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                    <TextBox x:Name="Access_Tsh" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
-                    <TextBox x:Name="Send_Tsh" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
+                    <TextBox x:Name="Access_Tsh"  Text="2100" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
+                    <TextBox x:Name="Send_Tsh"  Text="1200" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30"/>
 
                 </Grid>
             </Border>

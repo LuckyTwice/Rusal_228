@@ -27,6 +27,16 @@ namespace Rusal_228
             InitializeComponent();
             Mixers = new Button[] { Mixer1, Mixer2, Mixer3 };
             AddEventButton();
+            Bucket.Items.Add("3 ковш");
+            Bucket.Items.Add("17 ковш");
+            Bucket.Items.Add("18 ковш");
+            Documents.Items.Add("Отчет о загрузке миксера №2");
+            Documents.Items.Add("Отчет о запуске миксера №2");
+            Documents.Items.Add("Отчет о выгрузке миксера №2");
+            Documents.Items.Add("Отчет о начале  литья");
+            Documents.Items.Add("Отчет об окончании литья");
+
+
         }
         private void AddEventButton()
         {
@@ -73,6 +83,13 @@ namespace Rusal_228
                 TypeName.Content = "Столбы.";
             else
                 TypeName.Content = "Чушки." ;
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            Mixers_Column_Mixers_WND dialog = new Mixers_Column_Mixers_WND();
+            dialog.ShowDialog();
+
         }
     }
 }

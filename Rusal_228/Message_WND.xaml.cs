@@ -29,5 +29,13 @@ namespace Rusal_228
             Message_Text_WND dialog = new Message_Text_WND();
             dialog.ShowDialog();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Where.Items.Add("Чушки. Миксер №2");
+            Read.Items.Add("Сообщение от электролизный цех № 7");
+            Read.Items.Add("Сообщение от ковшевой");
+            Read.Items.Add("Сообщение от зоны контроля");
+        }
     }
 }
