@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,30 +28,33 @@ namespace Rusal_228
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            Profession_WND dialog1 = new Profession_WND();
+            /*Profession_WND dialog1 = new Profession_WND();
             dialog1.Show();
             Admin_WND dialog = new Admin_WND();
             dialog.Show();
-            Close();
-            /*using (var db = new AdminContext())
+            Close();*/
+
+            using (var db = new AluminContext())
             {
                 bool isConnected = db.Database.CanConnect();
                 if (isConnected)
                 {
                     try
                     {
-                        int username = Convert.ToInt32(Login.Text);
-                        int password = Convert.ToInt32(Password.Password);
-                        if (VerifyLogin(db, username, password))
+                        string username = Login.Text;
+                        string password = Password.Password;
+                        int id = -1;
+                        id = VerifyLogin(db, username, password);
+                        if (id>-1)
                         {
-                            int proff = GetProffFromTable2(db, username);
-                            if (VerifyProff(db, proff) == "Работник")
+                            GetProffFromTable2(db, username);
+                            if (GetProffFromTable2(db, username) == 1) //Админ
                             {
-                                OpenWindow1(db, username);
+                                OpenWindow1(db, id);
                             }
-                            else if (VerifyProff(db, proff) == "Админ")
+                            else if (GetProffFromTable2(db, username) == 0) //Сисадмин
                             {
-                                OpenWindow2(db, username);
+                                OpenWindow2(db, id);
                             }
                         }
                         else
@@ -62,45 +66,61 @@ namespace Rusal_228
                     {
                         MessageBox.Show("Логин и пароль дожны быть введены цифрами");
                     }
+                    catch(Exception) 
+                    {
+                        MessageBox.Show("Введите логин и пароль","Ошибка");
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Отсутствует связь с сервером", "Ошибка");
                 }
-            }*/
+            }
 
         }
-        /*private bool VerifyLogin(AdminContext db, int username, int password)
+        private int VerifyLogin(AluminContext db, string username, string password) //id человека
         {
-            int verify = db.Passwords.Count(p => p.Id == username && p.Password1 == password);
-            return verify > 0;
+            int id = db.Accounts.Where(p => p.Login == username && p.Password == password).Select(p=>p.Id).Single();
+            return id;
         }
-        private int GetProffFromTable2(AdminContext db, int username)
+        private int GetProffFromTable2(AluminContext db, string username) //id профессии
         {
-            //Возможно использование First это костыль
-            var id = db.Personals.Where(p => p.Id == username).Select(p => p.Профессия).First();
-            return Convert.ToInt32(id);
+            int id1 = db.Accounts.Where(p => p.Login == username).Select(p => p.Id).Single();
+            int id = db.Personals.Where(p => p.Id == id1).Select(p => p.ProfId).Single();
+            return id;
         }
 
-        private string VerifyProff(AdminContext db, int proff)
+        /*private string VerifyProff(AluminContext db, int proff)
         {
-            var prof = db.Professia.Where(p => p.Id == proff).Select(p => p.Професия).First();
+            var prof = db.Professions.Where(p => p.Id == proff).Select(p => p.P).First();
             return prof.ToString();
-        }
-        private void OpenWindow1(AdminContext db, int id)
-        {
-            var fio = db.Personals.Where(p => p.Id == id).Select(p => new { p.Фамилия, p.Имя, p.Отчество }).First();
-            Delivery_WND worker = new Delivery_WND();
-            worker.Name.Text = $"{fio.Фамилия} {fio.Имя} {fio.Отчество}";
-            worker.ShowDialog();
-        }
-        private void OpenWindow2(AdminContext db, int id)
-        {
-            var fio = db.Personals.Where(p => p.Id == id).Select(p => new { p.Фамилия, p.Имя, p.Отчество }).First();
-            Admin_WND admin = new Admin_WND();
-            admin.Name.Text = $"{fio.Фамилия} {fio.Имя} {fio.Отчество}";
-            admin.ShowDialog();
         }*/
+        private void OpenWindow1(AluminContext db, int id) // открытие окна админа
+        {
+            /*var fio = db.Personals.Where(p => p.Id == id).Select(p => new { p.Surname, p.Name, p.Patronymic }).Single();
+            Delivery_WND admin = new Delivery_WND();*/
+            //
+            int[] windows = { 0 }; //через запрос сделать выборку из базы
+
+            Profession_WND admin1 = new();
+            admin1.Pers_Id = id;
+            foreach(int window in windows) 
+            {
+                Prof_Choice item = new Prof_Choice { Id = window };
+                admin1.Read.Items.Add(item);
+            }
+            admin1.ShowDialog();
+            //
+           /* admin.Name.Text = $"{fio.Surname} {fio.Name} {fio.Patronymic}";
+            admin.ShowDialog();*/
+        }
+        private void OpenWindow2(AluminContext db, int id) // открытие окна сисадмина
+        {
+            var fio = db.Personals.Where(p => p.Id == id).Select(p => new { p.Surname, p.Name, p.Patronymic }).Single();
+            Admin_WND sysadmin = new Admin_WND();
+            sysadmin.Name.Text = $"{fio.Surname} {fio.Name} {fio.Patronymic}";
+            sysadmin.ShowDialog();
+        }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
