@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,15 @@ namespace Rusal_228
         public Admin_Employee_WND()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Surname.Text = "Комаровский Ярослав Сергеевич";
+            ID_Empl.Text = "228337";
+            Rules.Items.Add("Администратор");
+            Department.Items.Add("Работник поставки");
+            Department.Items.Add("Работник ковшевой");
         }
     }
 }

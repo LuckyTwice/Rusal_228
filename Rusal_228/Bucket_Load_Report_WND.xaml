@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Отчет о загрузке ковша" Height="750" Width="800">
+        Title="Отчет о загрузке ковша" Height="590" Width="800">
     <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,20,0,0" >
         <Label  Content="Отчет о загрузке ковша" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
         <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,0,20,15" VerticalAlignment="Stretch" Grid.ColumnSpan="2" >
@@ -31,36 +31,30 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBox x:Name="Corpus_Bath" Text="Сюда нужно вставить корпус и ванну" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,15,15,0" FontSize="15" Height="30" />
+                <TextBox x:Name="Corpus_Bath" Text="Корпус 8. Ванна 64" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,15,15,0" FontSize="15" Height="30" />
                 
                 <Label Content="Номер ковша" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <TextBox x:Name="Bucket" Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Height="30" />
+                <TextBox x:Name="Bucket" Text="19" Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Height="30" />
 
                 <Label Content="Масса алюминия" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <TextBox x:Name="Weight"  Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Height="30" />
+                <TextBox x:Name="Weight" Text="710 кг" Grid.Column="1" Grid.Row="2"  HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Height="30" />
 
-                <Label Content="Количество глинозема" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <Label Content="Количество фторсолей" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <Label Content="Количество анода" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <Label Content="Количество добавленного глинозема" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
+                <Label Content="Добавленные компоненты" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Grid.ColumnSpan="3" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                <TextBox x:Name="Alumina" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-                <TextBox x:Name="Salt" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-                <TextBox x:Name="Anode" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
-                <TextBox x:Name="AluminaAdd" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+                <TextBox x:Name="Components" Text="Глинозем - 300 кг, фторсоли - 140 кг, аннодная масса - 270 кг" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="3" Margin="15,0,15,15" Height="30"/>
 
                 <Label Content="Дата загрузки" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Время загрузки"  Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15"  />
 
 
-                <TextBox  x:Name="Date" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
-                <TextBox x:Name="Time" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox  x:Name="Date" Text="10.02.24" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox x:Name="Time" Text="18:20" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
 
                 <Label Content="Сотрудник, загрузивший ковш"  Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Сотрудник, оформивший отчет" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="12" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                <TextBox x:Name="NameLoad" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
-                <TextBox x:Name="NameWrite" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
+                <TextBox x:Name="NameLoad" Text="Ярослав Комаровский" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
+                <TextBox x:Name="NameWrite" Text="Ярослав Комаровский" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
                 <Button x:Name="Cancel" Grid.Column="0" Grid.Row="14" Content="Назад" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
                 <Button x:Name="Add" Grid.Column="1" Grid.Row="14" Content="Добавить" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Статистика" Height="700" Width="850">
+        Title="Статистика" Height="700" Width="850" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -118,6 +118,8 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Label  Content="Статус заготовок" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"  />
+                    <ComboBox x:Name="Type"  Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="30"/>
+
                     <Label Content="от" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top" FontSize="20" />
                     <Label Content="до" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
 
@@ -140,8 +142,8 @@
                     <Label Content="Отправлены" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="20" />
                     <Label Content="На складе" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
 
-                    <TextBox x:Name="ColumnRes" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
-                    <TextBox x:Name="TshapedRes" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                    <TextBox x:Name="Send" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                    <TextBox x:Name="Storage" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
                 </Grid>
             </Border>
         </StackPanel>
@@ -169,7 +171,7 @@
                 </Grid>
             </Border>
             <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,20,20" Grid.RowSpan="2" Height="557">
-                <Label Content="сюда как-то нужно вставить диаграмму" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
+                <Label  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
             </Border>
         </StackPanel>
     </Grid>

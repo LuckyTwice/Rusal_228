@@ -18,7 +18,7 @@
 
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="Name" Height="45" Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Сюда нужно логин вставлять " VerticalAlignment="Top"  Margin="20,10,40,0" FontSize="20" />
+        <TextBox x:Name="Name" Height="45" Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Ярослав Комаровский " VerticalAlignment="Top"  Margin="20,10,40,0" FontSize="20" />
         <Label Grid.Column="1" Grid.Row="0" Content="Поставка сырья" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,13,0,0" Padding="0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30"  />
 
 
@@ -56,14 +56,14 @@
                         </Grid.RowDefinitions>
 
                         <Label Content="Номер поставки" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-                        <TextBox x:Name="Delivery_Num" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" />
+                        <TextBox x:Name="Delivery_Num"  Text="36525" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" />
 
                         <Label Content="Тип сырья" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                        <ComboBox x:Name="Type"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                        <ComboBox x:Name="Type"   Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
 
                         <Label Content="Количество, кг" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                        <TextBox x:Name="Quantity"  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" FontSize="15" Height="30"/>
+                        <TextBox x:Name="Quantity"  Text="400 кг"  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" FontSize="15" Height="30"/>
 
 
 
@@ -71,7 +71,7 @@
                         <Label Content="Время поставки"  Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
                         <DatePicker  x:Name="Date" Margin="15,0,15,15" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Stretch" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" />
-                        <TextBox x:Name="Time" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
+                        <TextBox x:Name="Time" Text="18:48" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
 
                     </Grid>

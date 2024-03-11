@@ -25,6 +25,9 @@ namespace Rusal_228
         public Electrolysis_WND()
         {
             InitializeComponent();
+            Documents.Items.Add("Отчет о получении сырья");
+            Documents.Items.Add("Отчет о загрузке 14 ванны");
+            Documents.Items.Add("Отчет об окончании электролиза в 14 ванной");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -81,7 +84,8 @@ namespace Rusal_228
 
             dialog.start = start;
             dialog.finish = finish;
-            dialog.corpus = corpus;
+            dialog.corpus = 10;
+            //dialog.corpus = corpus;
 
             dialog.ShowDialog();
             

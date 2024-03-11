@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Мониторинг отливки" Height="400" Width="800">
+        Title="Мониторинг отливки" Height="300" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -20,12 +20,12 @@
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition Height="2*"/>
-                        <RowDefinition Height="2*"/>
+
 
                     </Grid.RowDefinitions>
-                    <TextBox  x:Name="Column_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Отлито за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+                    <TextBox  x:Name="Column_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Отлито за сегодня 360 столбов" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
 
-                    <TextBox x:Name="Column_Casting" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сюда нужно инфу об отливке" VerticalAlignment="Stretch" Margin="15,0,15,0" FontSize="15"/>
+                    <TextBox x:Name="Column_Casting" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сейчас ведется отливка из миксера №2. Время начала отливки 20:54.           Примерное время окончания литья - 21:44." VerticalAlignment="Stretch" Margin="15,0,15,0" FontSize="15"/>
 
                 </Grid>
             </Border>
@@ -41,10 +41,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition Height="2*"/>
-                        <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
-                    <TextBox  x:Name="Tshaped_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Отлито за сегодня" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
-                    <TextBox x:Name="Tshaped_Casting" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сюда нужно инфу об отливке" VerticalAlignment="Stretch" Margin="15,0,15,0" FontSize="15"/>
+                    <TextBox  x:Name="Tshaped_Load" Grid.ColumnSpan="2" Height="25" TextWrapping="Wrap" Text="Отлито за сегодня 800 чушек" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,0" FontSize="15" />
+                    <TextBox x:Name="Tshaped_Casting" Grid.Row="1" Grid.RowSpan="2" TextWrapping="Wrap" Text="Сейчас ведется отливка из миксера №1. Время начала отливки 21:10.           Примерное время окончания литья - 21:35." VerticalAlignment="Stretch" Margin="15,0,15,0" FontSize="15"/>
 
                 </Grid>
             </Border>

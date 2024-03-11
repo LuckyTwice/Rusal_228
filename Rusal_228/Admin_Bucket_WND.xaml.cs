@@ -24,6 +24,8 @@ namespace Rusal_228
         public Admin_Bucket_WND()
         {
             InitializeComponent();
+            Load.Text = "68 ковшей загружено сегодня";
+            Unload.Text = "52 ковшей выгружено сегодня";
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

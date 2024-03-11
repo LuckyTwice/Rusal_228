@@ -22,6 +22,8 @@ namespace Rusal_228
         public Storage_WND()
         {
             InitializeComponent();
+            Documents.Items.Add("Отчет о прибытии в хранилище");
+            Documents.Items.Add("Отчет об отправлении заказчику");
         }
     }
 }

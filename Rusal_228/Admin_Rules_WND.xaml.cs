@@ -36,14 +36,24 @@ namespace Rusal_228
             dialog.ShowDialog();
         }
 
-        private void Stop_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            Department.Items.Clear();
+            Department.Items.Add("Петренко Максим Леонидович");
+
+            //Close();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Department.Items.Add("Комаровский Ярослав Сергеевич");
+            Department.Items.Add("Курьян Илья Сергеевич");
+            Department.Items.Add("Петренко Максим Леонидович");
         }
     }
 }

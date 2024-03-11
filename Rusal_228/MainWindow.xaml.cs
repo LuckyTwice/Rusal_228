@@ -27,10 +27,17 @@ namespace Rusal_228
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            Profession_WND dialog1 = new Profession_WND();
+
+            /*Control_WND dialog = new Control_WND();
+            dialog.Show();*/
+
+            Storage_WND dialog1 = new Storage_WND();
             dialog1.Show();
-            Admin_WND dialog = new Admin_WND();
-            dialog.Show();
+
+            Storage_Send_WND dialog2 = new Storage_Send_WND();
+            dialog2.Show();
+            Storage_Get_WND dialog3 = new Storage_Get_WND();
+            dialog3.Show();
             Close();
             /*using (var db = new AdminContext())
             {

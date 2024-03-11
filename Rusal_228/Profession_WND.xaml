@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Выберите специальность" Height="420" Width="530" Background="#FFE4E4E4" >
+        Title="Выберите специальность" Height="420" Width="530" Background="#FFE4E4E4" Loaded="Window_Loaded" >
     <Window.Resources>
         <SolidColorBrush x:Key="ListBox.Static.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FFABADB3"/>

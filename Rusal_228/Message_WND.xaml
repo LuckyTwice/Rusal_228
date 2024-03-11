@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Сообщения" Height="800" Width="800">
+        Title="Сообщения" Height="800" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -25,7 +25,7 @@
 
 
         <Label Grid.Column="0" Grid.Row="2"  Content="Написать сообщение для " Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="10,0,0,0" Padding="0"  VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="30"  />
-        <ComboBox x:Name="TypeOut"  Grid.Row="2"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Height="30" Width="300"/>
+        <ComboBox x:Name="Where"  Grid.Row="2"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Height="30" Width="300"/>
 
         <TextBox x:Name="Write" Grid.Row="3" HorizontalAlignment="Stretch" Margin="15,5,15,10"  Height="250" BorderThickness="2"/>
 
