@@ -30,8 +30,8 @@ namespace Rusal_228
             Corpuses = new Button[] { Corpus7, Corpus8, Corpus9, Corpus10, Corpus11, Corpus12, Defective };
             AddEventButton();
 
-            Documents.Items.Add("Отчет о загрузке 19 ковша");
-            Documents.Items.Add("Отчет об отправлении  19 ковша");
+            /*Documents.Items.Add("Отчет о загрузке 19 ковша");
+            Documents.Items.Add("Отчет об отправлении  19 ковша");*/
         }
         private void AddEventButton()
         {

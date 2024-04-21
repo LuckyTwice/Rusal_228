@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Rusal_228
 {
@@ -22,54 +23,70 @@ namespace Rusal_228
         public Delivery_WND()
         {
             InitializeComponent();
-            Type.Items.Add("Глинозем");
+            using (var db = new AluminContext())
+            {
+                for(int i = 0; i < 3; i++)
+                {
+                    Type.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                    Type_Material.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                }
+                for(int i = 0;i < 6; i++)
+                {
+                    Direction_Material.Items.Add(db.Places.Where(p=>p.Id==i).Select(p=>p.Name).Single().ToString());
+                }
+                var list = db.Reports.Where(p => p.Ready == false).Select(p => new { p.PostNumb, p.Id}).ToList();
+                foreach(var i in list)
+                {
+                    Documents.Items.Add(list);
+                }
+            }
+            /*Type.Items.Add("Фторсоли");
             Type_Material.Items.Add("Аннодная масса");
-            Direction_Material.Items.Add("Цех №12");
-            Documents.Items.Add("Отчет о поставке фторсолей");
-            Documents.Items.Add("Отчет о снабжении цеха №10");
+            Direction_Material.Items.Add("Цех №12");*/
+            //Documents.Items.Add("Отчет о поставке фторсолей");
+            //Documents.Items.Add("Отчет о снабжении цеха №10");
         }
 
-/*        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void Add_Click(object sender, RoutedEventArgs e)
         {
-            using (var db = new MaterialContext()) 
+            using (var db = new AluminContext())
             {
-                var marka = db.MarkaMaterials.Select(x => x.Name).ToList();
-                var company = db.Companies.Select(x => x.Name).ToList();
-                var unit = db.Units.Select(x => x.Name).ToList();
-                var type = db.TypeMaterials.Select(x => x.Name).ToList();
-                Company.ItemsSource = company;
-                Type.ItemsSource = type;
-                Type_Material.ItemsSource = type;
-                //Grade.ItemsSource = marka;
-                Unit.ItemsSource = unit;
+                var postav = new Report
+                {
+                    PostNumb = Convert.ToInt32(Delivery_Num.Text),
+                    TypeId = Type.SelectedIndex,
+                    Count = Convert.ToInt32(Quantity.Text),
+                    ToId = 6,
+                    PersWId = 2,/// двойка взята для пример, реализовать взятие айди из проги
+                    Ready = false,
+                    Date = Date.SelectedDate.Value,
+                    Time = TimeSpan.Parse(Time.Text)
+                };
+                db.Reports.Add(postav);
+                try
+                {
+                    await db.SaveChangesAsync();
+                    MessageBox.Show("Информация о поставке была внесена в базу");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Информация не сохранилась");
+                }
             }
         }
 
-        private void Add_Click(object sender, RoutedEventArgs e)
+        private void Documents_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var db = new MaterialContext();
-            int unit = db.Units.Where(p=>p.Name == Unit.SelectedItem.ToString()).Select(p=>p.Id).Single();
-            //int marka = db.MarkaMaterials.Where(p => p.Name == Grade.SelectedItem.ToString()).Select(p => p.Id).Single();
-            int type = db.TypeMaterials.Where(p => p.Name == Type.SelectedItem.ToString()).Select(p => p.Id).Single();
-            int company = db.Companies.Where(p => p.Name == Company.SelectedItem.ToString()).Select(p => p.Id).Single();
-            int number = Convert.ToInt32(Delivery_Num.Text);
-            int quant = Convert.ToInt32(Quantity.Text);
-            DateTime date = Date.SelectedDate.Value;
-            TimeSpan time = TimeSpan.Parse(Time.Text);
-            var data = new Post
+            if(Documents.Items.Count>0)
             {
-                NumberPost = number,
-                TypeMaterial = type,
-                //MarkaMaterial = marka,
-                Count = quant,
-                Date = date,
-                Company = company,
-                Unit = unit,
-                Time = time
-            };
-            db.Posts.Add(data);
-            db.SaveChanges();
-            MessageBox.Show("Данные успешно внесены");
-        }*/
+                Delivery_Report_WND dialog = new Delivery_Report_WND();
+                var post = (Report)Documents.SelectedItem;
+                using(var db = new AluminContext())
+                {
+                    Delivery_Num.Text = post.PostNumb.ToString();
+                }
+                dialog.ShowDialog();
+            }
+        }
     }
 }

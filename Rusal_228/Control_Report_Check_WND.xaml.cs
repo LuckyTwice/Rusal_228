@@ -23,5 +23,11 @@ namespace Rusal_228
         {
             InitializeComponent();
         }
+
+        private void Defects_Click(object sender, RoutedEventArgs e)
+        {
+            Control_Report_Defects_WND dialog = new();
+            dialog.Show();
+        }
     }
 }

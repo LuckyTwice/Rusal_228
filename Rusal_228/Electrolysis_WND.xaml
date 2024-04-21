@@ -111,13 +111,13 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="20" />
-                    <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
-                    <Label Content="Анодная масса" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="Глинозем, кг" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="20" />
+                    <Label Content="Фторсоли, кг" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="Анодная масса, кг" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
 
-                    <TextBox x:Name="Alumina"  Text="300 кг" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
-                    <TextBox x:Name="Salt" Text="100 кг" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
-                    <TextBox x:Name="Anode" Text="260 кг" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30"/>
+                    <TextBox x:Name="Alumina"   Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Salt" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Anode"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
                 </Grid>
             </Border>
         </StackPanel>

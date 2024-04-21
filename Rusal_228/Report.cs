@@ -7,9 +7,11 @@ public partial class Report
 {
     public int Id { get; set; }
 
-    public int PersRId { get; set; }
+    public int? PersRId { get; set; }
 
-    public int? PersWId { get; set; }
+    public int PersWId { get; set; }
+
+    public int? PostNumb { get; set; }
 
     public int? FromId { get; set; }
 
@@ -43,13 +45,17 @@ public partial class Report
 
     public virtual ICollection<Report> InversePrev { get; set; } = new List<Report>();
 
-    public virtual Personal PersR { get; set; } = null!;
+    public virtual Personal? PersR { get; set; }
 
-    public virtual Personal? PersW { get; set; }
+    public virtual Personal PersW { get; set; } = null!;
 
     public virtual Report? Prev { get; set; }
 
     public virtual Place? To { get; set; }
 
     public virtual GeneralStorage Type { get; set; } = null!;
+    public override string ToString()
+    {
+        return $"Составить отчёт о поставке номер: {PostNumb}";
+    }
 }

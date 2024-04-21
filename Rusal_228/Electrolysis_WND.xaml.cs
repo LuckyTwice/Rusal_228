@@ -25,9 +25,15 @@ namespace Rusal_228
         public Electrolysis_WND()
         {
             InitializeComponent();
-            Documents.Items.Add("Отчет о получении сырья");
+            /*Documents.Items.Add("Отчет о получении сырья");
             Documents.Items.Add("Отчет о загрузке 14 ванны");
-            Documents.Items.Add("Отчет об окончании электролиза в 14 ванной");
+            Documents.Items.Add("Отчет об окончании электролиза в 14 ванной");*/
+            using (var db = new AluminContext())
+            {
+                Alumina.Text = db.GeneralStorages.Where(p => p.Id == 0).Select(p => p.Count).Single().ToString();
+                Salt.Text = db.GeneralStorages.Where(p => p.Id == 2).Select(p => p.Count).Single().ToString();
+                Anode.Text = db.GeneralStorages.Where(p => p.Id == 1).Select(p => p.Count).Single().ToString();
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -61,6 +67,7 @@ namespace Rusal_228
                 }
             }
             AddEventButton();
+            
         }
 
         private void AddEventButton()

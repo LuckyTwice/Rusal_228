@@ -22,6 +22,11 @@ namespace Rusal_228
         public Admin_Storage_WND()
         {
             InitializeComponent();
+            using (var db = new AluminContext())
+            {
+                Access_Col.Text = db.GeneralStorages.Where(p => p.Id == 3).Select(p => p.Count).Single().ToString();
+                Access_Tsh.Text = db.GeneralStorages.Where(p => p.Id == 4).Select(p => p.Count).Single().ToString();
+            }
         }
     }
 }

@@ -22,6 +22,16 @@ namespace Rusal_228
         public Control_Report_Defects_WND()
         {
             InitializeComponent();
+           /* Column_Numb.Items.Add("6");
+            Type_defect.Items.Add("Трещина");
+            Defect_List.Items.Add("Балка №4 имеет дефект: Ожог длиной 7 см");
+            Defect_List.Items.Add("Балка №6 имеет дефект: Трещина длиной 25 см");*/
+           using(var db = new AluminContext())
+            {
+                //var numb = db.Products.Where(p=>p.StatusId==1).Select(p=>p.Id).ToList(); //Дополнить Where нормальным условием про статус после заполнения бд
+                var def = db.DefTypes.Select(p=>p.Name).ToList();
+                Type_defect.ItemsSource=def;
+            }
         }
     }
 }

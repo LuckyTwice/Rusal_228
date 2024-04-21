@@ -24,7 +24,7 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <Label  Content="Доставлено компанентов" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"  />
+                    <Label  Content="Доставлено компонентов" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"  />
                     <Label Content="от" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top" FontSize="20" />
                     <Label Content="до" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
 

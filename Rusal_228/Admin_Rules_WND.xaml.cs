@@ -22,6 +22,12 @@ namespace Rusal_228
         public Admin_Rules_WND()
         {
             InitializeComponent();
+
+            using (var db = new AluminContext())
+            {
+                var persons = db.Personals.Select(p => new {Fullname = p.Surname + " " + p.Name + " " + p.Patronymic + " " }).ToList();
+                Department.ItemsSource = persons.Select(p=>p.Fullname).ToList();
+            }
         }
 
         private void Add_Empl_Click(object sender, RoutedEventArgs e)
@@ -51,9 +57,9 @@ namespace Rusal_228
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Department.Items.Add("Комаровский Ярослав Сергеевич");
+            /*Department.Items.Add("Комаровский Ярослав Сергеевич");
             Department.Items.Add("Курьян Илья Сергеевич");
-            Department.Items.Add("Петренко Максим Леонидович");
+            Department.Items.Add("Петренко Максим Леонидович");*/
         }
     }
 }

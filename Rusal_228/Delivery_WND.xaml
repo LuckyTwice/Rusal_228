@@ -56,33 +56,33 @@
                         </Grid.RowDefinitions>
 
                         <Label Content="Номер поставки" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-                        <TextBox x:Name="Delivery_Num"  Text="36525" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" />
+                        <TextBox x:Name="Delivery_Num"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="20" />
 
                         <Label Content="Тип сырья" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                        <ComboBox x:Name="Type"   Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                        <ComboBox x:Name="Type"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30" FontSize="20"/>
 
                         <Label Content="Количество, кг" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                        <TextBox x:Name="Quantity"  Text="400 кг"  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" FontSize="15" Height="30"/>
+                        <TextBox x:Name="Quantity"    Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" FontSize="20" Height="30"/>
 
 
 
                         <Label Content="Дата поставки" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                         <Label Content="Время поставки"  Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                        <DatePicker  x:Name="Date" Margin="15,0,15,15" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Stretch" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" />
-                        <TextBox x:Name="Time" Text="18:48" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
+                        <DatePicker  x:Name="Date" Text="12.03.2024" Margin="15,0,15,15" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Stretch" Foreground="Black" FontSize="20"  VerticalAlignment="Top" Height="30" />
+                        <TextBox x:Name="Time" Text="18:48" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="20" Height="30" />
 
 
                     </Grid>
-                    <Button x:Name="Add" Content="Добавить" FontSize="15"  Margin="15,15,15,15" IsDefault="True" Height="35" />
+                    <Button x:Name="Add" Content="Добавить" FontSize="15"  Margin="15,15,15,15" IsDefault="True" Height="35" Click="Add_Click" />
                 </StackPanel>
 
             </Border>
         </Grid>
 
         <Label  Grid.Column="1" Grid.Row="1" Content="Документооборот" VerticalAlignment="Top" Margin="10,10,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" Grid.RowSpan="2" />
-        <ListBox  x:Name="Documents" Grid.Column="1" Grid.Row="1" Margin="10,47,20,-10" BorderBrush="Gray" BorderThickness="1"  FontSize="20" />
+        <ListBox  x:Name="Documents" Grid.Column="1" Grid.Row="1" Margin="10,47,20,-10" BorderBrush="Gray" BorderThickness="1"  FontSize="20" SelectionChanged="Documents_SelectionChanged" />
 
         <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,30,0,0" >
             <Label  Content="Снабжение" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
@@ -103,9 +103,9 @@
                     <Label Content="Цех направления" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
                     <Label Content="Количество, кг" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                    <ComboBox x:Name="Type_Material" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-                    <ComboBox x:Name="Direction_Material" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-                    <TextBox x:Name="Quantity_Material" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                    <ComboBox x:Name="Type_Material" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="20"/>
+                    <ComboBox x:Name="Direction_Material" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Quantity_Material" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="20" />
 
                     <Button x:Name="Send" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Content="Отправить" FontSize="15"  Margin="15,5,15,20" IsDefault="True" Height="35"/>
                 </Grid>

@@ -28,7 +28,35 @@ namespace Rusal_228
 
         private void Log_Click(object sender, RoutedEventArgs e)
         {
-            if (Read.SelectedIndex > -1)
+            if (Read.SelectedIndex>-1)
+            {
+                switch(Read.SelectedIndex) 
+                {
+                    case 0:
+                        {
+                            
+                                Electrolysis_WND dialog = new Electrolysis_WND();
+                                dialog.ShowDialog();
+                            
+                            break;
+                        }
+                    case 1:
+                        {
+                                Bucket_WND dialog = new Bucket_WND();
+                                dialog.ShowDialog();
+                            
+                            break;
+                        }
+                    case 2:
+                        {
+                                Delivery_WND dialog = new Delivery_WND();
+                                dialog.ShowDialog();
+                            
+                            break;
+                        }
+                }
+            }
+            /*if (Read.SelectedIndex > -1)
             {
                 Prof_Choice item = (Prof_Choice)Read.SelectedItem;
                 switch (item.Id)
@@ -41,19 +69,19 @@ namespace Rusal_228
                             dialog.Name.Text = $"{Name.Surname} {Name.Name} {Name.Patronymic}";
                         }
                         int sum = 7 + (int)item.Id;
-                        dialog.Corpus_Name.Content += $" {sum}";
+                       // dialog.Corpus_Name.Content += $" {sum}";
                         dialog.ShowDialog();
                         break;
                 }
                 Read.SelectedIndex = -1;
-            }
+            }*/
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Read.Items.Add("Администратор");
-            Read.Items.Add("Работник электролизного цеха №8");
-            Read.Items.Add("Работник электролизного цеха №7");
+           /* Read.Items.Add("Администратор");
+            Read.Items.Add("Электролизный цех №8");
+            Read.Items.Add("Электролизный цех №7");*/
         }
     }
 }

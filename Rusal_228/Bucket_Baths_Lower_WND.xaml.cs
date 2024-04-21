@@ -71,7 +71,7 @@ namespace Rusal_228
 
             dialog.ShowDialog();
             // если нет, то
-            MessageBox.Show("Ванна не готова к выгрузке", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+           // MessageBox.Show("Ванна не готова к выгрузке", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
     }

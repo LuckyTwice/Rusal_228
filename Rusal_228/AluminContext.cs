@@ -37,7 +37,7 @@ public partial class AluminContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=LUCKYTWICE\\SQLEXPRESS;Database=Alumin;Trusted_Connection=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=LUCKYTWICE\\SQLEXPRESS;Database=Alumin;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -147,6 +147,7 @@ public partial class AluminContext : DbContext
             entity.Property(e => e.Mark).HasMaxLength(50);
             entity.Property(e => e.PersRId).HasColumnName("PersR_Id");
             entity.Property(e => e.PersWId).HasColumnName("PersW_Id");
+            entity.Property(e => e.PostNumb).HasColumnName("Post_Numb");
             entity.Property(e => e.PrevId).HasColumnName("Prev_Id");
             entity.Property(e => e.Time).HasPrecision(0);
             entity.Property(e => e.ToId).HasColumnName("To_Id");
@@ -159,11 +160,11 @@ public partial class AluminContext : DbContext
 
             entity.HasOne(d => d.PersR).WithMany(p => p.ReportPersRs)
                 .HasForeignKey(d => d.PersRId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Reports_Personals");
 
             entity.HasOne(d => d.PersW).WithMany(p => p.ReportPersWs)
                 .HasForeignKey(d => d.PersWId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Reports_Personals1");
 
             entity.HasOne(d => d.Prev).WithMany(p => p.InversePrev)
