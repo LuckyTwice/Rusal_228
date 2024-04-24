@@ -37,7 +37,7 @@
 
                     <Label Content="Тип сырья"   Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                    <ComboBox x:Name="Type"    Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                    <TextBox x:Name="Type"    Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
 
                     <Label Content="Количество" Grid.Column="0" Grid.Row="4"  HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
@@ -55,8 +55,8 @@
                     <TextBox x:Name="NameTake" IsReadOnly="True" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
                     <TextBox x:Name="NameWrite"   Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
-                    <Button x:Name="Cancel" Grid.Column="0" Grid.Row="12" Content="Назад" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35"/>
-                    <Button x:Name="Add" Grid.Column="1" Grid.Row="12" Content="Добавить" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35"/>
+                    <Button x:Name="Cancel" Grid.Column="0" Grid.Row="12" Content="Назад" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35" Click="Cancel_Click"/>
+                    <Button x:Name="Add" Grid.Column="1" Grid.Row="12" Content="Добавить" FontSize="15"  Margin="30,15,30,15" IsDefault="True" Height="35" Click="Add_Click"/>
                 </Grid>
             </StackPanel>
         </Border>

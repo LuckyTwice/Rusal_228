@@ -22,12 +22,12 @@
         <Label Grid.Column="1" Grid.Row="0" Content="Поставка сырья" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,13,0,0" Padding="0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30"  />
 
 
-        <Button x:Name="Alert" Height="45" Width="70" Grid.Column="4" Grid.Row="0"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,120,0" Background="LightGray"  >
+        <Button x:Name="Alert" Height="45" Width="70" Grid.Column="4" Grid.Row="0"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,120,0" Background="LightGray" Click="Alert_Click"  >
             <Image Source="\Resources\icons8-box-important-50.png" Margin="0, 0,0,0"/>
         </Button>
 
 
-        <Button x:Name="LogOut" Height="45" Width="70" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,20,0" Background="LightGray" >
+        <Button x:Name="LogOut" Height="45" Width="70" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,20,0" Background="LightGray" Click="LogOut_Click" >
             <Image Source="\Resources\icons8-exit-50.png" />
         </Button>
         <Border BorderBrush="Gray" BorderThickness="1" Margin="0,66,0,0" Grid.ColumnSpan="2" Height="1" VerticalAlignment="Top"/>
@@ -82,7 +82,7 @@
         </Grid>
 
         <Label  Grid.Column="1" Grid.Row="1" Content="Документооборот" VerticalAlignment="Top" Margin="10,10,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" Grid.RowSpan="2" />
-        <ListBox  x:Name="Documents" Grid.Column="1" Grid.Row="1" Margin="10,47,20,-10" BorderBrush="Gray" BorderThickness="1"  FontSize="20" SelectionChanged="Documents_SelectionChanged" />
+        <ListBox  x:Name="Documents" Grid.Column="1" Grid.Row="1" Margin="10,47,20,-10" BorderBrush="Gray" BorderThickness="1"  FontSize="20" MouseDoubleClick="Documents_MouseDoubleClick" />
 
         <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,30,0,0" >
             <Label  Content="Снабжение" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
@@ -107,7 +107,7 @@
                     <ComboBox x:Name="Direction_Material" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="20"/>
                     <TextBox x:Name="Quantity_Material" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="20" />
 
-                    <Button x:Name="Send" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Content="Отправить" FontSize="15"  Margin="15,5,15,20" IsDefault="True" Height="35"/>
+                    <Button x:Name="Send" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Content="Отправить" FontSize="15"  Margin="15,5,15,20" IsDefault="True" Height="35" Click="Send_Click"/>
                 </Grid>
 
             </Border>
