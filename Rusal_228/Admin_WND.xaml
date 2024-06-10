@@ -34,21 +34,17 @@
         <Label Content="Выход" FontSize="20"  Padding="0" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Grid.Column="3" Grid.Row="0" Margin="7,0,0,0"/>
 
 
-        <Button x:Name="Rules" Height="45" Width="70" Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,5,0,0" Background="LightGray" Click="Rules_Click" >
+        <Button x:Name="Rules" Height="45" Width="70" Grid.Column="5" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,5,0,0" Background="LightGray" Click="Rules_Click" >
             <Image Source="\Resources\icons8-user-50.png" />
         </Button>
-        <Label Content="Права" FontSize="20"  Padding="0" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2" Margin="30,0,0,0"/>
+        <Label Content="Права" FontSize="20"  Padding="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2" Margin="5,0,0,0"/>
 
-        <Button x:Name="Stat" Height="45" Width="70" Grid.Column="5" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,5,0,0" Background="LightGray" Click="Stat_Click"  >
+        <Button x:Name="Stat" Height="45" Width="70" Grid.Column="5" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,25,0" Background="LightGray" Click="Stat_Click"  >
             <Image Source="\Resources\icons8-statistics-50.png" Margin="0, 0,0,0"/>
         </Button>
-        <Label Content="Статистика" FontSize="20" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2" Margin="5,0,0,0"/>
+        <Label Content="Статистика" FontSize="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2" Margin="5,0,25,0"/>
 
-        <Button x:Name="Alert" Height="45" Width="70" Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,25,0" Background="LightGray" Click="Alert_Click"  >
-            <Image Source="\Resources\icons8-box-important-50.png" Margin="0, 0,0,0"/>
-        </Button>
-        <Label Content="Сообщения" FontSize="20"  Padding="0" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Grid.Column="5" Grid.Row="0" Grid.ColumnSpan="2" Margin="5,0,5,0"/>
-
+        
         <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Grid.ColumnSpan="8" Height="1" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Grid.Column="0" Grid.Row="1" Content="Мониторинг" Grid.ColumnSpan="8" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="15,5,15,0" Height="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="40"/>
 

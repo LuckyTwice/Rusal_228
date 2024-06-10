@@ -47,13 +47,6 @@ namespace Rusal_228
             dialog.Show();
         }
 
-        private void Alert_Click(object sender, RoutedEventArgs e)
-        {
-            //Реализовать не открывание нового окна, если одно уже открыто
-            Message_WND dialog = new Message_WND();
-            dialog.Show();
-        }
-
         private void Delivery_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             Admin_Delivery_WND dialog = new Admin_Delivery_WND();  
