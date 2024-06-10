@@ -28,10 +28,10 @@ namespace Rusal_228
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            /*Electrolysis_WND di = new Electrolysis_WND();
-            di.Show();*/
-            Delivery_WND deli = new Delivery_WND();
-            deli.Show();
+            Electrolysis_WND di = new Electrolysis_WND();
+            di.Show();
+            /*Delivery_WND deli = new Delivery_WND();
+            deli.Show();*/
             /* Admin_Rules_WND bucket = new Admin_Rules_WND();
              bucket.Show();*/
             /* if (Login.Text == "Admin")

@@ -90,7 +90,7 @@
 
 
         <Label  Content="Документооборот" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-        <ListBox x:Name="Documents"  Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"  Margin="10,37,20,20" BorderBrush="Gray" BorderThickness="1"  FontSize="20" />
+        <ListBox x:Name="Documents"  Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"  Margin="10,37,20,20" BorderBrush="Gray" BorderThickness="1"  FontSize="20" MouseDoubleClick="Documents_MouseDoubleClick" />
 
 
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  >

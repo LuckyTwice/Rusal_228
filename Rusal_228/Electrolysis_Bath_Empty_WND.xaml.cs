@@ -31,5 +31,35 @@ namespace Rusal_228
             Case_Numb.Text = "Корпус " + corpus + ". Ванна " + number + ".";
 
         }
+
+        private async void Load_Click(object sender, RoutedEventArgs e)
+        {
+            var load = new Report
+            {
+                Count = Convert.ToInt32(Alumina.Text),
+                SaltCount = Convert.ToInt32(Salt.Text),
+                CryoCount = Convert.ToInt32(Anode.Text),
+                PersWId = 2, // надо брать откуданибудь
+                Date = DateTime.Today,
+                Time = DateTime.Now.TimeOfDay,
+                ToId = corpus,
+                ToNumber = number,
+                Ready = false
+            };
+            using (var db = new AluminContext())
+            {
+                db.Reports.Add(load);
+                try
+                {
+                    await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
+                    MessageBox.Show("Информация о поставке была внесена в базу");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Информация не сохранилась");
+                }
+            }
+            Close(); 
+        }
     }
 }

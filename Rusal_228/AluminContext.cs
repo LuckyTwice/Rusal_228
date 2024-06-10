@@ -141,6 +141,7 @@ public partial class AluminContext : DbContext
             entity.Property(e => e.AddTime)
                 .HasPrecision(0)
                 .HasColumnName("Add_Time");
+            entity.Property(e => e.CryoCount).HasColumnName("Cryo_Count");
             entity.Property(e => e.Date).HasColumnType("date");
             entity.Property(e => e.FromId).HasColumnName("From_Id");
             entity.Property(e => e.FromNumber).HasColumnName("From_Number");
@@ -149,6 +150,7 @@ public partial class AluminContext : DbContext
             entity.Property(e => e.PersWId).HasColumnName("PersW_Id");
             entity.Property(e => e.PostNumb).HasColumnName("Post_Numb");
             entity.Property(e => e.PrevId).HasColumnName("Prev_Id");
+            entity.Property(e => e.SaltCount).HasColumnName("Salt_Count");
             entity.Property(e => e.Time).HasPrecision(0);
             entity.Property(e => e.ToId).HasColumnName("To_Id");
             entity.Property(e => e.ToNumber).HasColumnName("To_Number");
