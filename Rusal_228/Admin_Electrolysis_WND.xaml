@@ -112,7 +112,7 @@
 
                         <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
                         <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Криолит" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
                         <TextBox x:Name="Alumina_7" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
                         <TextBox x:Name="Salt_7" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
@@ -170,7 +170,7 @@
 
                         <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
                         <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Криолит" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
                         <TextBox x:Name="Alumina_8" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
                         <TextBox x:Name="Salt_8" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
@@ -230,7 +230,7 @@
 
                         <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
                         <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Криолит" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,35,0,0" FontSize="20" Grid.RowSpan="2" />
 
                         <TextBox x:Name="Alumina_9" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
                         <TextBox x:Name="Salt_9" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
@@ -290,7 +290,7 @@
 
                         <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
                         <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Криолит" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
                         <TextBox x:Name="Alumina_10" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
                         <TextBox x:Name="Salt_10" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
@@ -349,7 +349,7 @@
 
                         <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
                         <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Криолит" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
                         <TextBox x:Name="Alumina_11" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
                         <TextBox x:Name="Salt_11" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
@@ -407,7 +407,7 @@
 
                         <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top"  FontSize="20" />
                         <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
-                        <Label Content="Анод" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
+                        <Label Content="Криолит" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,-5,0,0" VerticalAlignment="Top" FontSize="20" />
 
                         <TextBox x:Name="Alumina_12" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>
                         <TextBox x:Name="Salt_12" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,0,15,10" Height="30"/>

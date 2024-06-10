@@ -42,7 +42,7 @@
         <Button x:Name="Stat" Height="45" Width="70" Grid.Column="5" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,25,0" Background="LightGray" Click="Stat_Click"  >
             <Image Source="\Resources\icons8-statistics-50.png" Margin="0, 0,0,0"/>
         </Button>
-        <Label Content="Статистика" FontSize="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2" Margin="5,0,25,0"/>
+        <Label Content="Статистика" FontSize="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Grid.Column="5" Grid.Row="0"  Grid.ColumnSpan="2" Margin="5,0,15,0"/>
 
         
         <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Grid.ColumnSpan="8" Height="1" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>

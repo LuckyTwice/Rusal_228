@@ -37,8 +37,8 @@
                 <Label Content="Время получения" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
 
-                <TextBox  x:Name="Date"  Grid.Column="0" Grid.Row="4" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
-                <TextBox x:Name="Time" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox  x:Name="Date" Text="08.02.24" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox x:Name="Time" Text="12:40" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
 
                 <Label Content="Сотрудник, оформивший отчет" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
 

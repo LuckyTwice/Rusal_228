@@ -33,5 +33,12 @@ namespace Rusal_228
             Department.Items.Add("Работник поставки");
             Department.Items.Add("Работник ковшевой");
         }
+
+        private void Password_Click(object sender, RoutedEventArgs e)
+        {
+            // желательно сделать так, чтобы показывалось только 10 секунд
+            MessageBox.Show("Пароль пользователя - cwi3q8IU 1", "Просмотр пароля (8 сек.)", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+        }
     }
 }

@@ -37,7 +37,7 @@
 
                     <Label Content="Тип сырья"   Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                    <TextBox x:Name="Type"    Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
+                    <TextBox x:Name="Type"    Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" FontSize="15" Margin="15,0,15,0" VerticalAlignment="Center" Height="30"/>
 
                     <Label Content="Количество" Grid.Column="0" Grid.Row="4"  HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 

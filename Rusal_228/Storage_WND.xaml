@@ -48,17 +48,18 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <Label Content="Радиус" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top"  FontSize="15" />
-                    <Label Content="Длина балки " Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top" FontSize="15" />
-                    <ComboBox x:Name="Radius"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,10" Height="30"/>
-                    <ComboBox x:Name="Length"  Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15,0,15,10" Height="30"/>
+                    <Label Content="Радиус, см" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top"  FontSize="15" />
+                    <Label Content="Длина балки, см" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top" FontSize="15" />
+                    
+                    <TextBox x:Name="Radius" Text="16" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
+                    <TextBox x:Name="Length" Text="600" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
 
 
                     <Label Content="Доступно" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top"  FontSize="15" />
                     <Label Content="Столбы к отправке " Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                    <TextBox x:Name="Access_Col" Text="600" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" TextChanged="Access_Col_TextChanged" FontSize="15"/>
-                    <TextBox x:Name="Count_Col" Text="240" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
+                    <TextBox x:Name="Access_Col" Text="200" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
+                    <TextBox x:Name="Count_Col" Text="120" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
 
                     <Button x:Name="Send_Col"  Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,5,0,10" Padding="20,0" Background="LightGray" FontSize="15" >Отправить</Button>
                 </Grid>
@@ -89,8 +90,8 @@
                     <Label Content="Доступно" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top"  FontSize="15" />
                     <Label Content="Чушки к отправке " Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                    <TextBox x:Name="Access_Tsh" Text="1200" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
-                    <TextBox x:Name="Count_Tsh" Text="600" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
+                    <TextBox x:Name="Access_Tsh" Text="700" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
+                    <TextBox x:Name="Count_Tsh" Text="" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,10" Height="30" FontSize="15"/>
 
                     <Button x:Name="Send_Tsh"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,5,0,10" Padding="20,0" Background="LightGray" FontSize="15" >Отправить</Button>
                 </Grid>

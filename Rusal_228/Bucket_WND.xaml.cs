@@ -64,7 +64,7 @@ namespace Rusal_228
             dialog.number = number;
             dialog.ShowDialog();
             // если нет, то
-            MessageBox.Show("Выбранный вами ковш пустой", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("В выбранном миксере недостаточно места", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Error);
 
         }
         private void Corpuses_Click(object sender, RoutedEventArgs e)

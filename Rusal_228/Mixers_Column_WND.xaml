@@ -143,7 +143,7 @@
                     <RowDefinition Height="2*"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBox x:Name="Casting"  TextWrapping="Wrap" Text="Сейчас ведется отливка из миксера №3. Время начала отливки 11:10.           Примерное время окончания литья - 12:00." VerticalAlignment="Stretch" Margin="15,10,15,0" FontSize="15"/>
+                <TextBox x:Name="Casting"  TextWrapping="Wrap" Text="Сейчас ведется отливка из миксера №3. Время начала отливки 11:10.                    Настройки литья:                                           Радиус - 22 см. Длина - 18 метров" VerticalAlignment="Stretch" Margin="15,10,15,0" FontSize="15"/>
                 <Button x:Name="Control"  Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,10" Background="LightGray" FontSize="15" >Отправить на контроль качества</Button>
 
             </Grid>

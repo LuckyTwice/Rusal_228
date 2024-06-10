@@ -15,17 +15,15 @@ using System.Windows.Shapes;
 namespace Rusal_228
 {
     /// <summary>
-    /// Логика взаимодействия для WorkerMain.xaml
+    /// Логика взаимодействия для Bucket_Defective.xaml
     /// </summary>
-    public partial class WorkerMain : Window
+    public partial class Bucket_Defective : Window
     {
-        public WorkerMain()
+        public Bucket_Defective()
         {
             InitializeComponent();
-            Baths.Items.Add("Корпус 8. Ванна 34");
-            Baths.Items.Add("Корпус 8. Ванна 36");
-            Baths.Items.Add("Корпус 8. Ванна 47");
-            Baths.Items.Add("Корпус 8. Ванна 24");
+            Bucket.Items.Add("6");
+
         }
     }
 }

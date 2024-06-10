@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Права доступа сотрудника" Height="520" Width="600" Loaded="Window_Loaded">
+        Title="Права доступа сотрудника" Height="600" Width="600" Loaded="Window_Loaded">
     <Window.Resources>
         <SolidColorBrush x:Key="ListBox.Static.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ListBox.Static.Border" Color="#FFABADB3"/>
@@ -78,15 +78,16 @@
                     <TextBox  x:Name="ID_Empl" Grid.Row="2" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="15,10,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                     <TextBox x:Name="Surname"  Grid.Row="1" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="15,10,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
 
+                    <Button x:Name="Password" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Content="Посмотреть пароль пользователя" FontSize="20"  Margin="30,5,35,15" Background="LightGray" IsCancel="True" Click="Password_Click"/>
 
                     <Label Content="Права доступа" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" Margin="15,10,15,0" VerticalAlignment="Center"  FontSize="20" />
 
                     <ComboBox x:Name="Rules" Grid.Row="6"  Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="15,5,15,15" Height="25" />
-                    <Button x:Name="Open" Grid.Column="1" Grid.Row="6" Content="Открыть доступ" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
+                    <Button x:Name="Open" Grid.Column="1" Grid.Row="6" Content="Открыть доступ" FontSize="20"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
 
                     <ListBox Style="{DynamicResource ListBoxStyle1}"  x:Name="Department" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="10,0,10,10"  VerticalAlignment="Top" Height="100" Background="LightGray" BorderBrush="Gray" BorderThickness="1" FontSize="20"/>
 
-                    <Button x:Name="Close" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Content="Закрыть доступ к выбранному" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
+                    <Button x:Name="Close" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Content="Закрыть доступ к выбранному" FontSize="20"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
 
 
                 </Grid>
@@ -97,8 +98,8 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
-                <Button x:Name="Save" Grid.Column="1" Grid.Row="0" Content="Сохранить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
+                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="20"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
+                <Button x:Name="Save" Grid.Column="1" Grid.Row="0" Content="Сохранить" FontSize="20"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
             </Grid>
         </StackPanel>
     </Grid>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-      Title="Информация о ковше"  Height="380" Width="400" Loaded="Window_Loaded">
+      Title="Информация о ковше"  Height="370" Width="400" Loaded="Window_Loaded">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -64,30 +64,31 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-                    <Label Content="Время выгрузки" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
                     <Label Content="Масса алюминия" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center"  FontSize="15" />
+                    <Label Content="Свободно" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center"  FontSize="15" />
 
-                    <Label Content="—" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="15,0,0,0" VerticalAlignment="Center"  FontSize="15" />
                     <Label Content="—" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" Margin="15,0,0,0" VerticalAlignment="Center"  FontSize="15" />
+                    <Label Content="—" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" Margin="15,0,0,0" VerticalAlignment="Center"  FontSize="15" />
 
 
 
                     <TextBox x:Name="Bucket_Numb" Style="{DynamicResource TextBoxStyle1}" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Ковш № ..." VerticalAlignment="Top" Margin="15,20,15,10" FontSize="25" Background="LightGray" BorderBrush="LightGray" HorizontalContentAlignment="Center"/>
 
-                    <TextBox x:Name="Time"  Style="{DynamicResource TextBoxStyle1}" Grid.Row="2" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="12:46" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                     <TextBox x:Name="Weight" Style="{DynamicResource TextBoxStyle1}" Grid.Row="4" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="3,3 тонны" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <TextBox x:Name="Rest" Style="{DynamicResource TextBoxStyle1}" Grid.Row="5" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="0,7 тонны" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
 
-                    <Label Content="Загрузка миксера" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" FontSize="20" />
+                    <Label Content="Загрузка миксера" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" FontSize="20" />
 
-                    <Label Content="Выберите миксер" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="15,0,0,20" Padding="0" VerticalAlignment="Center"  FontSize="15" />
-                    <Label Content="—" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,20" FontSize="15"  />
-                    <ComboBox x:Name="Bucket" Grid.Row="6"  Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,7,15,20" Height="25" />
+                    <Label Content="Выберите миксер" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="15,0,0,20" Padding="0" VerticalAlignment="Center"  FontSize="15" />
+                    <Label Content="—" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,20" FontSize="15"  />
+                    <ComboBox x:Name="Bucket" Grid.Row="7"  Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,7,15,20" Height="25" />
 
                 </Grid>
             </Border>
@@ -98,7 +99,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
-                <Button x:Name="Stop" Grid.Column="1" Grid.Row="0" Content="Выгрузить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
+                <Button x:Name="Stop" Grid.Column="1" Grid.Row="0" Content="Отправить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
             </Grid>
         </StackPanel>
     </Grid>

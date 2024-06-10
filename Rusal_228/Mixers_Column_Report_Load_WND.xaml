@@ -31,7 +31,7 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBox x:Name="Mixer" Text="Сюда нужно вставить номер миксера и вид литья" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,15,15,0" FontSize="15" Height="30" />
+                <TextBox x:Name="Mixer" Text="Столбы. Миксер 2" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,15,15,0" FontSize="15" Height="30" />
 
                 <Label Content="Номер ковша" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                 <TextBox x:Name="Bucket" Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Height="30" />
@@ -43,16 +43,16 @@
                 <Label Content="Всего загружено алюминия" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Доступно к загрузке" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                <TextBox x:Name="Full" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-                <TextBox x:Name="Rest" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+                <TextBox x:Name="Full" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
+                <TextBox x:Name="Rest" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
 
 
                 <Label Content="Дата загрузки" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Время загрузки"  Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15"  />
 
 
-                <TextBox  x:Name="Date" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
-                <TextBox x:Name="Time" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox  x:Name="Date" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
+                <TextBox x:Name="Time" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
 
                 <Label Content="Сотрудник, загрузивший миксер"  Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Сотрудник, оформивший отчет" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="12" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
@@ -60,8 +60,8 @@
                 <TextBox x:Name="NameUnload" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
                 <TextBox x:Name="NameWrite" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
-                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="14" Content="Назад" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-                <Button x:Name="Add" Grid.Column="1" Grid.Row="14" Content="Добавить" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="14" Content="Назад" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
+                <Button x:Name="Add" Grid.Column="1" Grid.Row="14" Content="Добавить" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
             </Grid>
 
         </Border>

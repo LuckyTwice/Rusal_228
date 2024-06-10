@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Информация о миксере" Height="290" Width="400" Loaded="Window_Loaded">
+        Title="Информация о миксере" Height="410" Width="400" Loaded="Window_Loaded">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -60,11 +60,15 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
+                    <TextBox x:Name="Mixer_Numb" Style="{DynamicResource TextBoxStyle1}" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Столбы. Миксер № ..." VerticalAlignment="Top" Margin="15,20,15,10" FontSize="25" Background="LightGray" BorderBrush="LightGray" HorizontalContentAlignment="Center"/>
 
                     <Label Content="Загружено, кг" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
                     <Label Content="Время запуска" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,15" VerticalAlignment="Center" Width="120" FontSize="15" />
@@ -72,10 +76,22 @@
                     <Label Content="—" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="15,0,0,0" VerticalAlignment="Center"  FontSize="15" />
                     <Label Content="—" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="15,0,0,15" VerticalAlignment="Center"  FontSize="15" />
 
-                    <TextBox x:Name="Mixer_Numb" Style="{DynamicResource TextBoxStyle1}" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Столбы. Миксер № ..." VerticalAlignment="Top" Margin="15,20,15,10" FontSize="25" Background="LightGray" BorderBrush="LightGray" HorizontalContentAlignment="Center"/>
 
                     <TextBox x:Name="Fill" Style="{DynamicResource TextBoxStyle1}" Grid.Row="1" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="4800 кг" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                     <TextBox x:Name="Time" Style="{DynamicResource TextBoxStyle1}" Grid.Row="2" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="15:44" VerticalAlignment="Top" Margin="15,10,15,20" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    
+                    <Label Content="Инструкции к литью" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="15,0,15,15" VerticalAlignment="Center"  FontSize="15" />
+
+                    <Label Content="Диаметр, см" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
+                    <Label Content="Длина, см" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Margin="15,0,15,15" VerticalAlignment="Center" Width="120" FontSize="15" />
+
+                    <Label Content="—" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" Margin="15,0,0,0" VerticalAlignment="Center"  FontSize="15" />
+                    <Label Content="—" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" Margin="15,0,0,15" VerticalAlignment="Center"  FontSize="15" />
+
+
+                    <TextBox x:Name="Radius" Style="{DynamicResource TextBoxStyle1}" Grid.Row="4" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="16" VerticalAlignment="Top" Margin="15,10,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <TextBox x:Name="Lenght" Style="{DynamicResource TextBoxStyle1}" Grid.Row="5" Grid.Column="2" Height="25" TextWrapping="Wrap" Text="400" VerticalAlignment="Top" Margin="15,10,15,20" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+
                 </Grid>
             </Border>
 

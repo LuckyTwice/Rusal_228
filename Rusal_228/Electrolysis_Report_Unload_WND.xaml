@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Отчет об окончании электролиза" Height="500" Width="800">
+        Title="Отчет об окончании электролиза" Height="510" Width="800">
     <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,20,0,0" >
         <Label  Content="Отчет об окончании электролиза" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
         <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,0,20,15" VerticalAlignment="Stretch" Grid.ColumnSpan="2" >
@@ -41,8 +41,8 @@
                 <Label Content="Время выгрузки"  Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15"  />
 
 
-                <TextBox  x:Name="Date" Text="12.02.24" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="20"/>
-                <TextBox x:Name="Time" Text="12:22" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="20"/>
+                <TextBox  x:Name="Date" Text="12.02.24" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox x:Name="Time" Text="12:22" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
 
                 <Label Content="Сотрудник, выгрузивший ванну"  Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Сотрудник, оформивший отчет" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
