@@ -54,19 +54,4 @@ public partial class Report
     public virtual Place? To { get; set; }
 
     public virtual GeneralStorage Type { get; set; } = null!;
-    public override string ToString()
-    {
-        if (ToId == 6)
-        {
-            return $"Составить отчёт о поставке номер: {PostNumb}";
-        }
-        else if (FromId == 6)
-        {
-            return $"Составить отчёт о снабжении: {Id}";
-        }
-        else
-        {
-            return $"{Id}";
-        }
-    }
 }
