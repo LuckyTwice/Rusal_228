@@ -34,7 +34,7 @@
                 <Label Content="Добавленные компоненты" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Grid.ColumnSpan="3" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
 
-                <TextBox x:Name="Components" Text="Глинозем - 300 кг, фторсоли - 140 кг, аннодная масса - 270 кг" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="3" Margin="15,0,15,15" Height="30"/>
+                <TextBox x:Name="Components" Text="Глинозем - 300 кг, фторсоли - 140 кг, криолит - 270 кг" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="3" Margin="15,0,15,15" Height="30"/>
                 
 
                 <Label Content="Дата выгрузки" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />

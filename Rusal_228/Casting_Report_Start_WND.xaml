@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Отчет о начале литья" Height="450" Width="800">
+        Title="Отчет о начале литья" Height="600" Width="800">
     <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,20,0,0" >
         <Label  Content="Отчет о начале литья" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
         <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,0,20,15" VerticalAlignment="Stretch" Grid.ColumnSpan="2" >
@@ -33,21 +33,25 @@
                 </Grid.RowDefinitions>
                 <TextBox x:Name="Casting" Text="Сюда нужно вставить вид литья" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,15,15,0" FontSize="15" Height="30" />
 
+                <Label Content="Параметры отливки " Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
+                <TextBox  x:Name="Settings" Text="Радиус - 20см, Длина - 8м" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
 
                 <Label Content="Загружено из " Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <TextBox  x:Name="Mixer" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox  x:Name="Mixer" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
                 <Label Content="Масса загруженного алюминия" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <TextBox  x:Name="Weight" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox  x:Name="Weight" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
                 
                 <Label Content="Дата начала литья" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Время начала литья"  Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15"  />
 
 
-                <TextBox  x:Name="Date" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
-                <TextBox x:Name="Time" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+                <TextBox  x:Name="Date" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
+                <TextBox x:Name="Time" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" FontSize="15"/>
 
+                <Label Content="Сотрудник, начавший отливку " Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
+                <TextBox x:Name="NameStart" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
+                
                 <Label Content="Сотрудник, оформивший отчет" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="12" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-
                 <TextBox x:Name="NameWrite" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
                 <Button x:Name="Cancel" Grid.Column="0" Grid.Row="14" Content="Назад" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>

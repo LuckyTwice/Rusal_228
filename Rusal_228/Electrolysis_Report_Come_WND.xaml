@@ -30,7 +30,7 @@
                 <Label Content="Тип сырья" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
                 <Label Content="Количество, кг" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                <TextBox x:Name="Type_Material" Text="Аннодная масса" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
+                <TextBox x:Name="Type_Material" Text="Глинозем" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
                 <TextBox x:Name="Quantity_Material" Text="200 кг" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
 
                 <Label Content="Дата получения" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
