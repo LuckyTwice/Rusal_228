@@ -7,7 +7,7 @@ public partial class GeneralStorage
 {
     public int Id { get; set; }
 
-    public string Name { get; set; } = null!;
+    public int TypeId { get; set; }
 
     public int? PlacesId { get; set; }
 
@@ -15,5 +15,5 @@ public partial class GeneralStorage
 
     public virtual Place? Places { get; set; }
 
-    public virtual ICollection<Report> Reports { get; set; } = new List<Report>();
+    public virtual Material Type { get; set; } = null!;
 }

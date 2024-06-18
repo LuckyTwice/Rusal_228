@@ -15,13 +15,13 @@ public partial class AluminContext : DbContext
     {
     }
 
-    public virtual DbSet<Account> Accounts { get; set; }
-
     public virtual DbSet<Batch> Batchs { get; set; }
 
     public virtual DbSet<DefType> DefTypes { get; set; }
 
     public virtual DbSet<GeneralStorage> GeneralStorages { get; set; }
+
+    public virtual DbSet<Material> Materials { get; set; }
 
     public virtual DbSet<Personal> Personals { get; set; }
 
@@ -33,40 +33,31 @@ public partial class AluminContext : DbContext
 
     public virtual DbSet<Report> Reports { get; set; }
 
+    public virtual DbSet<SizeName> SizeNames { get; set; }
+
     public virtual DbSet<Status> Statuses { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=Kompik\\SQLEXPRESS;Database=Alumin;Trusted_Connection=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Data Source=LUCKYTWICE\\SQLEXPRESS;Database=Alumin;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Account>(entity =>
-        {
-            entity.HasNoKey();
-
-            entity.Property(e => e.Login)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Password)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-
-            entity.HasOne(d => d.IdNavigation).WithMany()
-                .HasForeignKey(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Accounts_Personals");
-        });
-
         modelBuilder.Entity<Batch>(entity =>
         {
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.ReportId).HasColumnName("Report_Id");
+            entity.Property(e => e.SizeId).HasColumnName("Size_Id");
 
             entity.HasOne(d => d.Report).WithMany(p => p.Batches)
                 .HasForeignKey(d => d.ReportId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Batchs_Reports");
+
+            entity.HasOne(d => d.Size).WithMany(p => p.Batches)
+                .HasForeignKey(d => d.SizeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Batchs_Size_Name");
         });
 
         modelBuilder.Entity<DefType>(entity =>
@@ -80,12 +71,22 @@ public partial class AluminContext : DbContext
         {
             entity.ToTable("General_Storage");
 
-            entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.PlacesId).HasColumnName("Places_Id");
+            entity.Property(e => e.TypeId).HasColumnName("Type_Id");
 
             entity.HasOne(d => d.Places).WithMany(p => p.GeneralStorages)
                 .HasForeignKey(d => d.PlacesId)
                 .HasConstraintName("FK_General_Storage_Places");
+
+            entity.HasOne(d => d.Type).WithMany(p => p.GeneralStorages)
+                .HasForeignKey(d => d.TypeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_General_Storage_Materials");
+        });
+
+        modelBuilder.Entity<Material>(entity =>
+        {
+            entity.Property(e => e.Name).HasMaxLength(50);
         });
 
         modelBuilder.Entity<Personal>(entity =>
@@ -116,7 +117,7 @@ public partial class AluminContext : DbContext
             entity.HasOne(d => d.Batch).WithMany(p => p.Products)
                 .HasForeignKey(d => d.BatchId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Products_Batchs");
+                .HasConstraintName("FK_Products_Batch");
 
             entity.HasOne(d => d.DefType).WithMany(p => p.Products)
                 .HasForeignKey(d => d.DefTypeId)
@@ -135,6 +136,7 @@ public partial class AluminContext : DbContext
 
         modelBuilder.Entity<Report>(entity =>
         {
+            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.AddDate)
                 .HasColumnType("date")
                 .HasColumnName("Add_Date");
@@ -145,7 +147,6 @@ public partial class AluminContext : DbContext
             entity.Property(e => e.Date).HasColumnType("date");
             entity.Property(e => e.FromId).HasColumnName("From_Id");
             entity.Property(e => e.FromNumber).HasColumnName("From_Number");
-            entity.Property(e => e.Mark).HasMaxLength(50);
             entity.Property(e => e.PersRId).HasColumnName("PersR_Id");
             entity.Property(e => e.PersWId).HasColumnName("PersW_Id");
             entity.Property(e => e.PostNumb).HasColumnName("Post_Numb");
@@ -166,7 +167,6 @@ public partial class AluminContext : DbContext
 
             entity.HasOne(d => d.PersW).WithMany(p => p.ReportPersWs)
                 .HasForeignKey(d => d.PersWId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Reports_Personals1");
 
             entity.HasOne(d => d.Prev).WithMany(p => p.InversePrev)
@@ -180,7 +180,14 @@ public partial class AluminContext : DbContext
             entity.HasOne(d => d.Type).WithMany(p => p.Reports)
                 .HasForeignKey(d => d.TypeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Reports_General_Storage");
+                .HasConstraintName("FK_Reports_Materials");
+        });
+
+        modelBuilder.Entity<SizeName>(entity =>
+        {
+            entity.ToTable("Size_Name");
+
+            entity.Property(e => e.Name).HasMaxLength(50);
         });
 
         modelBuilder.Entity<Status>(entity =>

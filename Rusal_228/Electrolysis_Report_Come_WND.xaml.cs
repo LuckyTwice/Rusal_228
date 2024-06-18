@@ -35,7 +35,7 @@ namespace Rusal_228
                 {
                     come.PersRId = 2;//поменять на получение Id из проги
                     come.Ready = true;
-                    var material = db.GeneralStorages.Where(r=>r.PlacesId == Id && r.).FirstOrDefault();
+                   
                     try
                     {
                         await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
@@ -49,5 +49,6 @@ namespace Rusal_228
                 }
             }
         }
+        // var material = db.GeneralStorages.Where(r=>r.PlacesId == Id && r.).FirstOrDefault(); эта строка была после come.Ready вспомнить зачем
     }
 }

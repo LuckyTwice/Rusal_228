@@ -28,8 +28,12 @@ namespace Rusal_228
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            Electrolysis_WND di = new Electrolysis_WND();
-            di.Show();
+            /*Electrolysis_WND di = new Electrolysis_WND();
+            di.Show();*/
+            using (AluminContext db =  new AluminContext())
+            {
+
+            }
             /*Delivery_WND deli = new Delivery_WND();
             deli.Show();*/
             /* Admin_Rules_WND bucket = new Admin_Rules_WND();
@@ -141,7 +145,9 @@ namespace Rusal_228
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            Admin_Employee_WND dd = new Admin_Employee_WND();
+            dd.Show();
+            //Close();
         }
 
         /*private void Message(object sender, RoutedEventArgs e)

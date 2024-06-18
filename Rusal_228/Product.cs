@@ -15,8 +15,6 @@ public partial class Product
 
     public int BatchId { get; set; }
 
-    public int Length { get; set; }
-
     public virtual Batch Batch { get; set; } = null!;
 
     public virtual DefType? DefType { get; set; }

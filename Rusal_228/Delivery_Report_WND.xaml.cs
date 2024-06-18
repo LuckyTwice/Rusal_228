@@ -38,11 +38,11 @@ namespace Rusal_228
                 var postav = db.Reports.Single(r => r.Id == Id);
                 if (postav != null)
                 {
-                    postav.PersRId = 2;//поменять на получение Id из проги
+                    postav.PersRId = 2;
                     postav.Ready = true;
                     try
                     {
-                        await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
+                        await db.SaveChangesAsync();
                         MessageBox.Show("Информация о поставке была внесена в базу");
                     }
                     catch (Exception ex)

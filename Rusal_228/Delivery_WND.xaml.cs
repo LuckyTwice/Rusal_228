@@ -28,8 +28,8 @@ namespace Rusal_228
             {
                 for(int i = 0; i < 3; i++)
                 {
-                    Type.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
-                    Type_Material.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                  /*  Type.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                    Type_Material.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());*/
                 }
                 for(int i = 0;i < 6; i++)
                 {
@@ -94,7 +94,7 @@ namespace Rusal_228
 
         private void Documents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (Documents.Items.Count > 0 && Documents.SelectedIndex > -1)
+           /* if (Documents.Items.Count > 0 && Documents.SelectedIndex > -1)
             {
                 var post = (Report)Documents.SelectedItem;
                 if (post != null)
@@ -134,7 +134,7 @@ namespace Rusal_228
                         dialog.ShowDialog();
                     }
                 }
-            }
+            }*/
         }
         /*  public void UpdateComponent(object sender, EventArgs e)
           {

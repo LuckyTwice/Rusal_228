@@ -30,9 +30,9 @@ namespace Rusal_228
             Documents.Items.Add("Отчет об окончании электролиза в 14 ванной");*/
             using (var db = new AluminContext())
             {
-                Alumina.Text = db.GeneralStorages.Where(p => p.Name == "Глинозем" && p.PlacesId== corpus).Select(p => p.Count).Single().ToString();//сделать получение айди места через
-                Salt.Text = db.GeneralStorages.Where(p => p.Name == "Фторсоль" && p.PlacesId == corpus).Select(p => p.Count).Single().ToString();
-                Anode.Text = db.GeneralStorages.Where(p => p.Name == "Криолит" && p.PlacesId == corpus).Select(p => p.Count).Single().ToString();
+                Alumina.Text = db.GeneralStorages.Where(p => p.TypeId == 0 && p.PlacesId== corpus).Select(p => p.Count).Single().ToString();
+                Salt.Text = db.GeneralStorages.Where(p => p.TypeId == 2  && p.PlacesId == corpus).Select(p => p.Count).Single().ToString();
+                Anode.Text = db.GeneralStorages.Where(p => p.TypeId == 1 && p.PlacesId == corpus).Select(p => p.Count).Single().ToString();
             }
             UpdateListBoxData();
         }
@@ -131,9 +131,9 @@ namespace Rusal_228
                         Electrolysis_Report_Come_WND dialog = new Electrolysis_Report_Come_WND(post.Id);
                         using (var db = new AluminContext())
                         {
-                            dialog.Type_Material.Text = db.GeneralStorages.Where(p => p.Id == post.TypeId).Select(p => p.Name).Single().ToString();
+                            //dialog.Type_Material.Text = db.Materials.Where(p => p.Id == post.TypeId).Select(p => p.Name).Single().ToString();
                             dialog.Quantity_Material.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Count).Single().ToString();
-                            dialog.Date.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Date).Single().ToString(); // дата поступает вместе со временем, исправить
+                            dialog.Date.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Date).Single().ToString(); 
                             dialog.Time.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Time).Single().ToString();
                             var personal = db.Personals.Where(p => p.Id == post.PersWId).Select(p => new { p.Surname, p.Name, p.Patronymic }).Single();
                             dialog.NameWrite.Text = $"{personal.Surname} {personal.Name} {personal.Patronymic}";
@@ -144,7 +144,7 @@ namespace Rusal_228
                     }
                     else if (post.FromId==null && post.ToNumber!=null)
                     {
-                        Electrolysis_Report_Load_WND dialog = new Electrolysis_Report_Load_WND(post.Id);
+                        /*Electrolysis_Report_Load_WND dialog = new Electrolysis_Report_Load_WND(post.Id);
                         using (var db = new AluminContext())
                         {
                             var place = db.Reports.Where(p => p.Id == post.Id).Select(p => new { p.ToId, p.ToNumber }).Single();
@@ -159,11 +159,11 @@ namespace Rusal_228
                         }
                         dialog.Closed += When_Window_Closed;
                         // сделать перенос фио в окно отчета
-                        dialog.ShowDialog();
+                        dialog.ShowDialog();*/
                     }
                     else
                     {
-                        Electrolysis_Report_Unload_WND dialog = new Electrolysis_Report_Unload_WND(post.Id);
+                       /* Electrolysis_Report_Unload_WND dialog = new Electrolysis_Report_Unload_WND(post.Id);
                         using (var db = new AluminContext())
                         {
                             var place = db.Reports.Where(p => p.Id == post.Id).Select(p => new { p.ToId, p.ToNumber }).Single();
@@ -177,7 +177,7 @@ namespace Rusal_228
                         }
                         dialog.Closed += When_Window_Closed;
                         // сделать перенос фио в окно отчета
-                        dialog.ShowDialog();
+                        dialog.ShowDialog();*/
                     }
                 }
             }
