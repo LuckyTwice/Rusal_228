@@ -5,62 +5,163 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Отчет об отправлении ковша" Height="770" Width="800">
-    <StackPanel Grid.Column="1" Grid.Row="3" Margin="0,20,0,0" >
-        <Label  Content="Отчет об отправлении ковша" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
-        <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,0,20,15" VerticalAlignment="Stretch" Grid.ColumnSpan="2" >
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <TextBox x:Name="Bucket" Text="Ковш №17" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,15,15,0" FontSize="15" Height="30" />
+        Title="Электролиз" Height="900" Width="1000" >
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="5" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="6*" />
 
-                <TextBox x:Name="Line" Text="Линия столбов" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,15,15,0" FontSize="15" Height="30" />
+        </Grid.RowDefinitions>
 
-                <Label Content="В ковш загружены" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
+        <TextBox x:Name="Name"  Text="Ярослав Комаровский" Height="45" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap"  VerticalAlignment="Top"  Margin="20,10,40,0" FontSize="20" />
+        <Label Grid.Column="1" Grid.Row="0"  Content="Корпус №10" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,30" Padding="0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30"  />
 
-                <Border Background="LightGray" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="4" Height="200" Margin="15,0,15,10" CornerRadius="10" BorderBrush="Gray" BorderThickness="1">
-                    <ListBox x:Name="Baths"  Margin="10,10,10,0" Background="LightGray" BorderBrush="LightGray" FontSize="15" />
-                </Border>
-
-                <Label Content="Масса выгруженного алюминия" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <TextBox  x:Name="Weight" Text="3,7 тонны" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="15,0,15,15" FontSize="15"  Height="30" />
-
-                <Label Content="Дата отправления"  Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-                <Label Content="Время отправления"  Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15"  />
+        <Button x:Name="LogOut" Height="45" Width="70" Grid.Column="4" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,20,0" Background="LightGray" >
+            <Image Source="\Resources\icons8-exit-50.png" />
+        </Button>
 
 
-                <TextBox  x:Name="Date" Text="03.06.24" FontSize="15" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
-                <TextBox x:Name="Time" Text="13:33" FontSize="15" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30" />
+        <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="0,-15,0,0" Grid.ColumnSpan="4" Height="1"  Grid.Row="1" VerticalAlignment="Top"/>
 
-                <Label Content="Сотрудник, отправивший ковш"  Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
-                <Label Content="Сотрудник, оформивший отчет" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="12" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="15" />
 
-                <TextBox x:Name="NameUnload" Text="Ярослав Комаровский" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
-                <TextBox x:Name="NameWrite" Text="Ярослав Комаровский" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  TextWrapping="Wrap" VerticalAlignment="Top" Margin="15,0,15,15" FontSize="15" Height="30" />
 
-                <Button x:Name="Cancel" Grid.Column="0" Grid.Row="14" Content="Назад" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-                <Button x:Name="Add" Grid.Column="1" Grid.Row="14" Content="Добавить" HorizontalAlignment="Stretch" Margin="15,0,15,15" Height="30"/>
-            </Grid>
+        <Label  Content="Документооборот" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10,0,20,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+        <ListBox x:Name="Documents"  Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"  Margin="10,37,20,20" BorderBrush="Gray" BorderThickness="1"  FontSize="20" />
 
-        </Border>
-    </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  >
+            <Label  Content="В доступе" VerticalAlignment="Top" Margin="10,0,20,0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+            <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,20,20" Grid.ColumnSpan="2" Height="200" >
+                <Grid   Margin="0,15,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Глинозем" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top"  FontSize="20" />
+                    <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+                    <Label Content="Криолит" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
+
+                    <TextBox x:Name="Alumina" Text="1900 кг"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Salt" Text="1000 кг" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Anode" Text="2200 кг" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+
+        <ListBox x:Name="Corpus" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="15,64,15,15" BorderBrush="Gray" BorderThickness="1" FontSize="20" />
+        <Label Grid.Column="0" Grid.Row="2" Content=" Корпус № 10" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="15" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25" Background="LightGray" BorderBrush="Gray" BorderThickness="1" />
+
+        <Grid Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Margin="20,80,20,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Button x:Name="Corpus_1" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >1-5 ванна</Button>
+            <Button x:Name="Corpus_2" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >5-10 ванна</Button>
+            <Button x:Name="Corpus_3" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >10-15 ванна</Button>
+            <Button x:Name="Corpus_4" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >15-20 ванна</Button>
+            <Button x:Name="Corpus_5" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >20-25 ванна</Button>
+            <Button x:Name="Corpus_6" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >25-30 ванна</Button>
+            <Button x:Name="Corpus_7" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >30-35 ванна</Button>
+            <Button x:Name="Corpus_8" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >35-40 ванна</Button>
+            <Button x:Name="Corpus_9" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >40-45 ванна</Button>
+            <Button x:Name="Corpus_10" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >45-50 ванна</Button>
+
+            <Button x:Name="Corpus_11" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >50-55 ванна</Button>
+            <Button x:Name="Corpus_12" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >55-60 ванна</Button>
+            <Button x:Name="Corpus_13" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >60-65 ванна</Button>
+            <Button x:Name="Corpus_14" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >65-70 ванна</Button>
+            <Button x:Name="Corpus_15" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >70-75 ванна</Button>
+            <Button x:Name="Corpus_16" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >75-80 ванна</Button>
+            <Button x:Name="Corpus_17" Style="{DynamicResource ButtonStyle1}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >80-85 ванна</Button>
+            <Button x:Name="Corpus_18" Style="{DynamicResource ButtonStyle1}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >85-90 ванна</Button>
+            <Button x:Name="Corpus_19" Style="{DynamicResource ButtonStyle1}" Grid.Column="2" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >90-95 ванна</Button>
+            <Button x:Name="Corpus_20" Style="{DynamicResource ButtonStyle1}" Grid.Column="3" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Background="LightGray" FontSize="15" >95-100 ванна</Button>
+
+        </Grid>
+
+
+    </Grid>
 </Window>

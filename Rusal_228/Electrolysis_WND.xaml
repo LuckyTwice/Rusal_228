@@ -112,9 +112,9 @@
                     <Label Content="Фторсоли" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
                     <Label Content="Криолит" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Top" FontSize="20" />
 
-                    <TextBox x:Name="Alumina" Text="400 кг"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
-                    <TextBox x:Name="Salt" Text="200 кг" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
-                    <TextBox x:Name="Anode" Text="550 кг" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Alumina" Text="1900 кг"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Salt" Text="1000 кг" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
+                    <TextBox x:Name="Anode" Text="2200 кг" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,5,15,10" Height="30" FontSize="20"/>
                 </Grid>
             </Border>
         </StackPanel>

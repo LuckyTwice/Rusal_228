@@ -22,10 +22,10 @@ namespace Rusal_228
         public WorkerMain()
         {
             InitializeComponent();
-            Baths.Items.Add("Корпус 8. Ванна 34");
-            Baths.Items.Add("Корпус 8. Ванна 36");
-            Baths.Items.Add("Корпус 8. Ванна 47");
-            Baths.Items.Add("Корпус 8. Ванна 24");
+            Documents.Items.Add("Отчет о загрузке ванны 32");
+            Documents.Items.Add("Отчет о поступлении фторсолей");
+/*            Baths.Items.Add("Корпус 8. Ванна 47");
+            Baths.Items.Add("Корпус 8. Ванна 24");*/
         }
     }
 }
