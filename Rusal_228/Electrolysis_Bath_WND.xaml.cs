@@ -59,21 +59,33 @@ namespace Rusal_228
             Tuple<int> tag = (Tuple<int>)button.Tag;
             int number = tag.Item1;
 
-            // сделать проверку, что в выбранной ванне запущен процесс электролиза
-            // Если да, то
-            Electrolysis_Bath_Full_WND dialog = new Electrolysis_Bath_Full_WND();
+            
+            using(AluminContext db =new AluminContext())
+            {
+                var l = db.Reports.Where(p=>p.ToId==corpus&&p.ToNumber==number).OrderByDescending(p=>p.Id).FirstOrDefault();
+                if(l == null||(l.Ready&&l.PrevId!=null)) //когда будут записи то убрать l==null
+                {
+                    // если нет, то
+                    Electrolysis_Bath_Empty_WND dialog1 = new Electrolysis_Bath_Empty_WND();
 
-            dialog.number = number;
-            dialog.corpus = corpus;
+                    dialog1.number = number;
+                    dialog1.corpus = corpus;
 
-            dialog.ShowDialog();
-            // если нет, то
-            Electrolysis_Bath_Empty_WND dialog1 = new Electrolysis_Bath_Empty_WND();
+                    dialog1.ShowDialog();
+                }
+                else if (l.Ready && l.PrevId == null)
+                {
+                    // сделать проверку, что в выбранной ванне запущен процесс электролиза
+                    // Если да, то
+                    Electrolysis_Bath_Full_WND dialog = new Electrolysis_Bath_Full_WND();
 
-            dialog1.number = number;
-            dialog1.corpus = corpus;
+                    dialog.number = number;
+                    dialog.corpus = corpus;
 
-            dialog1.ShowDialog();
+                    dialog.ShowDialog();
+                }
+            }
+            
         }
     }
 }

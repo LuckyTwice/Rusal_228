@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Rusal_228;
 
@@ -56,4 +57,31 @@ public partial class Report
     public virtual Place? To { get; set; }
 
     public virtual Material Type { get; set; } = null!;
+    public override string ToString()
+    {
+        if (ToId == 6)
+        {
+            return $"Составить отчёт о поставке номер: {PostNumb}";
+        }
+        else if (FromId == 6)
+        {
+            return $"Составить отчёт о снабжении: {Id}";
+        }
+        else if (new int?[] { 0, 1, 2, 3, 4, 5 }.Contains(ToId) && PrevId != null)
+        {
+            return $"Составить отчёт о принятии снабжения: {Id}";
+        }
+        else if (new int?[] { 0, 1, 2, 3, 4, 5 }.Contains(ToId) && ToNumber != null)
+        {
+            return $"Составить отчёт о загруке ванны №: {ToNumber}";
+        }
+        else if (new int?[] { 0, 1, 2, 3, 4, 5 }.Contains(FromId) && FromNumber != null && ToId == 7 && ToNumber != null && PrevId != null)
+        {
+            return $"Составить отчёт об окончании работы ванны №: {ToNumber}";
+        }
+        else
+        {
+            return $"{Id}";
+        }
+    }
 }

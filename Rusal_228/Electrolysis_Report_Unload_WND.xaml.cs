@@ -19,9 +19,55 @@ namespace Rusal_228
     /// </summary>
     public partial class Electrolysis_Report_Unload_WND : Window
     {
-        public Electrolysis_Report_Unload_WND()
+        private int Id;
+        public Electrolysis_Report_Unload_WND(int id)
         {
             InitializeComponent();
+            Id = id;
+        }
+
+        private async void Add_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new AluminContext())
+            {
+                var send = db.Reports.Single(r => r.Id == Id);
+                if (send != null)
+                {
+                    send.PersRId = 2;//поменять на получение Id из проги
+                    send.Ready = true;
+                    try
+                    {
+                        await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
+                        MessageBox.Show("Информация о снабжении была внесена в базу");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Информация не сохранилась");
+                    }
+                    var send2 = new Report
+                    {
+                        PrevId = send.Id,
+                        Ready = false,
+                        TypeId = send.TypeId,
+                        FromId = send.FromId,
+                        ToId = send.ToId,
+                        Count = send.Count,
+                        Date = DateTime.Today,
+                        Time = DateTime.Now.TimeOfDay
+                    };
+                    db.Reports.Add(send2);
+                    try
+                    {
+                        await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
+                        MessageBox.Show("Информация о подготовке приемки снабжения была внесена в базу");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Информация не сохранилась");
+                    }
+                    Close();
+                }
+            }
         }
     }
 }

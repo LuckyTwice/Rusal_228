@@ -28,8 +28,8 @@ namespace Rusal_228
             {
                 for(int i = 0; i < 3; i++)
                 {
-                  /*  Type.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
-                    Type_Material.Items.Add(db.GeneralStorages.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());*/
+                    Type.Items.Add(db.Materials.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                    Type_Material.Items.Add(db.Materials.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
                 }
                 for(int i = 0;i < 6; i++)
                 {

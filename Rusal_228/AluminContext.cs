@@ -136,7 +136,6 @@ public partial class AluminContext : DbContext
 
         modelBuilder.Entity<Report>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.AddDate)
                 .HasColumnType("date")
                 .HasColumnName("Add_Date");

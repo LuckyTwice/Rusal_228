@@ -19,9 +19,35 @@ namespace Rusal_228
     /// </summary>
     public partial class Electrolysis_Report_Load_WND : Window
     {
-        public Electrolysis_Report_Load_WND()
+        private int Id;
+        public Electrolysis_Report_Load_WND(int id)
         {
             InitializeComponent();
+            Id = id;
+        }
+
+        private async void Add_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new AluminContext())
+            {
+                var come = db.Reports.Single(r => r.Id == Id);
+                if (come != null)
+                {
+                    come.PersRId = 2;//поменять на получение Id из проги
+                    come.Ready = true;
+
+                    try
+                    {
+                        await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
+                        MessageBox.Show("Информация о приёме сырья была внесена в базу");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Информация не сохранилась");
+                    }
+                    Close();
+                }
+            }
         }
     }
 }

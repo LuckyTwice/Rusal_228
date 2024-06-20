@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Rusal_228
 {
@@ -62,16 +63,47 @@ namespace Rusal_228
             Tuple<int> tag = (Tuple<int>)button.Tag;
             int number = tag.Item1;
 
-            // сделать проверку, что в выбранной ванне закончен процесс электролиза
-            // Если да, то
-            Bucket_Bath_WND dialog = new Bucket_Bath_WND();
+            using (AluminContext db = new AluminContext())
+            {
+                var l = db.Reports.Where(p => p.ToId == corpus && p.ToNumber == number && p.PrevId != null).OrderByDescending(p => p.Id).Select(p => new Report
+                {
+                    Id = p.Id,
+                    Time = p.Time,
+                    Count = p.Count,
+                    SaltCount = p.SaltCount,
+                    CryoCount = p.CryoCount,
+                    Ready = p.Ready,
+                }).FirstOrDefault();
+                bool r = false;
+                if (l != null)
+                {
+                    r = db.Reports.Any(p => p.FromId == corpus && p.FromNumber == number && p.ToId == 7 && p.PrevId == l.Id && p.Ready);
+                }
+                if (l != null && l.Ready && r == false)
+                {
+                    // сделать проверку, что в выбранной ванне закончен процесс электролиза
+                    // Если да, то
+                    Bucket_Bath_WND dialog = new Bucket_Bath_WND();
 
-            dialog.number = number;
-            dialog.corpus = corpus;
+                    dialog.number = number;
+                    dialog.corpus = corpus;
 
-            dialog.ShowDialog();
-            // если нет, то
-           // MessageBox.Show("Ванна не готова к выгрузке", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+                    dialog.Time.Text = l.Time.ToString();
+                    dialog.Alumina.Text = l.Count.ToString();
+                    dialog.Salt.Text = l.SaltCount.ToString();
+                    dialog.Anode.Text = l.CryoCount.ToString();
+
+                    dialog.ShowDialog();
+                    // если нет, то
+                    // MessageBox.Show("Ванна не готова к выгрузке", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Ванна не готова к выгрузке", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            
 
         }
     }

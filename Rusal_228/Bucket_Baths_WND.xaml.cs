@@ -20,6 +20,7 @@ namespace Rusal_228
     public partial class Bucket_Baths_WND : Window
     {
         public int corpus { get; set; }
+        public int buck { get; set; }
         Button[] Baths;
         public Bucket_Baths_WND()
         {

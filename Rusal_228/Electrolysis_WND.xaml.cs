@@ -20,7 +20,7 @@ namespace Rusal_228
     public partial class Electrolysis_WND : Window
     {
         private Button[] Baths;
-        public int corpus { get; set; }
+        public int corpus = 2;
 
         public Electrolysis_WND()
         {
@@ -40,9 +40,10 @@ namespace Rusal_228
         {
             using (var db = new AluminContext())
             {
-                var list = db.Reports.Where(p => !p.Ready && new int?[] { 0, 1, 2, 3, 4, 5 }.Contains(p.ToId) && p.PrevId!=null).Select(p => new Report //сделать привязку к цеху ToId==corpus
+                var list = db.Reports.Where(p => !p.Ready && p.ToId == corpus ).Select(p => new Report
                 {
                     Id = p.Id,
+                    PersWId = p.PersWId,
                     TypeId = p.TypeId,
                     FromId = p.FromId,
                     FromNumber = p.FromNumber,
@@ -111,7 +112,7 @@ namespace Rusal_228
 
             dialog.start = start;
             dialog.finish = finish;
-            dialog.corpus = 10;
+            dialog.corpus = 2;
             //dialog.corpus = corpus;
 
             dialog.ShowDialog();
@@ -131,7 +132,7 @@ namespace Rusal_228
                         Electrolysis_Report_Come_WND dialog = new Electrolysis_Report_Come_WND(post.Id);
                         using (var db = new AluminContext())
                         {
-                            //dialog.Type_Material.Text = db.Materials.Where(p => p.Id == post.TypeId).Select(p => p.Name).Single().ToString();
+                            dialog.Type_Material.Text = db.Materials.Where(p => p.Id == post.TypeId).Select(p => p.Name).Single().ToString();
                             dialog.Quantity_Material.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Count).Single().ToString();
                             dialog.Date.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Date).Single().ToString(); 
                             dialog.Time.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Time).Single().ToString();
@@ -144,7 +145,7 @@ namespace Rusal_228
                     }
                     else if (post.FromId==null && post.ToNumber!=null)
                     {
-                        /*Electrolysis_Report_Load_WND dialog = new Electrolysis_Report_Load_WND(post.Id);
+                        Electrolysis_Report_Load_WND dialog = new Electrolysis_Report_Load_WND(post.Id);
                         using (var db = new AluminContext())
                         {
                             var place = db.Reports.Where(p => p.Id == post.Id).Select(p => new { p.ToId, p.ToNumber }).Single();
@@ -159,7 +160,7 @@ namespace Rusal_228
                         }
                         dialog.Closed += When_Window_Closed;
                         // сделать перенос фио в окно отчета
-                        dialog.ShowDialog();*/
+                        dialog.ShowDialog();
                     }
                     else
                     {

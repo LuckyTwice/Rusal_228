@@ -29,6 +29,7 @@ namespace Rusal_228
             Buckets = new Button[] { Bucket1, Bucket2, Bucket3, Bucket4, Bucket5, Bucket6, Bucket7, Bucket8, Bucket9, Bucket10, Bucket11, Bucket12, Bucket13, Bucket14, Bucket15, Bucket16, Bucket17, Bucket18, Bucket19, Bucket20, Bucket21, Bucket22, Bucket23, Bucket24 };
             Corpuses = new Button[] { Corpus7, Corpus8, Corpus9, Corpus10, Corpus11, Corpus12, Defective };
             AddEventButton();
+            UpdateListBoxData();
 
             /*Documents.Items.Add("Отчет о загрузке 19 ковша");
             Documents.Items.Add("Отчет об отправлении  19 ковша");*/
@@ -51,6 +52,34 @@ namespace Rusal_228
                 button.Click += Buckets_Click;
             }
             
+        }
+        private void UpdateListBoxData()
+        {
+            using (var db = new AluminContext())
+            {
+                var list = db.Reports.Where(p => p.Ready == false && p.ToId == 7).Select(p => new Report
+                {
+                    PersWId = p.PersWId,
+                    FromId = p.FromId,
+                    FromNumber = p.FromNumber,
+                    Count=p.Count,
+                    ToId = p.ToId,//наверное не надл
+                    ToNumber= p.ToNumber,
+                    Date = p.Date,
+                }).ToList();
+                /*var list2 = db.Reports.Where(p => p.Ready == false && p.FromId == 7).Select(p => new Report
+                {
+                    PersWId = p.PersWId,
+                    FromId = p.FromId,
+                    FromNumber = p.FromNumber,
+                    Count = p.Count,
+                    ToId = p.ToId,//наверное не надл
+                    ToNumber = p.ToNumber,
+                    Date = p.Date,
+                }).ToList();
+                list.AddRange(list2);*/ //подкорректировать взятие информации
+                Documents.ItemsSource = list;
+            }
         }
         private void Buckets_Click(object sender, RoutedEventArgs e)
         {

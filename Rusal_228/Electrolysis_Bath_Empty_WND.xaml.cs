@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,7 +21,7 @@ namespace Rusal_228
     public partial class Electrolysis_Bath_Empty_WND : Window
     {
         public int number { get; set; }
-        public int corpus { get; set; }
+        public int corpus = 9;
         public Electrolysis_Bath_Empty_WND()
         {
             InitializeComponent();
@@ -48,6 +49,11 @@ namespace Rusal_228
             };
             using (var db = new AluminContext())
             {
+               /*try//дальше реализовать проверку количества
+                {
+                    if(load.Count>db.GeneralStorages.Where(p => p.TypeId == 0 && p.PlacesId == corpus).Select(p => p.Count).Single())
+                }*/
+                
                 db.Reports.Add(load);
                 try
                 {

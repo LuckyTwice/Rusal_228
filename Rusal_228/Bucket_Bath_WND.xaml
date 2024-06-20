@@ -70,7 +70,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-                    <Label Content="Время загрузки" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
+                    <Label Content="Время окончания" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="140" FontSize="15" />
                     <Label Content="Глинозем" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
                     <Label Content="Фторсоли" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
                     <Label Content="Криолит" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="15,0,15,20" VerticalAlignment="Center" Width="120" FontSize="15" />
@@ -103,7 +103,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True"/>
-                <Button x:Name="Stop" Grid.Column="1" Grid.Row="0" Content="Выгрузить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" />
+                <Button x:Name="Stop" Grid.Column="1" Grid.Row="0" Content="Выгрузить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Stop_Click" />
             </Grid>
         </StackPanel>
     </Grid>

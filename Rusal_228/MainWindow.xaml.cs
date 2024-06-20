@@ -30,12 +30,9 @@ namespace Rusal_228
         {
             /*Electrolysis_WND di = new Electrolysis_WND();
             di.Show();*/
-            using (AluminContext db =  new AluminContext())
-            {
 
-            }
-            /*Delivery_WND deli = new Delivery_WND();
-            deli.Show();*/
+            Bucket_WND deli = new Bucket_WND();
+            deli.Show();
             /* Admin_Rules_WND bucket = new Admin_Rules_WND();
              bucket.Show();*/
             /* if (Login.Text == "Admin")
@@ -145,7 +142,7 @@ namespace Rusal_228
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Admin_Employee_WND dd = new Admin_Employee_WND();
+            Electrolysis_WND dd = new Electrolysis_WND();
             dd.Show();
             //Close();
         }
