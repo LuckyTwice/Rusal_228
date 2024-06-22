@@ -25,5 +25,10 @@ namespace Rusal_228
             Bucket.Items.Add("6");
 
         }
+
+        private void Stop_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

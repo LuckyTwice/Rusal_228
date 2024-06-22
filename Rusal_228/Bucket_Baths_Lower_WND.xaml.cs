@@ -77,9 +77,9 @@ namespace Rusal_228
                 bool r = false;
                 if (l != null)
                 {
-                    r = db.Reports.Any(p => p.FromId == corpus && p.FromNumber == number && p.ToId == 7 && p.PrevId == l.Id && p.Ready);
+                    r = db.Reports.Any(p => p.FromId == corpus && p.FromNumber == number && p.ToId == 7 && p.PrevId == l.Id && p.Ready==true);
                 }
-                if (l != null && l.Ready && r == false)
+                if (l != null && l.Ready==true && r == false)
                 {
                     // сделать проверку, что в выбранной ванне закончен процесс электролиза
                     // Если да, то

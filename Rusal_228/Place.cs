@@ -16,4 +16,9 @@ public partial class Place
     public virtual ICollection<Report> ReportFroms { get; set; } = new List<Report>();
 
     public virtual ICollection<Report> ReportTos { get; set; } = new List<Report>();
+
+    public override string ToString()
+    {
+        return $"{Name}";
+    }
 }

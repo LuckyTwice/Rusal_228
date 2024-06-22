@@ -40,7 +40,7 @@ namespace Rusal_228
         {
             using (var db = new AluminContext())
             {
-                var list = db.Reports.Where(p => !p.Ready && p.ToId == corpus ).Select(p => new Report
+                var list = db.Reports.Where(p => p.Ready==false && p.ToId == corpus ).Select(p => new Report
                 {
                     Id = p.Id,
                     PersWId = p.PersWId,

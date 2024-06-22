@@ -63,7 +63,7 @@ namespace Rusal_228
             using(AluminContext db =new AluminContext())
             {
                 var l = db.Reports.Where(p=>p.ToId==corpus&&p.ToNumber==number).OrderByDescending(p=>p.Id).FirstOrDefault();
-                if(l == null||(l.Ready&&l.PrevId!=null)) //когда будут записи то убрать l==null
+                if(l == null||(l.Ready==true&&l.PrevId!=null)) //когда будут записи то убрать l==null
                 {
                     // если нет, то
                     Electrolysis_Bath_Empty_WND dialog1 = new Electrolysis_Bath_Empty_WND();
@@ -73,7 +73,7 @@ namespace Rusal_228
 
                     dialog1.ShowDialog();
                 }
-                else if (l.Ready && l.PrevId == null)
+                else if (l.Ready == true && l.PrevId == null)
                 {
                     // сделать проверку, что в выбранной ванне запущен процесс электролиза
                     // Если да, то

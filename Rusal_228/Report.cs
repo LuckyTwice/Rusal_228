@@ -38,7 +38,7 @@ public partial class Report
 
     public DateTime? AddDate { get; set; }
 
-    public bool Ready { get; set; }
+    public bool? Ready { get; set; }
 
     public int? PrevId { get; set; }
 
@@ -79,9 +79,21 @@ public partial class Report
         {
             return $"Составить отчёт об окончании работы ванны №: {ToNumber}";
         }
+        else if (ToId == 7 && Ready == false)
+        {
+            return $"Составить отчёт: {Id} о загрузке ковша {ToNumber}";
+        }
+        else if (FromId == 7)
+        {
+            return $"Составить отчёт: {Id} о выгрузке ковша {FromNumber}";
+        }
+        else if (ToId == 7 && Ready == null)
+        {
+            return $"В ковш {ToNumber} было загружено {Count} кг в отчете {Id}";
+        }
         else
         {
-            return $"{Id}";
+            return $"Недополненный отчет {Id}";
         }
     }
 }

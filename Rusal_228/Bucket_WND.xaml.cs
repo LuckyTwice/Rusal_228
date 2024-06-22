@@ -59,6 +59,7 @@ namespace Rusal_228
             {
                 var list = db.Reports.Where(p => p.Ready == false && p.ToId == 7).Select(p => new Report
                 {
+                    Id= p.Id,
                     PersWId = p.PersWId,
                     FromId = p.FromId,
                     FromNumber = p.FromNumber,
@@ -66,9 +67,11 @@ namespace Rusal_228
                     ToId = p.ToId,//наверное не надл
                     ToNumber= p.ToNumber,
                     Date = p.Date,
+                    Time = p.Time,
                 }).ToList();
-                /*var list2 = db.Reports.Where(p => p.Ready == false && p.FromId == 7).Select(p => new Report
+                var list2 = db.Reports.Where(p => p.Ready == false && p.FromId == 7).Select(p => new Report
                 {
+                    Id = p.Id,
                     PersWId = p.PersWId,
                     FromId = p.FromId,
                     FromNumber = p.FromNumber,
@@ -76,25 +79,41 @@ namespace Rusal_228
                     ToId = p.ToId,//наверное не надл
                     ToNumber = p.ToNumber,
                     Date = p.Date,
+                    Time= p.Time,
                 }).ToList();
-                list.AddRange(list2);*/ //подкорректировать взятие информации
+                list.AddRange(list2); //подкорректировать взятие информации
                 Documents.ItemsSource = list;
             }
+        }
+        private void When_Window_Closed(object sender, EventArgs e)
+        {
+            UpdateListBoxData();
         }
         private void Buckets_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             Tuple<int> tag = (Tuple<int>)button.Tag;
-            int number = tag.Item1;
+            int number = tag.Item1 + 1;
 
-            // сделать проверку, что в выбранном ковше есть алюминий
-            // Если да, то
-            Bucket_Bucket_WND dialog = new Bucket_Bucket_WND();
-            dialog.number = number;
-            dialog.ShowDialog();
-            // если нет, то
-            MessageBox.Show("В выбранном миксере недостаточно места", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Error);
-
+            using(AluminContext db = new AluminContext()) 
+            {
+                var l = db.Reports.Where(p => p.ToId == 7 && p.ToNumber == number && p.Ready==null).Select(p => p.Count).Sum();
+                if (l<3000)
+                {
+                    // сделать проверку, что в выбранном ковше есть алюминий
+                    // Если да, то
+                    Bucket_Bucket_WND dialog = new Bucket_Bucket_WND();
+                    dialog.number = number;
+                    dialog.Weight.Text=l.ToString();
+                    dialog.Rest.Text = Convert.ToString(3000 - Convert.ToInt32(l));
+                    dialog.ShowDialog();
+                }
+                else
+                {
+                    // если нет, то
+                    MessageBox.Show("В выбранном ковше недостаточно места", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
         private void Corpuses_Click(object sender, RoutedEventArgs e)
         {
@@ -111,6 +130,66 @@ namespace Rusal_228
             else
             MessageBox.Show("НАДА СДЕЛАТЬ ДОП ОКНО ДЛЯ ДЕФЕКТОВ", "Информационное окно", MessageBoxButton.OK, MessageBoxImage.Information);
 
+        }
+
+        private void Documents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (Documents.Items.Count > 0 && Documents.SelectedIndex > -1)
+            {
+                var post = (Report)Documents.SelectedItem;
+                if (post != null)
+                {
+                    if (post.ToId == 7)
+                    {
+                        Bucket_Load_Report_WND dialog = new Bucket_Load_Report_WND(post.Id);
+                        using (var db = new AluminContext())
+                        {
+                            dialog.Bucket.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.ToNumber).Single().ToString();
+                            dialog.Weight.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Count).Single().ToString();
+                            dialog.Date.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Date).Single().ToString();
+                            dialog.Time.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Time).Single().ToString();
+                            var personal = db.Personals.Where(p => p.Id == post.PersWId).Select(p => new { p.Surname, p.Name, p.Patronymic }).Single();
+                            dialog.NameWrite.Text = $"{personal.Surname} {personal.Name} {personal.Patronymic}";
+                            var istok = db.Reports.Where(p => p.Id == post.Id).Select(p => new { p.FromId, p.FromNumber}).Single();
+                            dialog.Corpus_Bath.Text = $" Корпус {istok.FromId}. Ванна {istok.FromId}";
+                        }
+                        dialog.Closed += When_Window_Closed;
+                        // сделать перенос фио в окно отчета
+                        dialog.ShowDialog();
+                    }
+                    else if (post.FromId == 7)
+                    {
+                        Bucket_Unload_Report_WND dialog = new Bucket_Unload_Report_WND(post.Id, post.FromNumber);
+                        using (var db = new AluminContext())
+                        {
+                            dialog.Bucket.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.FromNumber).Single().ToString();
+                            dialog.Line.Text = db.Places.Where(p => p.Id == post.ToId).Select(p => p.Name).Single().ToString();
+                            dialog.Weight.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Count).Single().ToString();
+                            dialog.Date.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Date).Single().ToString();
+                            dialog.Time.Text = db.Reports.Where(p => p.Id == post.Id).Select(p => p.Time).Single().ToString();
+                            var personal = db.Personals.Where(p => p.Id == post.PersWId).Select(p => new { p.Surname, p.Name, p.Patronymic }).Single();
+                            dialog.NameWrite.Text = $"{personal.Surname} {personal.Name} {personal.Patronymic}";
+                            var l = db.Reports.Where(p => p.ToId == 7 && p.ToNumber == post.FromNumber && p.Ready == null).Select(p=>new Report
+                            {
+                                Id = p.Id,
+                                Count = p.Count,
+                                ToId = p.ToId,
+                                ToNumber = p.ToNumber,
+                            }).ToList();
+                            dialog.Baths.ItemsSource = l;
+                        }
+                        dialog.Closed += When_Window_Closed;
+                        // сделать перенос фио в окно отчета
+                        dialog.ShowDialog();
+                    }
+                }
+            }
+        }
+
+        private void Defective_Click(object sender, RoutedEventArgs e)
+        {
+            Bucket_Defective dialog = new Bucket_Defective();
+            dialog.Show();
         }
     }
 }

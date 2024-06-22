@@ -31,10 +31,12 @@ namespace Rusal_228
         {
             using (AluminContext db = new AluminContext())
             {
-                var l = db.Reports.Where(p => (p.FromId == 7 || p.ToId == 7) && !p.Ready).Select(p => p.FromId == 7 ? p.FromNumber : p.ToNumber).ToList();
+                var l = db.Reports.Where(p => (p.FromId == 7 || p.ToId == 7) && p.Ready==false).Select(p => p.FromId == 7 ? p.FromNumber : p.ToNumber).ToList();
+               
                 for (int i = 1; i < 25; i++)
                 {
-                    if (!l.Contains(i))
+                    var k = db.Reports.Where(p => p.ToId == 7 && p.ToNumber == i && p.Ready == null).Select(p => p.Count).Sum();
+                    if (k < 3000 && !l.Contains(i))
                         Bucket.Items.Add(i);
                 }
             }
@@ -61,7 +63,7 @@ namespace Rusal_228
             };
             using (var db = new AluminContext())
             {
-                buckLoad.PrevId=db.Reports.Where(p => p.ToId == corpus && p.ToNumber == number && p.PrevId != null && p.Ready).OrderByDescending(p => p.Id).Select(p=>p.Id).First();
+                buckLoad.PrevId=db.Reports.Where(p => p.ToId == corpus && p.ToNumber == number && p.PrevId != null && p.Ready==true).OrderByDescending(p => p.Id).Select(p=>p.Id).First();
                 db.Reports.Add(buckLoad);
                 try
                 {
