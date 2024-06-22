@@ -142,7 +142,7 @@ namespace Rusal_228
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Electrolysis_WND dd = new Electrolysis_WND();
+            Admin_Delivery_WND dd = new Admin_Delivery_WND();
             dd.Show();
             //Close();
         }

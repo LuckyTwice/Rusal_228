@@ -28,10 +28,10 @@
 
                     <Label Content="Количество глинозема" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" FontSize="15" />
                     <Label Content="Количество фторсолей" Grid.Row="3" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" FontSize="15" />
-                    <Label Content="Количество криолита" Grid.Row="6" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" FontSize="15" />
+                    <Label Content="Количество криолита" Grid.Row="5" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" FontSize="15" />
 
                     <TextBox x:Name="Alumina"  Grid.Row="2" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="15,0,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
-                    <TextBox x:Name="Salt"   Grid.Row="3" TextWrapping="Wrap"   Margin="15,30,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray" Grid.RowSpan="2" Height="25" VerticalAlignment="Top"/>
+                    <TextBox x:Name="Salt"  Grid.Row="4" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="15,0,15,10" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                     <TextBox x:Name="Anode"  Grid.Row="6" Height="25" TextWrapping="Wrap"   VerticalAlignment="Top" Margin="15,0,15,25" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
 
                    

@@ -22,20 +22,42 @@ namespace Rusal_228
         public Admin_Stat_WND()
         {
             InitializeComponent();
+            using (var db = new AluminContext())
+            {
+
+                for (int i = 0; i < 6; i++)
+                {
+                    Type.Items.Add(db.Places.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                }
+            }
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            TypeOut.Items.Add("Цех №11");
-            AluminaOut.Text = "2100 кг";
-            SaltOut.Text = "800 кг";
-            AnodeOut.Text = "1800 кг";
-            Type.Items.Add("Чушки");
-            ColumnDone.Text = "400 шт";
-            TshapedDone.Text = "1200 шт";
-            Send.Text = "300 шт";
-            Storage.Text = "1800 шт";
 
+        private void OutMaterials()
+        {
+            if (TypeOut != null && DateFromOut != null && DateToOut != null)
+            {
+                DateTime SendDate1 = DateFromOut.SelectedDate.HasValue ? DateFromOut.SelectedDate.Value : DateTime.MinValue;
+                DateTime SendDate2 = DateToOut.SelectedDate.HasValue ? DateToOut.SelectedDate.Value : DateTime.MinValue;
+
+                using (var db = new AluminContext())
+                {
+                    AluminaOut.Text = db.Reports.Where(p => p.FromId == 6 && p.ToId == TypeOut.SelectedIndex && p.TypeId == 0 && p.Date >= SendDate1 && p.Date <= SendDate2).Select(p => p.Count).Sum().ToString();
+                    AnodeOut.Text = db.Reports.Where(p => p.FromId == 6 && p.ToId == TypeOut.SelectedIndex && p.TypeId == 1 && p.Date >= SendDate1 && p.Date <= SendDate2).Select(p => p.Count).Sum().ToString();
+                    SaltOut.Text = db.Reports.Where(p => p.FromId == 6 && p.ToId == TypeOut.SelectedIndex && p.TypeId == 2 && p.Date >= SendDate1 && p.Date <= SendDate2).Select(p => p.Count).Sum().ToString();
+                }
+            }
+        }
+
+
+        private void TypeOut_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            OutMaterials();
+        }
+
+        private void DateOut_CalendarClosed(object sender, RoutedEventArgs e)
+        {
+            OutMaterials();
         }
     }
 }
