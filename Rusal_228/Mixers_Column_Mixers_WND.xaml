@@ -76,9 +76,9 @@
 
                 </Grid.RowDefinitions>
 
-                <Button x:Name="Mixer1" Style="{DynamicResource ButtonStyle1}" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15" Background="LightGray" FontSize="15" >Миксер 1</Button>
-                <Button x:Name="Mixer2" Style="{DynamicResource ButtonStyle1}" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15" Background="LightGray" FontSize="15" >Миксер 2</Button>
-                <Button x:Name="Mixer3" Style="{DynamicResource ButtonStyle1}" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15" Background="LightGray" FontSize="15" >Миксер 3</Button>
+                <Button x:Name="Mixer1" Style="{DynamicResource ButtonStyle1}" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15" Background="LightGray" FontSize="15" Click="Mixer_Click" >Миксер 1</Button>
+                <Button x:Name="Mixer2" Style="{DynamicResource ButtonStyle1}" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15" Background="LightGray" FontSize="15" Click="Mixer_Click" >Миксер 2</Button>
+                <Button x:Name="Mixer3" Style="{DynamicResource ButtonStyle1}" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15" Background="LightGray" FontSize="15" Click="Mixer_Click" >Миксер 3</Button>
             </Grid>
         </Border>
 

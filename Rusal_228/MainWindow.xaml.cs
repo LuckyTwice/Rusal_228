@@ -142,7 +142,7 @@ namespace Rusal_228
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Electrolysis_WND dd = new Electrolysis_WND();
+            Mixers_Column_WND dd = new Mixers_Column_WND();
             dd.Show();
             //Close();
         }

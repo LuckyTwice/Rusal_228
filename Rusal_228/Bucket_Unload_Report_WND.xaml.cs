@@ -43,6 +43,20 @@ namespace Rusal_228
                     {
                         r.Ready = true;
                     }
+                    Report k = new Report //проверить работу потом
+                    {
+                        PersR = come.PersR,
+                        PersW = come.PersW,
+                        ToId = null,
+                        ToNumber = come.ToNumber,
+                        FromNumber = come.FromNumber,
+                        FromId = come.FromId,
+                        Date = come.Date,
+                        Time = come.Time,
+                        Count = come.Count,
+                        Ready = null,
+                        PrevId = come.PrevId,
+                    };
                     try
                     {
                         await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности

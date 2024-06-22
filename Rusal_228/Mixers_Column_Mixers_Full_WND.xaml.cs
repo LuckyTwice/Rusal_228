@@ -33,5 +33,44 @@ namespace Rusal_228
             else
                 Mixer_Numb.Text = "Чушки. " + (number + 1) + " миксер.";
         }
+
+        private async void Go_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new AluminContext())
+            {
+                var send2 = new Report
+                {
+                    PrevId = db.Reports.Where(p => p.FromId == null && p.ToId == 8 && p.ToNumber == number && p.Ready == null).Select(p => p.Id).Single(),
+                    Ready = false,
+                    PersWId = 2,
+                    FromId = 8,
+                    FromNumber = number,
+                    ToId = 8,
+                    ToNumber = number,
+                    Count = Convert.ToInt32(Fill.Text),
+                    Date = DateTime.Today,
+                    Time = DateTime.Now.TimeOfDay
+                };
+                db.Reports.Add(send2);
+                var batch = new Batch
+                {
+                    ReportId = send2.Id,
+                    Radius = Convert.ToInt32(Radius.Text),
+                    Length = Convert.ToInt32(Lenght.Text),
+                    SizeId = 4,
+                };
+                db.Batchs.Add(batch);
+                try
+                {
+                    await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
+                    MessageBox.Show($"Информация о начале литья в миксере {number}, а также подготовке партии {batch.Id} передана в базу");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Информация о начале литья в миксере {number} передана в базу");
+                }
+                    Close();
+            }
+        }
     }
 }
