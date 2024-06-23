@@ -24,10 +24,17 @@ namespace Rusal_228
             InitializeComponent();
             using (var db = new AluminContext())
             {
-
+                for (int i = 0; i < 3; i++)
+                {
+                    TypeOut.Items.Add(db.Materials.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                }
                 for (int i = 0; i < 6; i++)
                 {
-                    Type.Items.Add(db.Places.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                    TypeGraph.Items.Add(db.Places.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
+                }
+                for (int i = 0; i < 4; i++)
+                {
+                    Type.Items.Add(db.SizeNames.Where(p => p.Id == i).Select(p => p.Name).Single().ToString());
                 }
             }
         }

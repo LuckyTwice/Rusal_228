@@ -47,6 +47,7 @@ namespace Rusal_228
                     Salt.Text = db.Reports.Where(p => p.FromId == null && p.ToId == 6 && p.TypeId == 2 && p.Date >= Date1 && p.Date <= Date2).Select(p => p.Count).Sum().ToString();
                     Count.Text = db.Reports.Where(p => p.FromId == null && p.ToId == 6 && p.Date >= Date1 && p.Date <= Date2).Count().ToString();
                 }
+
             }
         }
 

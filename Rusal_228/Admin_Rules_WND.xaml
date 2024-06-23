@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Список сотрудников" Height="500" Width="400" Loaded="Window_Loaded">
+        Title="Список сотрудников" Height="500" Width="400" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -17,8 +17,8 @@
         </Grid.RowDefinitions>
 
         <Label Content="Введите фамилию" Grid.Row="0" HorizontalAlignment="Left" Margin="15,10,15,0" VerticalAlignment="Top" FontSize="15" />
-        <TextBox  x:Name="ID_Empl" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Margin="20,10,100,0" FontSize="15"/>
-        <Button x:Name="ццй" Grid.Column="1" Grid.Row="0" Content="Поиск" FontSize="15" Width="70" Height="25"  Margin="15,5,20,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="LightGray" IsDefault="True" />
+        <TextBox  x:Name="Name" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Margin="20,10,100,0" FontSize="15"/>
+        <Button x:Name="Seach" Grid.Column="1" Grid.Row="0" Content="Поиск" FontSize="15" Width="70" Height="25"  Margin="15,5,20,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="LightGray" IsDefault="True" Click="Search_Click" />
 
 
         <StackPanel Grid.ColumnSpan="2" Grid.Row="1">
@@ -33,11 +33,9 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="Cancel" Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsCancel="True" Click="Cancel_Click"/>
-                <Button x:Name="Add_Empl" Grid.Column="1" Grid.Row="0" Content="Добавить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Add_Empl_Click" />
-                <Button x:Name="Save" Grid.Column="2" Grid.Row="0" Content="Сохранить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Save_Click" />
+                <Button x:Name="Add_Empl" Grid.Column="2" Grid.Row="0" Content="Добавить" FontSize="15"  Margin="15,5,15,15" Background="LightGray" IsDefault="True" Click="Add_Empl_Click" />
             </Grid>
         </StackPanel>
     </Grid>

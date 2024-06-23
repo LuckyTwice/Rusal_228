@@ -20,6 +20,8 @@ namespace Rusal_228
     /// </summary>
     public partial class Admin_Employee_WND : Window
     {
+        public int id { get; set; }
+
         public Admin_Employee_WND()
         {
             InitializeComponent();
@@ -27,9 +29,15 @@ namespace Rusal_228
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Surname.Text = "Комаровский Ярослав Сергеевич";
-            ID_Empl.Text = "228337";
-            Rules.Items.Add("Администратор");
+            using (var db = new AluminContext())
+            {
+                Surname.Text = db.Personals.Where(p => p.Id == id).Select(p =>  p.Surname + " " + p.Name + " " + p.Patronymic).Single().ToString();
+
+                var Proff = db.Professions.Select(p => new { Profession =  p.Name}).ToList();
+                Rules.ItemsSource = Proff.Select(p => p.Profession).ToList();
+            }
+
+            ID_Empl.Text = id.ToString();
             Department.Items.Add("Работник поставки");
             Department.Items.Add("Работник ковшевой");
         }

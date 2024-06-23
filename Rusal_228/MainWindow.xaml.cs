@@ -31,7 +31,7 @@ namespace Rusal_228
             /*Electrolysis_WND di = new Electrolysis_WND();
             di.Show();*/
 
-            Bucket_WND deli = new Bucket_WND();
+            Electrolysis_WND deli = new Electrolysis_WND();
             deli.Show();
             /* Admin_Rules_WND bucket = new Admin_Rules_WND();
              bucket.Show();*/

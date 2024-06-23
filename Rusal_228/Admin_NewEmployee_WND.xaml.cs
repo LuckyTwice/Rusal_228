@@ -22,10 +22,35 @@ namespace Rusal_228
         public Admin_NewEmployee_WND()
         {
             InitializeComponent();
+            using (var db = new AluminContext())
+            {
+                var Proff = db.Professions.Select(p => new { Profession = p.Name }).ToList();
+                Rules.ItemsSource = Proff.Select(p => p.Profession).ToList();
+            }
         }
 
-        private void Save_Click(object sender, RoutedEventArgs e)
+        private async void Save_Click(object sender, RoutedEventArgs e)
         {
+            var postav = new Personal
+            {
+                Surname = Surname.Text,
+                Name = Name.Text,
+                Patronymic = Mid_Name.Text,
+                ProfId = Rules.SelectedIndex
+            };
+            using (var db = new AluminContext())
+            {
+                db.Personals.Add(postav);
+                try
+                {
+                    await db.SaveChangesAsync();// уточнить, есть ли необходимость в ассинхронности
+                    MessageBox.Show("Информация о работнике была внесена в базу");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Информация не сохранилась");
+                }
+            }
             Close();
         }
 

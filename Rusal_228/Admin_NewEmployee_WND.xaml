@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rusal_228"
         mc:Ignorable="d"
-        Title="Новый сотрудник" Height="320" Width="500">
+        Title="Новый сотрудник" Height="420" Width="400">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
@@ -121,24 +121,23 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
 
                     </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+
 
                     <TextBox x:Name="Case_Numb"  Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Заполните информацию" VerticalAlignment="Top" Margin="15,20,15,10" FontSize="25" Background="LightGray" BorderBrush="LightGray" HorizontalContentAlignment="Center"/>
-
-                    <Label Content="ID сотрудника" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
-                    <Label Content="Фамилия" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
+                    <Label Content="Фамилия" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
                     <Label Content="Имя" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
-                    <Label Content="Отчество" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
-
-                    <TextBox  x:Name="ID_Empl" Style="{DynamicResource TextBoxStyle2}" Grid.Row="2" Grid.Column="0" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
-                    <TextBox x:Name="Surname" Style="{DynamicResource TextBoxStyle2}" Grid.Row="2" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <Label Content="Отчество" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
+                    <Label Content="Права доступа" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" Margin="15,0,15,0" VerticalAlignment="Center" Width="120" FontSize="15" />
+                    <TextBox x:Name="Surname" Style="{DynamicResource TextBoxStyle2}" Grid.Row="2" Grid.Column="0" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
                     <TextBox x:Name="Name" Style="{DynamicResource TextBoxStyle2}" Grid.Row="4" Grid.Column="0" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
-                    <TextBox x:Name="Mid_Name" Style="{DynamicResource TextBoxStyle2}" Grid.Row="4" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,0,15,25" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <TextBox x:Name="Mid_Name" Style="{DynamicResource TextBoxStyle2}" Grid.Row="6" Grid.Column="1" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="15,0,15,0" FontSize="15" Background="LightGray" BorderBrush="Gray"/>
+                    <ComboBox x:Name="Rules" Grid.Row="8"  Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="15,0,15,25" Height="25" />
 
                 </Grid>
             </Border>

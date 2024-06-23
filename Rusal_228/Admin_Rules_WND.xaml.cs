@@ -25,8 +25,30 @@ namespace Rusal_228
 
             using (var db = new AluminContext())
             {
-                var persons = db.Personals.Select(p => new {Fullname = p.Surname + " " + p.Name + " " + p.Patronymic + " " }).ToList();
-                Department.ItemsSource = persons.Select(p=>p.Fullname).ToList();
+                var persons = db.Personals.Select(p => new { Id = p.Id, Fullname = p.Surname + " " + p.Name + " " + p.Patronymic }).ToList();
+                Department.ItemsSource = persons;
+                Department.DisplayMemberPath = "Fullname";
+            }
+        }
+
+        private void Department_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Department.SelectedItem != null)
+            {
+                var selectedPerson = (dynamic)Department.SelectedItem;
+                Admin_Employee_WND dialog = new Admin_Employee_WND();
+                dialog.id = selectedPerson.Id;
+                dialog.ShowDialog();
+            }
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new AluminContext())
+            {
+                var persons = db.Personals.Where(p => p.Surname.TrimStart().StartsWith(Name.Text)).Select(p => new { Id = p.Id, Fullname = p.Surname + " " + p.Name + " " + p.Patronymic }).ToList();
+                Department.ItemsSource = persons;
+                Department.DisplayMemberPath = "Fullname";
             }
         }
 
@@ -35,31 +57,14 @@ namespace Rusal_228
             Admin_NewEmployee_WND dialog = new Admin_NewEmployee_WND();
             dialog.ShowDialog();
         }
-
-        private void Department_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Admin_Employee_WND dialog = new Admin_Employee_WND();
-            dialog.ShowDialog();
-        }
-
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Department.Items.Clear();
-            Department.Items.Add("Петренко Максим Леонидович");
 
-            //Close();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            /*Department.Items.Add("Комаровский Ярослав Сергеевич");
-            Department.Items.Add("Курьян Илья Сергеевич");
-            Department.Items.Add("Петренко Максим Леонидович");*/
         }
     }
 }
