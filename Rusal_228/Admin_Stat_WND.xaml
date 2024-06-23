@@ -32,12 +32,12 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Label  Content="Расход компанентов" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"  />
-                    <ComboBox x:Name="TypeOut"  Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="30"/>
+                    <ComboBox x:Name="TypeOut"  Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="30" SelectionChanged="TypeOut_SelectionChanged"/>
                     <Label Content="от" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top" FontSize="20" />
                     <Label Content="до" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="0" VerticalAlignment="Top" FontSize="20" />
 
-                    <DatePicker  x:Name="DateFromOut" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
-                    <DatePicker  x:Name="DateToOut"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"  Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" />
+                    <DatePicker  x:Name="DateFromOut" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" CalendarClosed="DateOut_CalendarClosed" />
+                    <DatePicker  x:Name="DateToOut"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"  Margin="10,0,10,5" Foreground="Black" FontSize="15"  VerticalAlignment="Top" Height="30" Width="150" CalendarClosed="DateOut_CalendarClosed" />
                 </Grid>
             </Border>
             <Border  BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,20,20" Grid.ColumnSpan="2" >
